@@ -30,6 +30,14 @@
         "verify": "https://tzkt.io/oomw5MNXurBpYLwoGqNAS5BDrRBr3Hsx8FTBfTPexn1eWhwU9EN"
       },
       {
+        "label": "PADUREA-DE-COD-BOOK",
+        "tx_hash": "op3WERVe7BiAWngAGWjfFqnrHHKMHzWdUhPw7yKJ3qM2sb1ryKu",
+        "payload_sha256": "6dc56cb1087fde71acdc9ab6342a8aa136128587f3b05d9adf3e0e8bb2e6d317",
+        "description": "Master hash v1.3 — 118 IP assets including Pădurea de Cod Book (58 files, 56 chapters)",
+        "status": "CONFIRMED",
+        "verify": "https://tzkt.io/op3WERVe7BiAWngAGWjfFqnrHHKMHzWdUhPw7yKJ3qM2sb1ryKu"
+      },
+      {
         "label": "DEEP-WATER",
         "tx_hash": "op7UGM1tMW6EdLN7H6bykL8h68sQeBZmD98KXMMmabxbf4okaW1",
         "description": "Inside Water Deep Research — timestamped separately",
@@ -37,12 +45,14 @@
         "verify": "https://tzkt.io/op7UGM1tMW6EdLN7H6bykL8h68sQeBZmD98KXMMmabxbf4okaW1"
       }
     ],
-    "pending_transaction": {
+    "pending_transaction": null,
+    "confirmed_v1_3": {
       "label": "MANIFEST-V1.3",
+      "tx_hash": "op3WERVe7BiAWngAGWjfFqnrHHKMHzWdUhPw7yKJ3qM2sb1ryKu",
       "master_hash": "6dc56cb1087fde71acdc9ab6342a8aa136128587f3b05d9adf3e0e8bb2e6d317",
       "description": "Master hash of 118 IP assets — v1.2 (116) + Pădurea de Cod Book (58 unique files, 56 chapters + annexes)",
-      "status": "PENDING_TEZOS_TX",
-      "note": "Submit this hash to Tezos mainnet to confirm v1.3. Chain: v1.1→v1.2→v1.3"
+      "status": "CONFIRMED",
+      "verify": "https://tzkt.io/op3WERVe7BiAWngAGWjfFqnrHHKMHzWdUhPw7yKJ3qM2sb1ryKu"
     }
   },
   "new_assets_since_v1_2": {

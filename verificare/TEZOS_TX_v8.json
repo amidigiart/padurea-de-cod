@@ -30,6 +30,7 @@
     "languages_interactive": ["RO", "EN", "ES", "FR", "JA"],
     "period": "Martie 2026 — Septembrie 2026"
   },
-  "tx_hash": "PENDING",
-  "status": "Ready to submit to Tezos mainnet"
+  "tx_hash": "op3WERVe7BiAWngAGWjfFqnrHHKMHzWdUhPw7yKJ3qM2sb1ryKu",
+  "status": "CONFIRMED",
+  "verify": "https://tzkt.io/op3WERVe7BiAWngAGWjfFqnrHHKMHzWdUhPw7yKJ3qM2sb1ryKu"
 }
