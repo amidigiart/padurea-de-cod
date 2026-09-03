@@ -1,0 +1,30 @@
+{
+  "version": "v9",
+  "timestamp_utc": "2026-09-04T00:30:00Z",
+  "author": "Mihai Roșca",
+  "co_author": "Claude (Opus 4.6, Anthropic)",
+  "wallet": "tz1bmw3igCLN8N6CqgLBzJ9dyRb79E2Tdu5Q",
+  "chain": {
+    "v1.1_master": "08a4230e7c9dac122432b348aa11a66945a3334d85eac22c536b96066214ae6d",
+    "v1.2_master": "987872ae01015eb1ba4df03d1187758fc428ef3c773d846c6cd569837b77d348",
+    "v1.3_master": "6dc56cb1087fde71acdc9ab6342a8aa136128587f3b05d9adf3e0e8bb2e6d317",
+    "v1.4_master": "3f05e7378b3fc18d705246d20e9a141b5ec097842684c8c0df42597375a42dcb"
+  },
+  "payload_string": "BRIDGRAI-IPR-v9|119entries|3f05e7378b3fc18d705246d20e9a141b5ec097842684c8c0df42597375a42dcb|2026-09-04|MihaiRosca+Claude|ScaleEngine-Benchmark-4scenarios-3baselines-225x-scaling|S(M)=R",
+  "new_assets": {
+    "119": {
+      "name": "ScaleEngine Head-to-Head Benchmark",
+      "sha256": "c5afb6d25e2f4265866a2f81a7d42d99155c5b3d82e2dce3e334b75412f058b4"
+    }
+  },
+  "benchmark_results": {
+    "drift_recovery": "ScaleEngine wins 10/12",
+    "safety_no_blind": "ScaleEngine wins 12/12",
+    "rsi_stability": "ScaleEngine wins 8/12",
+    "alignment_mae": "ScaleEngine wins 4/12 (trade-off: maintains internal coherence)",
+    "scaling_N1000": "54x",
+    "scaling_N5000": "225x"
+  },
+  "tx_hash": "PENDING",
+  "status": "Ready to submit to Tezos mainnet"
+}

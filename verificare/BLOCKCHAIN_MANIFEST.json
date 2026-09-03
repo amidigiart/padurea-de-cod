@@ -1,11 +1,11 @@
 {
   "protocol": "ami* Ecosystem Verification Protocol",
-  "version": "1.3",
-  "timestamp_utc": "2026-09-03T21:15:00Z",
+  "version": "1.4",
+  "timestamp_utc": "2026-09-04T00:30:00Z",
   "previous_version": {
-    "version": "1.2",
-    "timestamp_utc": "2026-09-03T20:15:00Z",
-    "master_hash": "987872ae01015eb1ba4df03d1187758fc428ef3c773d846c6cd569837b77d348"
+    "version": "1.3",
+    "timestamp_utc": "2026-09-03T21:15:00Z",
+    "master_hash": "6dc56cb1087fde71acdc9ab6342a8aa136128587f3b05d9adf3e0e8bb2e6d317"
   },
   "author": {
     "name": "Mihai Roșca",
@@ -45,7 +45,6 @@
         "verify": "https://tzkt.io/op7UGM1tMW6EdLN7H6bykL8h68sQeBZmD98KXMMmabxbf4okaW1"
       }
     ],
-    "pending_transaction": null,
     "confirmed_v1_3": {
       "label": "MANIFEST-V1.3",
       "tx_hash": "op3WERVe7BiAWngAGWjfFqnrHHKMHzWdUhPw7yKJ3qM2sb1ryKu",
@@ -53,7 +52,28 @@
       "description": "Master hash of 118 IP assets — v1.2 (116) + Pădurea de Cod Book (58 unique files, 56 chapters + annexes)",
       "status": "CONFIRMED",
       "verify": "https://tzkt.io/op3WERVe7BiAWngAGWjfFqnrHHKMHzWdUhPw7yKJ3qM2sb1ryKu"
+    },
+    "pending_transaction": {
+      "label": "MANIFEST-V1.4",
+      "master_hash": "3f05e7378b3fc18d705246d20e9a141b5ec097842684c8c0df42597375a42dcb",
+      "description": "Master hash of 119 IP assets — v1.3 (118) + ScaleEngine head-to-head benchmark",
+      "status": "PENDING_TEZOS_TX",
+      "note": "Submit this hash to Tezos mainnet to confirm v1.4. Chain: v1.1→v1.2→v1.3→v1.4"
     }
+  },
+  "new_assets_since_v1_3": {
+    "total_new": 1,
+    "assets": [
+      {
+        "id": 119,
+        "name": "ScaleEngine Head-to-Head Benchmark",
+        "type": "benchmark",
+        "repo": "github.com/amidigiart/amidor-engine",
+        "file": "tests/benchmark_head_to_head.py",
+        "sha256": "c5afb6d25e2f4265866a2f81a7d42d99155c5b3d82e2dce3e334b75412f058b4",
+        "description": "4 scenarios, 5 metrics, 3 baselines (FixedWeight/NoBetaMin/PID). ScaleEngine: 10/12 recovery, 12/12 safety, 225x scaling at N=5000"
+      }
+    ]
   },
   "new_assets_since_v1_2": {
     "total_new": 2,
@@ -178,7 +198,7 @@
     }
   },
   "verification_summary": {
-    "blockchain_ip_assets": 118,
+    "blockchain_ip_assets": 119,
     "total_tests_ecosystem": 717,
     "test_breakdown": {
       "ukbe_core": 175,
