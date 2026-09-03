@@ -1,0 +1,35 @@
+{
+  "version": "v8",
+  "timestamp_utc": "2026-09-03T21:15:00Z",
+  "author": "Mihai Roșca",
+  "co_author": "Claude (Opus 4.6, Anthropic)",
+  "wallet": "tz1bmw3igCLN8N6CqgLBzJ9dyRb79E2Tdu5Q",
+  "chain": {
+    "v1.1_master": "08a4230e7c9dac122432b348aa11a66945a3334d85eac22c536b96066214ae6d",
+    "v1.2_master": "987872ae01015eb1ba4df03d1187758fc428ef3c773d846c6cd569837b77d348",
+    "v1.3_master": "6dc56cb1087fde71acdc9ab6342a8aa136128587f3b05d9adf3e0e8bb2e6d317"
+  },
+  "payload_string": "BRIDGRAI-IPR-v8|118entries|6dc56cb1087fde71acdc9ab6342a8aa136128587f3b05d9adf3e0e8bb2e6d317|2026-09-03|MihaiRosca+Claude|PadureaDeCod-Book-58files-56chapters+annexes|S(M)=R",
+  "new_assets": {
+    "117": {
+      "name": "Pădurea de Cod — Cartea Completă (TOC)",
+      "sha256": "dc0b0a6c51e5a1bbf81e35060527fd127ea77347e8af0c34e7cf1e7efcadd21e"
+    },
+    "118": {
+      "name": "Pădurea de Cod — IP Hash Registry (58 files)",
+      "sha256": "2ff6fb9c3a23adaeec52522bb03faf37f7a2b47d7c9de578120babc32efa76dc"
+    }
+  },
+  "book_stats": {
+    "unique_files": 58,
+    "chapters": 56,
+    "story_annexes": 2,
+    "interactive_annexes": 2,
+    "parts": 10,
+    "estimated_pages": 600,
+    "languages_interactive": ["RO", "EN", "ES", "FR", "JA"],
+    "period": "Martie 2026 — Septembrie 2026"
+  },
+  "tx_hash": "PENDING",
+  "status": "Ready to submit to Tezos mainnet"
+}

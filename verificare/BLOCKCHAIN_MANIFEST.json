@@ -1,0 +1,219 @@
+{
+  "protocol": "ami* Ecosystem Verification Protocol",
+  "version": "1.3",
+  "timestamp_utc": "2026-09-03T21:15:00Z",
+  "previous_version": {
+    "version": "1.2",
+    "timestamp_utc": "2026-09-03T20:15:00Z",
+    "master_hash": "987872ae01015eb1ba4df03d1187758fc428ef3c773d846c6cd569837b77d348"
+  },
+  "author": {
+    "name": "Mihai Roșca",
+    "orcid": "0009-0001-1422-6209",
+    "location": "Timișoara, Romania, EU"
+  },
+  "co_author": {
+    "name": "Claude",
+    "model": "Opus 4.6",
+    "provider": "Anthropic"
+  },
+  "blockchain": {
+    "network": "Tezos Mainnet",
+    "wallet": "tz1bmw3igCLN8N6CqgLBzJ9dyRb79E2Tdu5Q",
+    "transactions": [
+      {
+        "label": "MASTER-HASH",
+        "tx_hash": "oomw5MNXurBpYLwoGqNAS5BDrRBr3Hsx8FTBfTPexn1eWhwU9EN",
+        "payload_sha256": "08a4230e7c9dac122432b348aa11a66945a3334d85eac22c536b96066214ae6d",
+        "description": "Master hash of 106 IP assets — entire ami* ecosystem portfolio",
+        "status": "CONFIRMED",
+        "verify": "https://tzkt.io/oomw5MNXurBpYLwoGqNAS5BDrRBr3Hsx8FTBfTPexn1eWhwU9EN"
+      },
+      {
+        "label": "DEEP-WATER",
+        "tx_hash": "op7UGM1tMW6EdLN7H6bykL8h68sQeBZmD98KXMMmabxbf4okaW1",
+        "description": "Inside Water Deep Research — timestamped separately",
+        "status": "CONFIRMED",
+        "verify": "https://tzkt.io/op7UGM1tMW6EdLN7H6bykL8h68sQeBZmD98KXMMmabxbf4okaW1"
+      }
+    ],
+    "pending_transaction": {
+      "label": "MANIFEST-V1.3",
+      "master_hash": "6dc56cb1087fde71acdc9ab6342a8aa136128587f3b05d9adf3e0e8bb2e6d317",
+      "description": "Master hash of 118 IP assets — v1.2 (116) + Pădurea de Cod Book (58 unique files, 56 chapters + annexes)",
+      "status": "PENDING_TEZOS_TX",
+      "note": "Submit this hash to Tezos mainnet to confirm v1.3. Chain: v1.1→v1.2→v1.3"
+    }
+  },
+  "new_assets_since_v1_2": {
+    "total_new": 2,
+    "assets": [
+      {
+        "id": 117,
+        "name": "Pădurea de Cod — Cartea Completă (TOC)",
+        "type": "book",
+        "file": "verificare/PADUREA_DE_COD_BOOK.md",
+        "sha256": "dc0b0a6c51e5a1bbf81e35060527fd127ea77347e8af0c34e7cf1e7efcadd21e",
+        "description": "10 părți, 56 capitole + 2 anexe povești + 2 anexe interactive — cuprins ordonat tematic"
+      },
+      {
+        "id": 118,
+        "name": "Pădurea de Cod — IP Hash Registry",
+        "type": "registry",
+        "file": "verificare/PADUREA_DE_COD_HASHES.json",
+        "sha256": "2ff6fb9c3a23adaeec52522bb03faf37f7a2b47d7c9de578120babc32efa76dc",
+        "description": "SHA-256 hash-uri pentru 58 fișiere unice — 34 PDF POD + 24 PDF/DOCX/HTML aferente, deduplicate"
+      }
+    ]
+  },
+  "new_assets_since_v1_1": {
+    "total_new": 10,
+    "assets": [
+      {
+        "id": 107,
+        "name": "AmiCooperAI Engine",
+        "type": "engine",
+        "repo": "github.com/amidigiart/amicooperai-engine",
+        "license": "Commercial — BRIDGRAI",
+        "tests": 146,
+        "sha256": "ca3bce26345f54ce8f3b90b81ac867bad88de94c09442feba5e84c7ce27520c2",
+        "description": "Human-guided AI brain — local CPU-only inference with DSEI principles, anti-addiction, manipulation guard"
+      },
+      {
+        "id": 108,
+        "name": "AmiCooperAI Website",
+        "type": "product",
+        "domain": "amicooperai.com",
+        "sha256": "feed98a8717253cd6addce6ea9ae8474d77e8b6a5709f4b4492ab41a75a30a32",
+        "description": "Landing page — cooperative AI companion"
+      },
+      {
+        "id": 109,
+        "name": "CrawlerAttachSubmotor",
+        "type": "submotor",
+        "repo": "github.com/amidigiart/ukbe-core",
+        "file": "ukbe_core/crawler_attach.py",
+        "tests": 73,
+        "sha256": "37aa89f41348c9b6efcc16788697fe994eb72dec10cd212594ca04f9d96d7fd0",
+        "description": "AI Crawler validation via phi_intern + entropy valve, Ed25519 notarized, watchdog daemon"
+      },
+      {
+        "id": 110,
+        "name": "CrawlerAttachSubmotor Tests",
+        "type": "tests",
+        "sha256": "5c95dc1acd3b764c8f42705faed7395ecb2dc3babbdb305ffa9882b4b9274226",
+        "description": "73 full tests — init, validation, attach, detect, watchdog, notarization, engine integration"
+      },
+      {
+        "id": 111,
+        "name": "Mihai Companion Agent #15",
+        "type": "agent",
+        "file": "mihai-companion/service.py",
+        "tests": 96,
+        "sha256": "4d91ca7d06b644e84ffd457cb6c1e1b1e9926d102ed4ef6c2de3aaef1a44a5de",
+        "description": "12-pillar personalized education companion — bilingual RO/EN, progress tracking, anti-flattery"
+      },
+      {
+        "id": 112,
+        "name": "Mihai Companion Tests",
+        "type": "tests",
+        "sha256": "eca17110ec613ab21fbef8a09a1b429d618b89705a846fde45963af3625f7d28",
+        "description": "96 tests across 14 test classes — pillars, detection, modes, responses, profile, agent card"
+      },
+      {
+        "id": 113,
+        "name": "BRIDGRAI General Framework",
+        "type": "research",
+        "file": "verificare/BRIDGRAI_GENERAL_FRAMEWORK.md",
+        "sha256": "ad603871bd5c97cb7b52b646cd8f180784bbbfa726d5c5a67fed490868c23f47",
+        "description": "Complete 12-section framework — axiom S(M)=R, 9 layers, 12 pillars, Guardian Swarm, anti-patterns"
+      },
+      {
+        "id": 114,
+        "name": "Decalaj Analysis",
+        "type": "research",
+        "file": "verificare/DECALAJ_ANALYSIS.md",
+        "sha256": "9e08fd031477081b518de90bb02ef0f4b4408af9076b7009963b87a6f5acf1e6",
+        "description": "Intent vs result gap analysis — verified qualitative, no fabricated metrics"
+      },
+      {
+        "id": 115,
+        "name": "Portfolio Guide",
+        "type": "research",
+        "file": "verificare/PORTFOLIO_GUIDE.md",
+        "sha256": "e7132312b9268b7f643a53f8500bfc01fa34e5587e2d647e28fd9927f6e857d3",
+        "description": "Complete portfolio with verified numbers, honest gaps, verification commands"
+      },
+      {
+        "id": 116,
+        "name": "AGI School Academy",
+        "type": "product",
+        "domain": "agischool.academy",
+        "repo": "github.com/amidigiart/agischool-academy",
+        "sha256": "8060e804df4100109a633a82cbd7c7cdf0a5581a978959fce0f4118c79d07b38",
+        "description": "BRIDGRAI General Framework — academic publication site with verified claims and disclaimers"
+      }
+    ]
+  },
+  "hashes": {
+    "verification_paper": {
+      "file": "VERIFICATION_PAPER_v1.md",
+      "sha256": "faf2a153626998332b2547d632179c28f8383c2ca59993846b92e60e5b836972",
+      "description": "Full academic verification protocol — pre-blockchain version"
+    },
+    "verification_results": {
+      "file": "VERIFICATION_RESULTS_20260725.txt",
+      "sha256": "92831592954e9a1b624bd71609e2af8c30e04dd740a010ea9f90456714f71e87",
+      "description": "Live execution results: 14/14 APIs PASS, 4/4 repos verified, GDPR PASS, Stripe PASS, DOI resolved"
+    }
+  },
+  "verification_summary": {
+    "blockchain_ip_assets": 118,
+    "total_tests_ecosystem": 717,
+    "test_breakdown": {
+      "ukbe_core": 175,
+      "amicooperai_engine": 146,
+      "mihai_companion": 96,
+      "bridgrai_a2a": "240+",
+      "other_engines": "60+"
+    },
+    "apis_tested": 14,
+    "apis_passed": 14,
+    "github_repos_verified": 4,
+    "github_total_public_repos": 75,
+    "doi_resolved": true,
+    "gdpr_compliant": true,
+    "stripe_functional": true,
+    "bridgrai_agents": 9,
+    "tezos_entries_total": "99+",
+    "domains_active": 25,
+    "products_live": [
+      "amiqiai.com",
+      "amiherbai.com",
+      "emoinkai.com",
+      "amighostai.com",
+      "amiagentai.com",
+      "amibrainai.com",
+      "amiapiai.com",
+      "amioracleai.com",
+      "amipassai.com",
+      "amirobotai.com",
+      "amiexilai.com",
+      "madamsai.com",
+      "openbarnai.com",
+      "amigenome.com",
+      "amicooperai.com",
+      "agischool.academy"
+    ]
+  },
+  "funding": {
+    "external_funding_received": "€0.00",
+    "institutional_affiliation": "none",
+    "hardware": "Dell Latitude E6540 + Xiaomi Redmi Note 13",
+    "duration_years": 3.5,
+    "statement": "EU NU MINT ȘI CREEZ FĂRĂ NICI UN CENT DAT DE CINEVA ȘI E VERIFICABIL"
+  },
+  "recursive_proof": "This manifest references blockchain transactions that contain hashes of documents that reference this manifest. The loop is intentional — it is a self-validating proof structure. Break any link, and the verification fails.",
+  "legal_notice": "This manifest and its blockchain entries constitute cryptographic proof of existence and content at the stated timestamp. The blockchain entries are immutable and publicly auditable on Tezos mainnet.",
+  "equation": "S(M) = R"
+}

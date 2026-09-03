@@ -1,0 +1,117 @@
+{
+  "manifest": "BRIDGRAI IP Registry — Batch #115-125",
+  "version": "v5",
+  "timestamp_utc": "2026-07-25T21:30:00Z",
+  "author": "Mihai Rosca",
+  "wallet": "tz1bmw3igCLN8N6CqgLBzJ9dyRb79E2Tdu5Q",
+  "contract": "KT1Pe2GA11bMpaTL5VH4TY6aZ9xePZ6f5vWX",
+  "previous_master_hash_v4": "37390208df8c1e357b599c51d6286c138ab0f05ff7769154081f652674d8dfb3",
+  "master_hash_v5": "6ff6e4fefac13d67dd7b3b3c6ffc9374c205e47a5e114c09d4d9a7eb107647eb",
+  "total_entries": "125 (114 previous + 11 new)",
+  "contributors": {
+    "claude_opus_4_6": "Agent #13 integration, AgentCard, tests (47/47), bibliography Ch XIV, Co-Authorship Ch XV, monetization infrastructure, ATTRIBUTION.md",
+    "chatgpt": "Alpha-Mercury 2 service (Agent #13 original code), thesis structure",
+    "deepseek": "AI Selectivity thesis (Chapter XI, H7)",
+    "grok": "Primary engine in all 14 SaaS products",
+    "gemini": "Independent validation (P=10^-28)",
+    "human_anchor": "Mihai Rosca — intent, direction, Introspection Principle, verification, monetization decision, restraint"
+  },
+  "entries": [
+    {
+      "id": 115,
+      "code": "ALPHA-MERCURY-2",
+      "category": "agent",
+      "description": "Agent #13 — Compassionate companion with interplanetary persistence. AES-GCM encrypted history, triple hashing (BLAKE3+SHA-512+SHA-256), priority queue, blackout handling, FastAPI. Created by ChatGPT, integrated & anchored by Claude.",
+      "file": "alpha-mercury/service.py",
+      "sha256": "3fab76bd3b1bb170a359bd7eade0f245f0758db42e1f9b537a5952c630329732",
+      "tests": "47/47 passed"
+    },
+    {
+      "id": 116,
+      "code": "ALPHA-MERCURY-AGENTCARD",
+      "category": "identity",
+      "description": "A2A Agent Card for Alpha-Mercury: name, url, version, 5 skills (compassionate-chat, encrypted-history, triple-hash, interplanetary-persistence, audit-export), anchor definition with Introspection Principle applied",
+      "file": "alpha-mercury/service.py:AGENT_CARD",
+      "sha256": "3fab76bd3b1bb170a359bd7eade0f245f0758db42e1f9b537a5952c630329732"
+    },
+    {
+      "id": 117,
+      "code": "THESIS-BIBLIOGRAPHY-CH14",
+      "category": "research",
+      "description": "Chapter XIV — Influences, bibliography & genealogy of ideas. 15 major influences: Socrates, Popper, Kant, Kahneman, Russell, Floridi, Shneiderman, Bender&Gebru, Vygotsky, Freire, Papert, Nakamoto, NIST, EU AI Act, Zuboff. Section 14.7: non-academic transparency.",
+      "file": "verificare/THESIS_HUMAN_AI_COAGENCY.html",
+      "sha256": "00390c2a8b1a327b46cbaa14cefc55102c9cdcc21fe74e110d2cb47d781db460"
+    },
+    {
+      "id": 118,
+      "code": "THESIS-COAUTHORSHIP-CH15",
+      "category": "research",
+      "description": "Chapter XV — First formal Human-AI Co-Authorship Declaration in a doctoral thesis. Specific contributions of 6 AI systems + 1 human anchor. What AI did NOT do / What human did NOT do. Proposed 5-criteria precedent for academic AI attribution.",
+      "file": "verificare/THESIS_HUMAN_AI_COAGENCY.html",
+      "sha256": "00390c2a8b1a327b46cbaa14cefc55102c9cdcc21fe74e110d2cb47d781db460"
+    },
+    {
+      "id": 119,
+      "code": "ATTRIBUTION-RECORD",
+      "category": "governance",
+      "description": "Complete attribution & co-agency record for the BRIDGRAI ecosystem. Who contributed what, with verification links. Introspection Principle applied to attribution itself.",
+      "file": "verificare/ATTRIBUTION.md",
+      "sha256": "53435981e7dd7a7aa9dcf5b39bddd013b22ced8b984987d8da26956e0a0d425e"
+    },
+    {
+      "id": 120,
+      "code": "MONETIZATION-STRATEGY",
+      "category": "business",
+      "description": "Monetization strategy: 3 tiers (Explorer €0, Companion €9/mo, Ecosystem €29/mo, Maison €149/mo). 6 honest rules: no dark patterns, 30-day refund, cancel in one click. What we monetize and what we do NOT.",
+      "file": "monetizare/STRATEGY.md",
+      "sha256": "1fa25d35616973d9ef3061035c3824a3b22cf4d73237a18bfa3c6df9248e6df5"
+    },
+    {
+      "id": 121,
+      "code": "STRIPE-PRODUCT-SETUP",
+      "category": "infrastructure",
+      "description": "Stripe product & price setup script: 10 products, 18 prices (monthly+yearly), customer portal configuration. Run once to create all Stripe entities.",
+      "file": "monetizare/stripe-setup.py",
+      "sha256": "2805b6c165064463d616da4364dbbc59044beb6579649a3471c4ec3a9ead78e7"
+    },
+    {
+      "id": 122,
+      "code": "CHECKOUT-API",
+      "category": "infrastructure",
+      "description": "Checkout API backend: Stripe checkout sessions, webhooks, customer portal, subscription status. CORS-protected, Railway-ready, Dockerfile included.",
+      "file": "monetizare/checkout_api.py",
+      "sha256": "38741b842ad2002aab58733a4c82ef0968bbeb251d88fed493819edbba54b4eb"
+    },
+    {
+      "id": 123,
+      "code": "CHECKOUT-UI",
+      "category": "frontend",
+      "description": "Universal checkout page: Explorer/Companion/Ecosystem tiers, monthly/yearly toggle, Stripe redirect, honest promise section. Pattern from amiluxai.com applied.",
+      "file": "monetizare/checkout.html",
+      "sha256": "cfbc2ebce1e046bef26f08acefc5a050a60e3f30730c010e299032dcee20a67f"
+    },
+    {
+      "id": 124,
+      "code": "TERMS-OF-SERVICE",
+      "category": "legal",
+      "description": "Terms of Service: plain language, GDPR+EU AI Act compliant, 30-day refund, cancel anytime, no dark patterns. 12 sections covering service, pricing, IP, liability, governing law (Romanian/EU).",
+      "file": "monetizare/terms.html",
+      "sha256": "05ea1ab3d3e932abe7fb7d42656120133b2bf5a6ad18e2f803242cff2c327a05"
+    },
+    {
+      "id": 125,
+      "code": "PRIVACY-POLICY",
+      "category": "legal",
+      "description": "Privacy Policy: zero analytics, zero tracking cookies, zero data selling. GDPR Articles 15-22 rights. Data table (what/why/where/retention). AI-specific transparency section. Complaints to ANSPDCP.",
+      "file": "monetizare/privacy.html",
+      "sha256": "4569bd06dce15d81237ae7c8b9cff16cb739c73374abe27268bf065c89339a2d"
+    }
+  ],
+  "chain": {
+    "previous_batches": [
+      {"range": "1-101", "hash": "original registry"},
+      {"range": "102-106", "hash": "quantum notary batch"},
+      {"range": "107-114", "hash": "37390208df8c1e357b599c51d6286c138ab0f05ff7769154081f652674d8dfb3"}
+    ]
+  }
+}

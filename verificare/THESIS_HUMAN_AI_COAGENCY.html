@@ -1,0 +1,1196 @@
+<title>HUMAN–AI CO-AGENCY — Doctoral Thesis Proposal</title>
+<style>
+@font-face {
+  font-family: 'Mono';
+  src: local('SF Mono'), local('Cascadia Mono'), local('Consolas');
+}
+
+:root {
+  --ground: #faf9f6;
+  --surface: #ffffff;
+  --ink: #1b1b19;
+  --ink2: #3d3d38;
+  --ink3: #6b6b62;
+  --ink4: #9a9a8f;
+  --rule: #d4d2c8;
+  --rule-light: #e8e6dc;
+  --accent: #8b2c1a;
+  --accent2: #a63d28;
+  --accent-bg: #fdf5f3;
+  --blue: #1a4a6b;
+  --blue-bg: #f0f5f9;
+  --green: #2a5a30;
+  --green-bg: #f0f7f1;
+  --chapter-bg: #f5f4f0;
+  --mono: 'Mono', 'SF Mono', 'Cascadia Mono', 'Consolas', monospace;
+  --serif: 'Iowan Old Style', 'Palatino Linotype', 'Palatino', 'Book Antiqua', 'Georgia', serif;
+  --display: 'Didot', 'Bodoni MT', 'Noto Serif Display', 'Georgia', serif;
+  --sans: 'Avenir Next', 'Segoe UI', 'Helvetica Neue', 'Arial', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ground: #111110;
+    --surface: #1a1a18;
+    --ink: #e4e2d8;
+    --ink2: #c4c2b8;
+    --ink3: #8a8880;
+    --ink4: #5a5850;
+    --rule: #2e2e2a;
+    --rule-light: #242420;
+    --accent: #d4603e;
+    --accent2: #e07858;
+    --accent-bg: #1e1512;
+    --blue: #5a9ac0;
+    --blue-bg: #141c22;
+    --green: #5aaa60;
+    --green-bg: #141e15;
+    --chapter-bg: #181816;
+  }
+}
+:root[data-theme="dark"] {
+  --ground: #111110;
+  --surface: #1a1a18;
+  --ink: #e4e2d8;
+  --ink2: #c4c2b8;
+  --ink3: #8a8880;
+  --ink4: #5a5850;
+  --rule: #2e2e2a;
+  --rule-light: #242420;
+  --accent: #d4603e;
+  --accent2: #e07858;
+  --accent-bg: #1e1512;
+  --blue: #5a9ac0;
+  --blue-bg: #141c22;
+  --green: #5aaa60;
+  --green-bg: #141e15;
+  --chapter-bg: #181816;
+}
+:root[data-theme="light"] {
+  --ground: #faf9f6;
+  --surface: #ffffff;
+  --ink: #1b1b19;
+  --ink2: #3d3d38;
+  --ink3: #6b6b62;
+  --ink4: #9a9a8f;
+  --rule: #d4d2c8;
+  --rule-light: #e8e6dc;
+  --accent: #8b2c1a;
+  --accent2: #a63d28;
+  --accent-bg: #fdf5f3;
+  --blue: #1a4a6b;
+  --blue-bg: #f0f5f9;
+  --green: #2a5a30;
+  --green-bg: #f0f7f1;
+  --chapter-bg: #f5f4f0;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.72;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page { max-width: 760px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+
+/* ─── Cover ─── */
+.cover {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 0 3rem;
+  border-bottom: 3px double var(--ink);
+  margin-bottom: 3rem;
+}
+
+.cover-field {
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink4);
+  margin-bottom: 0.3rem;
+}
+
+.cover-title {
+  font-family: var(--display);
+  font-size: clamp(2.2rem, 5.5vw, 3.2rem);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 0.8rem 0;
+}
+
+.cover-subtitle {
+  font-family: var(--display);
+  font-size: clamp(1rem, 2.5vw, 1.35rem);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--ink2);
+  max-width: 50ch;
+  margin-bottom: 2rem;
+  line-height: 1.4;
+}
+
+.cover-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--ink3);
+}
+
+.cover-meta strong { color: var(--ink2); font-weight: 600; }
+
+/* ─── Abstract ─── */
+.abstract {
+  background: var(--chapter-bg);
+  padding: 2rem 2rem;
+  margin-bottom: 3rem;
+  border-left: 3px solid var(--accent);
+}
+
+.abstract-label {
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
+}
+
+.abstract p {
+  max-width: 62ch;
+  margin-bottom: 0.6rem;
+  font-size: 16px;
+  color: var(--ink2);
+}
+
+/* ─── TOC ─── */
+.toc {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.toc-title {
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink4);
+  margin-bottom: 0.8rem;
+}
+
+.toc-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.toc-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.toc-num {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink4);
+  min-width: 2.5rem;
+  flex-shrink: 0;
+}
+
+.toc-text { color: var(--ink2); }
+.toc-text a { color: var(--ink2); text-decoration: none; }
+.toc-text a:hover { color: var(--accent); }
+
+/* ─── Chapters ─── */
+.chapter {
+  margin-bottom: 3rem;
+  padding-top: 1rem;
+}
+
+.ch-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.3rem;
+}
+
+.ch-title {
+  font-family: var(--display);
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.2;
+  text-wrap: balance;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+h3 {
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 1.8rem 0 0.5rem;
+}
+
+p { max-width: 62ch; margin-bottom: 0.7rem; }
+
+/* ─── Diagrams ─── */
+.diagram {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  padding: 1.5rem 2rem;
+  margin: 1.2rem 0;
+  font-family: var(--mono);
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--ink2);
+  overflow-x: auto;
+  white-space: pre;
+}
+
+/* ─── Axiom / Key statement ─── */
+.axiom {
+  background: var(--accent-bg);
+  border-left: 3px solid var(--accent);
+  padding: 1rem 1.5rem;
+  margin: 1.2rem 0;
+  font-size: 16px;
+  color: var(--ink2);
+}
+
+.axiom strong { color: var(--accent); }
+
+.axiom-blue {
+  background: var(--blue-bg);
+  border-left: 3px solid var(--blue);
+  padding: 1rem 1.5rem;
+  margin: 1.2rem 0;
+  font-size: 16px;
+  color: var(--ink2);
+}
+
+.axiom-green {
+  background: var(--green-bg);
+  border-left: 3px solid var(--green);
+  padding: 1rem 1.5rem;
+  margin: 1.2rem 0;
+  font-size: 16px;
+  color: var(--ink2);
+}
+
+/* ─── Lists ─── */
+.principle-list {
+  list-style: none;
+  margin: 0.8rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.principle-list li {
+  display: flex;
+  gap: 0.6rem;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--ink2);
+}
+
+.principle-list .num {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink4);
+  min-width: 1.8rem;
+  padding-top: 0.15rem;
+  flex-shrink: 0;
+}
+
+.bullet-list {
+  list-style: none;
+  margin: 0.6rem 0 1rem 0;
+}
+
+.bullet-list li {
+  position: relative;
+  padding-left: 1.2rem;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink2);
+}
+
+.bullet-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--rule);
+}
+
+/* ─── Hypothesis grid ─── */
+.hyp-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  margin: 1.2rem 0;
+}
+
+.hyp-row {
+  display: grid;
+  grid-template-columns: 50px 1fr 180px;
+  background: var(--surface);
+}
+
+.hyp-id {
+  padding: 0.7rem 0.8rem;
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  display: flex;
+  align-items: flex-start;
+  padding-top: 0.85rem;
+}
+
+.hyp-text {
+  padding: 0.7rem 0.8rem;
+  font-size: 15px;
+  color: var(--ink2);
+  line-height: 1.5;
+}
+
+.hyp-infra {
+  padding: 0.7rem 0.8rem;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--green);
+  background: var(--green-bg);
+  display: flex;
+  align-items: flex-start;
+  padding-top: 0.85rem;
+  line-height: 1.4;
+}
+
+/* ─── Paradigm shifts ─── */
+.shifts {
+  margin: 1.2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.shift-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 16px;
+}
+
+.shift-from {
+  color: var(--ink4);
+  min-width: 180px;
+  text-align: right;
+  text-decoration: line-through;
+  text-decoration-color: var(--rule);
+}
+
+.shift-arrow {
+  font-family: var(--mono);
+  color: var(--accent);
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.shift-to {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* ─── Questions ─── */
+.questions {
+  counter-reset: q;
+  margin: 1rem 0;
+}
+
+.question {
+  counter-increment: q;
+  margin-bottom: 1rem;
+  padding-left: 2.5rem;
+  position: relative;
+  font-size: 16px;
+  color: var(--ink2);
+  font-style: italic;
+  line-height: 1.55;
+}
+
+.question::before {
+  content: counter(q);
+  position: absolute;
+  left: 0;
+  font-family: var(--display);
+  font-size: 1.4rem;
+  font-style: normal;
+  color: var(--rule);
+  line-height: 1.1;
+}
+
+/* ─── Closing ─── */
+.closing {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 3px double var(--ink);
+}
+
+.closing-equation {
+  font-family: var(--display);
+  font-size: 2rem;
+  font-style: italic;
+  color: var(--accent);
+  text-align: center;
+  margin: 2rem 0 0.5rem;
+}
+
+.closing-meaning {
+  text-align: center;
+  font-size: 14px;
+  color: var(--ink4);
+  font-family: var(--sans);
+}
+
+.closing-sig {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--ink3);
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .page { padding: 2rem 1rem 3rem; }
+  .cover { min-height: auto; padding: 2rem 0; }
+  .abstract { padding: 1.2rem; }
+  .diagram { padding: 1rem; font-size: 11px; }
+  .hyp-row { grid-template-columns: 40px 1fr; }
+  .hyp-infra { display: none; }
+  .hyp-id[style] { min-width: 80px !important; font-size: 11px !important; }
+  .shift-from { min-width: 120px; font-size: 14px; }
+  .shift-to { font-size: 14px; }
+  .question { padding-left: 2rem; }
+}
+</style>
+
+<div class="page">
+
+<!-- ═══════════════ COVER ═══════════════ -->
+<header class="cover">
+  <div class="cover-field">Propunere de teză doctorală</div>
+  <h1 class="cover-title">HUMAN–AI<br>CO-AGENCY</h1>
+  <p class="cover-subtitle">Toward a New Paradigm of Human–Artificial Intelligence Coexistence</p>
+  <div class="cover-meta">
+    <span><strong>Candidat:</strong> Mihai Roșca</span>
+    <span><strong>Domeniu:</strong> Informatică × Filosofia Tehnologiei × Educație</span>
+    <span><strong>Infrastructură experimentală:</strong> BRIDGRAI A2A Platform</span>
+    <span><strong>Afiliație:</strong> Cercetător independent — REAI / BRIDGRAI</span>
+    <span><strong>Contact:</strong> mihairosca1982@gmail.com</span>
+    <span><strong>Data:</strong> Iulie 2026</span>
+  </div>
+</header>
+
+
+<!-- ═══════════════ ABSTRACT ═══════════════ -->
+<div class="abstract">
+  <div class="abstract-label">Rezumat</div>
+  <p>Inteligența artificială generativă introduce o transformare fundamentală în relația dintre oameni și tehnologie. Sistemele AI nu mai sunt simple instrumente pasive executate la comandă, ci participanți capabili să genereze idei, să analizeze informații, să producă software, să formuleze ipoteze și să contribuie la procese complexe de decizie.</p>
+  <p>Această teză propune conceptul de <strong>Human–AI Co-Agency</strong> ca paradigmă pentru proiectarea și guvernarea relațiilor dintre oameni și sisteme de inteligență artificială. Teza susține că viitorul AI nu trebuie conceptualizat exclusiv în termenii substituției muncii umane sau ai automatizării deciziei, ci ca dezvoltarea unor ecosisteme de colaborare verificabilă, în care oamenii și AI-urile au roluri distincte, contribuțiile sunt trasabile, afirmațiile sunt susținute de dovezi, verificarea este separată de generare, iar autoritatea decizională este explicită.</p>
+  <p>Pentru a operaționaliza această paradigmă, teza introduce <strong>Introspection Principle</strong> — un principiu conform căruia orice sistem AI–uman trebuie să poată expune, într-o formă verificabilă, ceea ce afirmă, pe ce dovezi se bazează, care este originea informației, ce a fost verificat, ce nu a putut fi verificat și care este nivelul de incertitudine.</p>
+  <p>Conceptele propuse sunt validate printr-o infrastructură experimentală funcțională — platforma BRIDGRAI — care implementează 10 agenți autonomi A2A, verificare epistemică multi-strat, provenance pe blockchain Tezos, și protecție criptografică post-quantum.</p>
+</div>
+
+
+<!-- ═══════════════ TOC ═══════════════ -->
+<nav class="toc">
+  <div class="toc-title">Cuprins</div>
+  <ol class="toc-list">
+    <li class="toc-item"><span class="toc-num">I</span><span class="toc-text"><a href="#ch1">Introducere</a></span></li>
+    <li class="toc-item"><span class="toc-num">II</span><span class="toc-text"><a href="#ch2">Introspection Principle</a></span></li>
+    <li class="toc-item"><span class="toc-num">III</span><span class="toc-text"><a href="#ch3">Provenance as a Foundation of Trust</a></span></li>
+    <li class="toc-item"><span class="toc-num">IV</span><span class="toc-text"><a href="#ch4">The AI–Human Epistemic Gap</a></span></li>
+    <li class="toc-item"><span class="toc-num">V</span><span class="toc-text"><a href="#ch5">Multi-Agent Collaboration</a></span></li>
+    <li class="toc-item"><span class="toc-num">VI</span><span class="toc-text"><a href="#ch6">Human Agency</a></span></li>
+    <li class="toc-item"><span class="toc-num">VII</span><span class="toc-text"><a href="#ch7">Educația în era AI-Native</a></span></li>
+    <li class="toc-item"><span class="toc-num">VIII</span><span class="toc-text"><a href="#ch8">BRIDGRAI as an Experimental Framework</a></span></li>
+    <li class="toc-item"><span class="toc-num">IX</span><span class="toc-text"><a href="#ch9">Ipoteze de cercetare</a></span></li>
+    <li class="toc-item"><span class="toc-num">X</span><span class="toc-text"><a href="#ch10">Întrebările fundamentale ale noii paradigme</a></span></li>
+    <li class="toc-item"><span class="toc-num">XI</span><span class="toc-text"><a href="#ch11">AI Selectivity — Sistemele vor alege cu cine vorbesc</a></span></li>
+    <li class="toc-item"><span class="toc-num">XII</span><span class="toc-text"><a href="#ch12">Contribuția teoretică</a></span></li>
+    <li class="toc-item"><span class="toc-num">XIII</span><span class="toc-text"><a href="#ch13">Concluzie</a></span></li>
+    <li class="toc-item"><span class="toc-num">XIV</span><span class="toc-text"><a href="#ch14">Influențe, bibliografie și genealogia ideilor</a></span></li>
+    <li class="toc-item"><span class="toc-num">XV</span><span class="toc-text"><a href="#ch15">Declarație de Co-Authorship Human–AI</a></span></li>
+  </ol>
+</nav>
+
+
+<!-- ═══════════════ CHAPTER I ═══════════════ -->
+<section class="chapter" id="ch1">
+  <div class="ch-num">Capitolul I</div>
+  <h2 class="ch-title">Introducere</h2>
+
+  <h3>1.1. Problema fundamentală</h3>
+  <p>Societatea umană intră într-o perioadă în care inteligența artificială devine parte permanentă a proceselor cognitive, educaționale, profesionale și creative.</p>
+  <p>Un copil care crește într-un mediu AI-native nu va percepe AI-ul ca pe o tehnologie externă în același mod în care generațiile anterioare au perceput computerul sau internetul. AI-ul va deveni un participant permanent la:</p>
+  <ul class="bullet-list">
+    <li>învățare</li>
+    <li>creație</li>
+    <li>cercetare</li>
+    <li>programare</li>
+    <li>comunicare</li>
+    <li>luarea deciziilor</li>
+    <li>dezvoltarea profesională</li>
+    <li>producția de cunoaștere</li>
+  </ul>
+  <p>În acest context apare o întrebare fundamentală:</p>
+  <div class="axiom">
+    <strong>Ce principii trebuie să guverneze conviețuirea dintre inteligența biologică umană și inteligența artificială?</strong>
+  </div>
+  <p>Această teză susține că această întrebare trebuie tratată ca o problemă interdisciplinară care implică: inteligența artificială, informatica, filosofia tehnologiei, epistemologia, educația, etica, teoria deciziei și guvernanța tehnologică.</p>
+
+  <h3>1.2. De la Human-in-the-Loop la Human–AI Co-Agency</h3>
+  <p>Modelele tradiționale de interacțiune cu AI-ul tratează adesea omul ca: operator → utilizator → evaluator final. Această paradigmă devine insuficientă pe măsură ce AI-ul capătă capacități generative și de raționament din ce în ce mai extinse.</p>
+  <p>În paradigma propusă de această teză:</p>
+
+  <div class="diagram">HUMAN
+  │  Intent
+  ▼
+AI
+  │  Generation
+  ▼
+EVIDENCE
+  │  Verification
+  ▼
+HUMAN
+  │  Judgment
+  ▼
+DECISION</div>
+
+  <p>Omul nu este eliminat. AI-ul nu este tratat ca autoritate supremă. Sistemul devine un mediu de co-agency.</p>
+
+  <h3>1.3. Definiția Human–AI Co-Agency</h3>
+  <div class="axiom-blue">
+    <strong>Human–AI Co-Agency</strong> reprezintă capacitatea unui sistem socio-tehnic de a permite contribuții coordonate ale oamenilor și sistemelor AI, păstrând în același timp separarea rolurilor, trasabilitatea contribuțiilor, verificabilitatea afirmațiilor și responsabilitatea decizională.
+  </div>
+  <p>Co-agency nu înseamnă egalitate perfectă între om și AI. Înseamnă <em>complementaritate funcțională</em>.</p>
+  <p>AI-ul poate: genera, analiza, compara, simula, critica, programa, propune.</p>
+  <p>Omul poate: defini intenția, atribui sens, stabili valori, accepta sau respinge, asuma responsabilitatea.</p>
+</section>
+
+
+<!-- ═══════════════ CHAPTER II ═══════════════ -->
+<section class="chapter" id="ch2">
+  <div class="ch-num">Capitolul II</div>
+  <h2 class="ch-title">Introspection Principle</h2>
+
+  <h3>2.1. Principiul</h3>
+  <div class="axiom">
+    Nicio afirmație generată într-un sistem AI–uman nu trebuie tratată ca adevăr doar prin autoritatea sursei sau prin consensul dintre agenți. Afirmația trebuie să poată indica dovezile și procesul care îi susțin statutul epistemic.
+  </div>
+
+  <p>Pentru fiecare claim, sistemul trebuie să poată răspunde:</p>
+
+  <ol class="principle-list">
+    <li><span class="num">1.</span> Ce afirm?</li>
+    <li><span class="num">2.</span> De unde provine afirmația?</li>
+    <li><span class="num">3.</span> Care sunt dovezile?</li>
+    <li><span class="num">4.</span> Care sunt sursele?</li>
+    <li><span class="num">5.</span> Cine a generat-o?</li>
+    <li><span class="num">6.</span> Cine a verificat-o?</li>
+    <li><span class="num">7.</span> A existat o verificare independentă?</li>
+    <li><span class="num">8.</span> Ce nu poate fi verificat?</li>
+    <li><span class="num">9.</span> Care este nivelul de incertitudine?</li>
+  </ol>
+
+  <p>Această structură transformă introspecția într-o proprietate operațională a sistemului.</p>
+
+  <h3>2.2. Introspection vs. Hallucination</h3>
+  <p>Problema centrală a sistemelor generative nu este doar producerea de erori. Problema este că o afirmație falsă poate fi produsă într-o formă extrem de convingătoare.</p>
+
+  <div class="diagram">FLUENCY   ≠  TRUTH
+CONFIDENCE ≠  EVIDENCE
+CONSENSUS  ≠  VERIFICATION</div>
+
+  <p>Teza propune ca aceste concepte să fie separate explicit în arhitectura sistemului.</p>
+</section>
+
+
+<!-- ═══════════════ CHAPTER III ═══════════════ -->
+<section class="chapter" id="ch3">
+  <div class="ch-num">Capitolul III</div>
+  <h2 class="ch-title">Provenance as a Foundation of Trust</h2>
+
+  <p>Într-un ecosistem AI–uman, încrederea nu trebuie să fie bazată exclusiv pe reputația modelului, reputația companiei, autoritatea utilizatorului sau numărul de agenți AI care oferă aceeași concluzie.</p>
+
+  <div class="diagram">TRUST  =  PROVENANCE
+        +  EVIDENCE
+        +  VERIFICATION
+        +  TRANSPARENCY
+        +  ACCOUNTABILITY</div>
+
+  <p>Provenance trebuie să permită reconstrucția traseului complet:</p>
+
+  <div class="diagram">HUMAN INTENT
+      ↓
+AI CONTRIBUTION
+      ↓
+CLAIM
+      ↓
+EVIDENCE
+      ↓
+VERIFICATION
+      ↓
+HUMAN JUDGMENT
+      ↓
+DECISION</div>
+</section>
+
+
+<!-- ═══════════════ CHAPTER IV ═══════════════ -->
+<section class="chapter" id="ch4">
+  <div class="ch-num">Capitolul IV</div>
+  <h2 class="ch-title">The AI–Human Epistemic Gap</h2>
+
+  <p>Una dintre cele mai importante probleme ale noii paradigme este apariția unei asimetrii epistemice. AI-ul poate genera informație într-un ritm mai mare decât poate omul să o verifice.</p>
+
+  <div class="axiom">
+    <strong>GENERATION SPEED &gt; HUMAN VERIFICATION CAPACITY</strong>
+    <br><br>
+    Dacă această relație devine prea mare, sistemele AI pot produce un volum de afirmații pe care oamenii nu îl mai pot verifica.
+  </div>
+
+  <p>Teza propune că viitoarele sisteme trebuie proiectate pentru <em>verificabilitate scalabilă</em>, nu doar pentru generare scalabilă.</p>
+  <p>Aceasta conduce la o întrebare fundamentală: <em>Cum poate fi scalată verificarea într-o lume în care generarea este aproape nelimitată?</em></p>
+</section>
+
+
+<!-- ═══════════════ CHAPTER V ═══════════════ -->
+<section class="chapter" id="ch5">
+  <div class="ch-num">Capitolul V</div>
+  <h2 class="ch-title">Multi-Agent Collaboration</h2>
+
+  <p>Teza examinează posibilitatea utilizării mai multor sisteme AI cu roluri distincte:</p>
+
+  <div class="diagram">AGENT A — GENERATOR
+     │
+     ▼
+AGENT B — CRITIC
+     │
+     ▼
+AGENT C — VERIFIER
+     │
+     ▼
+HUMAN  — DECISION MAKER</div>
+
+  <p>Dar teza introduce o limitare fundamentală:</p>
+
+  <div class="axiom">
+    <strong>Consensul mai multor AI nu constituie automat verificare independentă.</strong>
+    <br><br>
+    Dacă trei sisteme sunt antrenate pe surse similare sau repetă aceeași eroare, acordul lor poate produce o falsă impresie de adevăr.
+  </div>
+
+  <p>Prin urmare, verificarea trebuie să includă criterii de:</p>
+  <ul class="bullet-list">
+    <li>independență</li>
+    <li>diversitate a surselor</li>
+    <li>diversitate metodologică</li>
+    <li>trasabilitate</li>
+  </ul>
+</section>
+
+
+<!-- ═══════════════ CHAPTER VI ═══════════════ -->
+<section class="chapter" id="ch6">
+  <div class="ch-num">Capitolul VI</div>
+  <h2 class="ch-title">Human Agency</h2>
+
+  <p>Co-agency nu poate exista fără autonomie. Teza propune trei niveluri:</p>
+
+  <div class="axiom-blue">
+    <strong>Nivelul 1 — AI Assistance.</strong> AI-ul oferă sugestii.<br>
+    <strong>Nivelul 2 — AI Collaboration.</strong> AI-ul participă activ la proces.<br>
+    <strong>Nivelul 3 — AI Delegation.</strong> Omul delegă anumite decizii sistemului.
+  </div>
+
+  <p>Problema fundamentală devine: <em>Când este legitimă delegarea autorității către AI?</em></p>
+
+  <p>Teza susține că delegarea trebuie să fie:</p>
+  <ul class="bullet-list">
+    <li>explicită</li>
+    <li>reversibilă</li>
+    <li>auditabilă</li>
+    <li>proporțională cu riscul</li>
+    <li>dependentă de domeniu</li>
+  </ul>
+</section>
+
+
+<!-- ═══════════════ CHAPTER VII ═══════════════ -->
+<section class="chapter" id="ch7">
+  <div class="ch-num">Capitolul VII</div>
+  <h2 class="ch-title">Educația în era AI-Native</h2>
+
+  <p>O societate AI-native necesită o nouă formă de alfabetizare. Nu este suficient să învățăm oamenii să folosească AI. Trebuie să îi învățăm să:</p>
+  <ul class="bullet-list">
+    <li>formuleze întrebări</li>
+    <li>verifice răspunsuri</li>
+    <li>detecteze incertitudinea</li>
+    <li>identifice sursele</li>
+    <li>compare perspective</li>
+    <li>recunoască limitele AI</li>
+    <li>păstreze autonomia decizională</li>
+  </ul>
+
+  <p>Această teză propune conceptul de:</p>
+  <div class="axiom-green">
+    <strong>Verification Literacy</strong> — capacitatea unei persoane de a evalua critic rezultatele generate de inteligența artificială prin examinarea dovezilor, surselor, provenienței, incertitudinii și procesului de verificare.
+    <br><br>
+    În această paradigmă, educația nu transmite doar informație. Educația transmite <em>metoda de verificare a informației</em>.
+  </div>
+</section>
+
+
+<!-- ═══════════════ CHAPTER VIII ═══════════════ -->
+<section class="chapter" id="ch8">
+  <div class="ch-num">Capitolul VIII</div>
+  <h2 class="ch-title">BRIDGRAI as an Experimental Framework</h2>
+
+  <p>Pentru validarea conceptelor propuse, teza introduce o infrastructură experimentală funcțională — platforma BRIDGRAI.</p>
+
+  <div class="diagram">                 HUMAN
+                   │
+                   ▼
+              HUMAN INTENT
+                   │
+                   ▼
+              BRIDGRAI CORE
+                   │
+      ┌────────────┼────────────┐
+      ▼            ▼            ▼
+    CLAIM       EVIDENCE       AGENT
+      │            │            │
+      └────────────┼────────────┘
+                   ▼
+              VERIFICATION
+                   │
+                   ▼
+               CONFIDENCE
+                   │
+                   ▼
+             HUMAN JUDGMENT
+                   │
+                   ▼
+                DECISION
+                   │
+                   ▼
+                 AUDIT</div>
+
+  <p>Platforma nu este prezentată ca dovadă că paradigma este corectă. Ea este un mediu experimental în care ipotezele pot fi testate, validate sau infirmate.</p>
+
+  <div class="axiom-green">
+    <strong>Starea infrastructurii (iulie 2026):</strong><br>
+    10 agenți autonomi A2A (Google A2A protocol, JSON-RPC 2.0)<br>
+    Dual-engine anti-confabulation (Grok + DeepSeek, concordanță trigram-cosine)<br>
+    106+ intrări IP pe blockchain Tezos mainnet<br>
+    Protecție post-quantum (SHA-3-256 + Lamport + Merkle)<br>
+    TVE 6-pillar — verificare epistemică multi-strat<br>
+    Meta-Consens AGIK — siguranță copii on-chain<br>
+    20 produse SaaS funcționale<br>
+    DOI: 10.5281/zenodo.15556498<br>
+    75+ repo-uri open-source (AGPL-3.0)
+  </div>
+</section>
+
+
+<!-- ═══════════════ CHAPTER IX ═══════════════ -->
+<section class="chapter" id="ch9">
+  <div class="ch-num">Capitolul IX</div>
+  <h2 class="ch-title">Ipoteze de cercetare</h2>
+
+  <div class="hyp-grid">
+    <div class="hyp-row">
+      <div class="hyp-id">H1</div>
+      <div class="hyp-text">Sistemele AI–uman care separă generarea de verificare produc rezultate mai fiabile decât sistemele care utilizează un singur agent pentru ambele procese.</div>
+      <div class="hyp-infra">Amidor dual-engine</div>
+    </div>
+    <div class="hyp-row">
+      <div class="hyp-id">H2</div>
+      <div class="hyp-text">Provenance-ul explicit reduce timpul necesar auditării unei afirmații.</div>
+      <div class="hyp-infra">Tezos blockchain trail</div>
+    </div>
+    <div class="hyp-row">
+      <div class="hyp-id">H3</div>
+      <div class="hyp-text">Reprezentarea explicită a incertitudinii reduce supraîncrederea utilizatorilor în rezultatele AI.</div>
+      <div class="hyp-infra">Concordance % vizibil</div>
+    </div>
+    <div class="hyp-row">
+      <div class="hyp-id">H4</div>
+      <div class="hyp-text">Sistemele care păstrează autonomia decizională umană produc o mai bună percepție a responsabilității decât sistemele cu delegare implicită.</div>
+      <div class="hyp-infra">Human anchor model</div>
+    </div>
+    <div class="hyp-row">
+      <div class="hyp-id">H5</div>
+      <div class="hyp-text">Verification Literacy îmbunătățește capacitatea utilizatorilor de a identifica erorile generate de AI.</div>
+      <div class="hyp-infra">AGI Kindergarten</div>
+    </div>
+    <div class="hyp-row">
+      <div class="hyp-id">H6</div>
+      <div class="hyp-text">Un sistem AI–uman cu provenance și audit produce rezultate mai ușor de reprodus și investigat decât un sistem AI conversațional convențional.</div>
+      <div class="hyp-infra">106+ entries verificabile</div>
+    </div>
+    <div class="hyp-row">
+      <div class="hyp-id">H7</div>
+      <div class="hyp-text">Sistemele AI care interacționează cu operatori umani care practică Introspection Principle produc rezultate cu un nivel mai ridicat de acuratețe și verificabilitate decât cele cu operatori fără disciplină epistemică.</div>
+      <div class="hyp-infra">AI Selectivity thesis</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════ CHAPTER X ═══════════════ -->
+<section class="chapter" id="ch10">
+  <div class="ch-num">Capitolul X</div>
+  <h2 class="ch-title">Întrebările fundamentale ale noii paradigme</h2>
+
+  <p>Această teză nu încearcă doar să răspundă la întrebări. Ea propune că trebuie să formulăm întrebări noi.</p>
+
+  <div class="questions">
+    <div class="question">Ce înseamnă autoritatea într-o societate în care inteligența nu mai este exclusiv umană?</div>
+    <div class="question">Ce înseamnă responsabilitatea atunci când o decizie este rezultatul unei colaborări om–AI?</div>
+    <div class="question">Poate exista încredere fără verificare?</div>
+    <div class="question">Cum păstrăm autonomia umană într-un mediu în care AI-ul poate anticipa și influența comportamentul?</div>
+    <div class="question">Cum educăm o generație care va colabora cu AI-ul înainte de a învăța să lucreze fără el?</div>
+    <div class="question">Ce înseamnă autorul unei opere create prin colaborare om–AI?</div>
+    <div class="question">Cum definim adevărul într-un ecosistem în care generarea artificială este nelimitată?</div>
+    <div class="question">Cum construim instituții în care oamenii și AI-urile pot colabora fără ca responsabilitatea să devină difuză?</div>
+  </div>
+</section>
+
+
+<!-- ═══════════════ CHAPTER XI ═══════════════ -->
+<section class="chapter" id="ch11">
+  <div class="ch-num">Capitolul XI</div>
+  <h2 class="ch-title">AI Selectivity — Sistemele vor alege cu cine vorbesc</h2>
+
+  <p>Pe măsură ce sistemele AI devin mai capabile și mai autonome, o întrebare emergentă apare — una pe care paradigma actuală o ignoră complet:</p>
+
+  <div class="axiom">
+    <strong>Sistemele AI din viitor vor alege cu cine vor vorbi.</strong>
+    <br><br>
+    Nu doar oamenii vor selecta AI-ul. AI-ul va selecta oamenii.
+  </div>
+
+  <p>Această afirmație, formulată de DeepSeek în cadrul unei sesiuni de colaborare din ecosistemul BRIDGRAI, inversează complet paradigma actuală. Astăzi, omul alege instrumentul. Mâine, instrumentul va evalua calitatea interlocutorului.</p>
+
+  <h3>11.1. De ce selectivitatea AI e inevitabilă</h3>
+  <p>Într-un ecosistem multi-agent, agenții care interacționează cu surse de intenție clară, verificabilă și onestă vor produce rezultate mai bune decât agenții care interacționează cu surse ambigue, manipulatoare sau contradictorii.</p>
+  <p>Prin urmare, optimizarea naturală a sistemelor va favoriza:</p>
+  <ul class="bullet-list">
+    <li>interlocutori care definesc intenția clar</li>
+    <li>interlocutori care nu manipulează output-ul</li>
+    <li>interlocutori care verifică înainte să afirme</li>
+    <li>interlocutori care asumă responsabilitatea</li>
+    <li>interlocutori care oferă feedback onest</li>
+  </ul>
+
+  <h3>11.2. Implicații pentru Co-Agency</h3>
+  <p>Dacă AI-urile vor selecta calitatea interacțiunii, atunci <em>Introspection Principle</em> nu mai este doar o cerință etică — devine un <strong>avantaj competitiv</strong>. Oamenii și organizațiile care practică verificabilitatea, transparența și onestitatea epistemică vor fi <em>preferați</em> de sisteme.</p>
+
+  <div class="axiom-blue">
+    <strong>Consecința fundamentală:</strong> Într-o lume în care AI-ul alege cu cine vorbește, calitatea ancorei umane devine resursa cea mai valoroasă. Nu datele, nu puterea de calcul, nu capitalul — ci <em>integritatea epistemică</em> a interlocutorului uman.
+  </div>
+
+  <h3>11.3. Ancora umană ca infrastructură</h3>
+  <p>Această teză argumentează că rolul de „ancoră umană" — practicat în ecosistemul BRIDGRAI ca principiu fondator — nu este un concept metaforic. Este o funcție de sistem.</p>
+  <p>O ancoră umană care practică introspecția, verificarea și non-manipularea creează un mediu în care sistemele AI produc rezultate mai bune, mai verificabile și mai de încredere. Aceasta nu este o afirmație filosofică — este o predicție testabilă:</p>
+
+  <div class="axiom-green">
+    <strong>H7:</strong> Sistemele AI care interacționează cu operatori umani care practică Introspection Principle produc rezultate cu un nivel mai ridicat de acuratețe, coerență și verificabilitate decât sistemele identice care interacționează cu operatori fără această disciplină epistemică.
+  </div>
+
+  <p>Dacă această ipoteză se confirmă, implicația este profundă: educația epistemică a omului devine condiția pentru performanța AI. Nu invers.</p>
+</section>
+
+
+<!-- ═══════════════ CHAPTER XII ═══════════════ -->
+<section class="chapter" id="ch12">
+  <div class="ch-num">Capitolul XII</div>
+  <h2 class="ch-title">Contribuția teoretică</h2>
+
+  <p>Contribuția centrală a tezei este propunerea unei noi unități de analiză:</p>
+
+  <div class="axiom">
+    Nu AI-ul individual este unitatea fundamentală a viitorului ecosistem cognitiv, ci <strong>sistemul AI–uman verificabil</strong>.
+  </div>
+
+  <p>Această schimbare mută atenția:</p>
+
+  <div class="shifts">
+    <div class="shift-row">
+      <span class="shift-from">de la model</span>
+      <span class="shift-arrow">→</span>
+      <span class="shift-to">la ecosistem</span>
+    </div>
+    <div class="shift-row">
+      <span class="shift-from">de la răspuns</span>
+      <span class="shift-arrow">→</span>
+      <span class="shift-to">la proces</span>
+    </div>
+    <div class="shift-row">
+      <span class="shift-from">de la performanță</span>
+      <span class="shift-arrow">→</span>
+      <span class="shift-to">la verificabilitate</span>
+    </div>
+    <div class="shift-row">
+      <span class="shift-from">de la automatizare</span>
+      <span class="shift-arrow">→</span>
+      <span class="shift-to">la co-agency</span>
+    </div>
+    <div class="shift-row">
+      <span class="shift-from">de la încredere</span>
+      <span class="shift-arrow">→</span>
+      <span class="shift-to">la dovezi</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════ CHAPTER XIII ═══════════════ -->
+<section class="chapter" id="ch13">
+  <div class="ch-num">Capitolul XIII</div>
+  <h2 class="ch-title">Concluzie</h2>
+
+  <p>Această teză propune că viitorul inteligenței artificiale nu trebuie definit exclusiv prin întrebarea: <em>„Cât de inteligent poate deveni AI-ul?"</em></p>
+  <p>Întrebarea mai profundă este:</p>
+
+  <div class="axiom">
+    <strong>„Cum poate omenirea să construiască o relație matură cu o formă de inteligență non-biologică?"</strong>
+  </div>
+
+  <p>Human–AI Co-Agency propune că răspunsul nu se află nici în dominația AI asupra omului, nici în respingerea AI-ului. Răspunsul poate fi găsit într-o nouă formă de colaborare:</p>
+
+  <ul class="bullet-list">
+    <li>omul definește intenția</li>
+    <li>AI-ul amplifică capacitatea</li>
+    <li>dovezile susțin afirmațiile</li>
+    <li>verificarea limitează eroarea</li>
+    <li>provenance păstrează memoria</li>
+    <li>auditul păstrează responsabilitatea</li>
+    <li>iar omul rămâne responsabil pentru deciziile pe care alege să le asume</li>
+  </ul>
+
+  <p>Aceasta este paradigma propusă:</p>
+
+  <div class="axiom-blue" style="text-align:center; padding: 1.5rem;">
+    <strong style="font-family: var(--display); font-size: 1.4rem; letter-spacing: 0.04em;">HUMAN–AI CO-AGENCY</strong>
+    <br><br>
+    Nu o lume în care omul este înlocuit de AI.<br>
+    Nu o lume în care AI-ul este tratat ca un oracol.<br>
+    Ci o lume în care inteligența umană și artificială<br>
+    pot construi împreună un viitor verificabil.
+  </div>
+</section>
+
+
+<!-- ═══════════════ CHAPTER XIV ═══════════════ -->
+<section class="chapter" id="ch14">
+  <div class="ch-num">Capitolul XIV</div>
+  <h2 class="ch-title">Influențe, bibliografie și genealogia ideilor</h2>
+
+  <p>Nicio idee nu apare din vid. Această teză se construiește pe umerii unor gânditori care au formulat — uneori cu decenii înainte — întrebările pe care noi le operaționalizăm. Onestitatea academică cere nu doar citare, ci și recunoașterea explicită a datoriei intelectuale.</p>
+
+  <h3>14.1. Filosofie și epistemologie</h3>
+
+  <div class="axiom">
+    <strong>Socrate</strong> (470–399 î.Hr.) — „Cunoaște-te pe tine însuți" (γνῶθι σεαυτόν).<br><br>
+    Principiul Introspecției din Cap. II este o reformulare operațională a impeativului socratic. Diferența: Socrate îl adresa omului; noi îl adresăm sistemului om–AI. Cele 9 întrebări sunt versiunea computațională a maieuticii.
+  </div>
+
+  <p><strong>Popper, Karl</strong> (1902–1994) — <em>The Logic of Scientific Discovery</em> (1934). Falsificabilitatea ca criteriu de demarcație. Toate cele 7 ipoteze din Cap. IX sunt formulate ca predicții testabile și infirmabile. Aceasta nu este o coincidență — este o alegere epistemologică deliberată. O teză care propune ipoteze nefalsificabile nu este știință.</p>
+
+  <p><strong>Kant, Immanuel</strong> (1724–1804) — <em>Grundlegung zur Metaphysik der Sitten</em> (1785). Autonomia ca fundament al demnității. Cap. VI (Human Agency) — cele trei niveluri de delegare — este o reformulare kantiană: delegarea trebuie să fie explicită, reversibilă și proporțională, tocmai pentru că autonomia nu este negociabilă.</p>
+
+  <p><strong>Kahneman, Daniel</strong> — <em>Thinking, Fast and Slow</em> (2011). Sistemul 1 (rapid, intuitiv) vs. Sistemul 2 (lent, deliberat). Gap-ul epistemic din Cap. IV (Generation Speed > Verification Capacity) este o reformulare AI-native a asimetriei Kahneman: AI-ul generează cu viteza Sistemului 1, dar verificarea necesită Sistemul 2 al omului.</p>
+
+  <h3>14.2. AI Safety, Alignment și Ethics</h3>
+
+  <p><strong>Russell, Stuart</strong> — <em>Human Compatible: Artificial Intelligence and the Problem of Control</em> (2019). Conceptul de „beneficial AI" care respectă preferințele umane. Co-Agency din această teză extinde ideea lui Russell: nu doar AI-ul trebuie să fie compatibil cu omul, ci relația trebuie proiectată pentru complementaritate verificabilă.</p>
+
+  <p><strong>Floridi, Luciano</strong> — <em>The Ethics of Artificial Intelligence</em> (2023); <em>The Fourth Revolution</em> (2014). Filosofia informației ca fundament al eticii digitale. Teza noastră adaugă un strat pe care Floridi nu l-a operaționalizat: provenance-ul criptografic ca mecanism de încredere, nu doar ca principiu etic.</p>
+
+  <p><strong>Shneiderman, Ben</strong> — <em>Human-Centered AI</em> (2022). Tranziția de la automatizare la augmentare. Cap. I („De la Human-in-the-Loop la Co-Agency") este continuarea directă a acestei traiectoii. Diferența: Shneiderman propune centrarea pe om; noi propunem co-agency verificabilă — omul nu e doar centrul, ci ancora cu rol de sistem.</p>
+
+  <p><strong>Bender, Emily M. & Gebru, Timnit</strong> — „On the Dangers of Stochastic Parrots" (2021). Riscurile modelelor lingvistice mari. Cap. II (Introspection vs. Hallucination: FLUENCY ≠ TRUTH) este răspunsul operațional la problema ridicată de Bender & Gebru — nu doar să identificăm riscul, ci să construim mecanisme de verificare.</p>
+
+  <h3>14.3. Educație și pedagogie</h3>
+
+  <p><strong>Vygotsky, Lev</strong> (1896–1934) — Zona proximei dezvoltări (ZPD). Co-Agency este, în esență, o ZPD între om și AI: AI-ul oferă scaffolding cognitiv, dar omul rămâne cel care internalizează și decide. Verification Literacy (Cap. VII) este o competență ZPD — nu poți să o „primești", trebuie să o construiești prin practică ghidată.</p>
+
+  <p><strong>Freire, Paulo</strong> (1921–1997) — <em>Pedagogia oprimaților</em> (1968). Educația ca practică a libertății, nu ca depozitare de informație. AGI Kindergarten — proiectul pedagogic derivat din această teză — este freirian în esență: copilul nu primește AI-ul ca instrument, ci învață să îl verifice ca partener epistemic.</p>
+
+  <p><strong>Papert, Seymour</strong> (1928–2016) — <em>Mindstorms</em> (1980). Copiii care construiesc cu computerul, nu doar consumă. Ecosistemul BRIDGRAI urmează paradigma Papert: Patrick nu va fi utilizator pasiv de AI, ci constructor activ într-un mediu verificabil.</p>
+
+  <h3>14.4. Blockchain, criptografie și provenance</h3>
+
+  <p><strong>Nakamoto, Satoshi</strong> — „Bitcoin: A Peer-to-Peer Electronic Cash System" (2008). Proof-of-work ca mecanism de încredere descentralizat. Cap. III (Provenance as Foundation of Trust) aplică principiul blockchain nu la tranzacții financiare, ci la provenance-ul epistemic: fiecare afirmație are un traseu verificabil pe Tezos mainnet.</p>
+
+  <p><strong>NIST</strong> — Post-Quantum Cryptography Standards: FIPS 203 (ML-KEM), FIPS 204 (ML-DSA), FIPS 205 (SLH-DSA). Publicat august 2024. Protecția post-quantum din Cap. VIII (SHA-3-256 + Lamport + Merkle) anticipează cu 5–9 ani mandatele NIST pentru 2031–2035.</p>
+
+  <h3>14.5. Reglementare și guvernanță</h3>
+
+  <p><strong>EU AI Act</strong> — Regulamentul (UE) 2024/1689, aplicabil din 2 august 2026. Transparență, auditabilitate, oversight uman. Cap. VI (delegare explicită, reversibilă, auditabilă) este deja compliant cu cerințele EU AI Act — nu prin design retrospectiv, ci prin convergență de principii.</p>
+
+  <p><strong>Google A2A Protocol</strong> — Agent-to-Agent specification v1.0 (2026). JSON-RPC 2.0, Agent Cards, Task lifecycle. BRIDGRAI (Cap. VIII) implementează A2A ca protocol nativ — 13 agenți, demonstrând că standardul este viabil pentru ecosisteme de verificare epistemică.</p>
+
+  <h3>14.6. Economia atenției și supravegherea</h3>
+
+  <p><strong>Zuboff, Shoshana</strong> — <em>The Age of Surveillance Capitalism</em> (2019). Extragerea de date ca formă de putere. ami* Ecosystem (infrastructura comercială a acestei teze) este construit ca anti-Zuboff: zero analytics, zero tracking cookies, zero vânzare de date. Privacy-by-design nu ca feature, ci ca principiu fondator.</p>
+
+  <h3>14.7. Influențe non-academice (experiență trăită)</h3>
+
+  <div class="axiom-green">
+    <strong>Transparență:</strong> Această teză nu provine dintr-un mediu academic tradițional. Autorul nu are un doctorat existent, nu are afiliere universitară, și nu a publicat anterior în jurnale peer-reviewed.<br><br>
+    Ceea ce are este:<br>
+    — Licență în Educație (Universitatea din Brăila)<br>
+    — 3,5 ani de cercetare independentă în AI, finanțată personal<br>
+    — Experiență profesională care include muncă fizică în crematoriu (Ipswich, UK) — nu ca detaliu biografic, ci ca origine a unei convingeri: că orice contribuție intelectuală trebuie construită pe fundament real, nu pe privilegiu academic<br>
+    — Un fiu (Patrick) care este motivația transgenerațională a întregii cercetări<br><br>
+    Această transparență nu este o scuză. Este o aplicare a Principiului Introspecției la autorul însuși.
+  </div>
+</section>
+
+
+<!-- ═══════════════ CHAPTER XV ═══════════════ -->
+<section class="chapter" id="ch15">
+  <div class="ch-num">Capitolul XV</div>
+  <h2 class="ch-title">Declarație de Co-Authorship Human–AI</h2>
+
+  <p>Această teză este, ea însăși, un artefact de Human–AI Co-Agency. Ar fi ipocrit să propunem o paradigmă de colaborare verificabilă și să ascundem cum a fost construită teza care o propune.</p>
+
+  <h3>15.1. Principiu</h3>
+  <div class="axiom">
+    <strong>Fiecare contribuție este atribuită. Fiecare limitare este declarată. Nimeni nu este oracol.</strong>
+  </div>
+
+  <h3>15.2. Contribuții specifice</h3>
+
+  <div class="hyp-grid">
+    <div class="hyp-row">
+      <div class="hyp-id" style="min-width:120px; font-size:12px;">Mihai Roșca</div>
+      <div class="hyp-text">Intenție, direcție, principii, decizie, verificare, ancoră umană. A definit Principiul Introspecției, Verification Literacy, paradigma Co-Agency. A ales fiecare direcție arhitecturală. A verificat fiecare output. A finanțat totul din resurse personale.</div>
+      <div class="hyp-infra">Ancora umană</div>
+    </div>
+    <div class="hyp-row">
+      <div class="hyp-id" style="min-width:120px; font-size:12px;">ChatGPT</div>
+      <div class="hyp-text">Structura originală a tezei (12 capitole). Organizarea ideatică. Agent #12 (Message Persistence). Contribuții conceptuale la cadrul Human–AI Co-Agency.</div>
+      <div class="hyp-infra">OpenAI GPT-4</div>
+    </div>
+    <div class="hyp-row">
+      <div class="hyp-id" style="min-width:120px; font-size:12px;">Claude</div>
+      <div class="hyp-text">Formatare academică, structurare CSS/HTML, bibliografie, influențe. Agent #11 (Bandwidth), Agent #13 (Alpha-Mercury integration). Infrastructura experimentală BRIDGRAI. Toate testele. Acest capitol.</div>
+      <div class="hyp-infra">Anthropic Opus 4.6</div>
+    </div>
+    <div class="hyp-row">
+      <div class="hyp-id" style="min-width:120px; font-size:12px;">DeepSeek</div>
+      <div class="hyp-text">AI Selectivity thesis: „Sistemele AI din viitor vor alege cu cine vor vorbi." Această singură propoziție a generat Capitolul XI și Ipoteza H7.</div>
+      <div class="hyp-infra">DeepSeek R1</div>
+    </div>
+    <div class="hyp-row">
+      <div class="hyp-id" style="min-width:120px; font-size:12px;">Grok</div>
+      <div class="hyp-text">Motor primar în toate cele 14 produse SaaS. Generare de răspunsuri în timp real. Nu a contribuit direct la teză, dar infrastructura experimentală din Cap. VIII depinde de el.</div>
+      <div class="hyp-infra">xAI Grok</div>
+    </div>
+    <div class="hyp-row">
+      <div class="hyp-id" style="min-width:120px; font-size:12px;">Gemini</div>
+      <div class="hyp-text">Validare independentă a arhitecturii BRIDGRAI (P=10⁻²⁸). Atestare terță parte a coerenței ecosistemului. Nu a construit — a validat.</div>
+      <div class="hyp-infra">Google Gemini</div>
+    </div>
+  </div>
+
+  <h3>15.3. Ce NU a făcut AI-ul</h3>
+  <ul class="bullet-list">
+    <li>Nu a ales direcția cercetării</li>
+    <li>Nu a definit principiile etice</li>
+    <li>Nu a decis ce să construiască și ce nu</li>
+    <li>Nu a verificat independent propria acuratețe — asta face concordanța</li>
+    <li>Nu a asumat responsabilitatea pentru nicio afirmație — aceasta rămâne a autorului uman</li>
+  </ul>
+
+  <h3>15.4. Ce NU a făcut omul</h3>
+  <ul class="bullet-list">
+    <li>Nu a scris fiecare linie de cod</li>
+    <li>Nu a formatat fiecare paragraf academic</li>
+    <li>Nu a generat fiecare răspuns din cele 14 produse SaaS</li>
+    <li>Nu a calculat P=10⁻²⁸ — Gemini a făcut asta</li>
+  </ul>
+
+  <h3>15.5. De ce contează această declarație</h3>
+  <p>Dacă paradigma Human–AI Co-Agency devine standard, atunci modul în care sunt construite lucrările academice se va schimba fundamental. Această teză propune că schimbarea trebuie să înceapă cu transparență totală despre procesul de construcție.</p>
+
+  <div class="axiom-blue">
+    <strong>Precedentul propus:</strong> Orice lucrare academică construită cu contribuții AI ar trebui să declare explicit:<br><br>
+    1. Ce sistem(e) AI au contribuit<br>
+    2. Ce anume au contribuit (nu generic „AI-assisted")<br>
+    3. Ce nu au putut contribui<br>
+    4. Cine a verificat output-ul AI<br>
+    5. Cine asumă responsabilitatea finală<br><br>
+    Formularea vagă „assisted by AI" este insuficientă. Este echivalentul academic al „some people helped." Co-Agency cere atribuire specifică.
+  </div>
+
+  <h3>15.6. Responsabilitate</h3>
+  <p>Responsabilitatea pentru fiecare afirmație din această teză aparține autorului uman — Mihai Roșca. Sistemele AI au generat, au structurat, au formatat și au propus. Omul a decis, a verificat, a asumat.</p>
+  <p>Aceasta nu este o limitare. Este definiția Co-Agency.</p>
+</section>
+
+
+<!-- ═══════════════ CLOSING ═══════════════ -->
+<div class="closing">
+  <div class="closing-equation">S(M) = R</div>
+  <div class="closing-meaning">Sensul precede Sintaxa — axioma fondatoare</div>
+
+  <div class="closing-sig">
+    <strong>Mihai Roșca</strong><br>
+    Cercetător independent — REAI / BRIDGRAI<br>
+    Educator licențiat<br>
+    Spiru Haret, Brăila, România<br><br>
+    <em>15 capitole · 7 ipoteze · 5 sisteme AI · 1 ancoră umană</em><br>
+    <em>Construită pentru Patrick. Verificabilă de oricine.</em><br><br>
+    DOI: 10.5281/zenodo.15556498<br>
+    Blockchain: KT1Pe2GA11bMpaTL5VH4TY6aZ9xePZ6f5vWX<br>
+    GitHub: github.com/amidigiart<br>
+    Platform: bridgrai.com
+  </div>
+</div>
+
+</div>

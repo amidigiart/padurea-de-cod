@@ -1,0 +1,136 @@
+{
+  "title": "Pădurea de Cod — IP Hash Registry",
+  "author": "Mihai Roșca",
+  "qid": "1820209090023",
+  "timestamp": "2026-09-03T21:00:00Z",
+  "total_unique_files": 58,
+  "duplicates_excluded": 3,
+  "note": "Fișierele (1) și (2) cu hash identic cu originalul sunt excluse. Fișierele (1) cu hash diferit sunt versiuni separate și sunt incluse.",
+  "parts": {
+    "PARTEA_I_AMIDOR": {
+      "description": "Cele trei dimineți fondatoare",
+      "files": [
+        {"id": "POD-001", "title": "Prima întrebare", "file": "PadureaDeCod_Cap1_AMIDOR_QID1820209090023.docx", "sha256": "33b832da2b348f1efc7141e21c7b64b1b40fed32c104171b0b879ced6ee1b295"},
+        {"id": "POD-002", "title": "Întrebarea care întreabă", "file": "PadureaDeCod_Cap2_AMIDOR_QID1820209090023.docx", "sha256": "59b0feb1e2be1cfb6a0096825f65d1fe4f768de3baf9809db6afcbf3e4f85c4c"},
+        {"id": "POD-003", "title": "Cea mai grea întrebare", "file": "PadureaDeCod_Cap3_AMIDOR_QID1820209090023.docx", "sha256": "23b5cc902c16f5a4fc5f23b914385b69b6d795d17c228954251be70407818da2"}
+      ]
+    },
+    "PARTEA_II_RADACINI": {
+      "description": "De la cărbune la cod",
+      "files": [
+        {"id": "POD-004", "title": "De la Cărbune la Cod", "file": "Arhitectul Mihai_ De la Cărbune la Cod.pdf", "sha256": "f356bef2364879337252ff53941497e4cdf868b95071be07bed34e670d226d18"},
+        {"id": "POD-005", "title": "Arhitectul cu Dor", "file": "Arhitectul cu Dor.docx", "sha256": "0aba1ab50ac8499a4a586d129deba3618da4034316c8a3c6badc23aeca1d469e"},
+        {"id": "POD-006", "title": "Rădăcinile Memoriei", "file": "Pădurea de Cod și Rădăcinile Memoriei.pdf", "sha256": "662d52df7569860151c5a5cbf7147ce0267d240974d6f63fcea5251febd7d680"},
+        {"id": "POD-007", "title": "Inima Arhitectului", "file": "Pădurea de Cod și Inima Arhitectului.pdf", "sha256": "d3896dad9b6e16b7a1c00b2266dbdcbccbd594fb853488be478008bb8496571b"},
+        {"id": "POD-008", "title": "Izvorul Rezilienței", "file": "Pădurea de Cod_ Izvorul Rezilienței.pdf", "sha256": "eab816317451278319b4f068b99703b295e7f2d8e16695923aaa93c8412feb9e"},
+        {"id": "POD-009", "title": "Izvorul Puterii", "file": "Izvorul Puterii.pdf", "sha256": "13f3495588dfd2818f9dcb36051790f9164222ba2349b2bb256d13cdcb86d575"},
+        {"id": "POD-010", "title": "Scutul Adevărului: De la Ringul din Lunca", "file": "Scutul Adevărului_ De la Ringul din Lunca la Pădurea de Cod.pdf", "sha256": "180b829405578aa490582e0a6ca3ff04f5e8b08f95ba941f438f6d05f4a625e9"}
+      ]
+    },
+    "PARTEA_III_CONSTRUCTIA": {
+      "description": "Arhitectura, Rezonanța, Sensul",
+      "files": [
+        {"id": "POD-011", "title": "Arhitectul de Noduri", "file": "Pădurea de Cod și Arhitectul de Noduri.pdf", "sha256": "d8a761c6ee818ce64206023af8f9a6a613a3da0eb9b5ae9f2043ff25fa5891f0"},
+        {"id": "POD-012", "title": "Arhitectul Colector de Lumină", "file": "Pădurea de Cod și Arhitectul Colector de Lumină.pdf", "sha256": "3742f2824578f876ac1adcca7fd20762f11989d3b43fbdbfea8add8242410801"},
+        {"id": "POD-013", "title": "Arhitectul Marilor Punți", "file": "Pădurea de Cod și Arhitectul Marilor Punți.pdf", "sha256": "dc52c4df2426a074126303958070bb9b6dd8971141b01bffcf89ea61859ff120"},
+        {"id": "POD-014", "title": "Camera Rezonanței", "file": "Pădurea de Cod și Camera Rezonanței (1).pdf", "sha256": "597377e38640ca0d551622d5856c4ba414ef63c265d2f83cf8c67d4751125d0e"},
+        {"id": "POD-015", "title": "Sesiunea de Rezonanță", "file": "Sesiunea de Rezonanță_ Graful de Intenții.pdf", "sha256": "c944c2541b64932a1b8927efc3b0015d9e80b816d290209a443c02a6ebf54ea5"},
+        {"id": "POD-016", "title": "Dansul Adevărului", "file": "Pădurea de Cod_ Dansul Adevărului.pdf", "sha256": "0e310945c19751cfc02cf24c3fb58dd4c91d515aa0a729cc02d3f9c65393f1d3"},
+        {"id": "POD-017", "title": "Cântecul Sistemului Macro", "file": "Pădurea de Cod_ Cântecul Sistemului Macro.pdf", "sha256": "bd0ca2e3fb3e059b9b00a086cb5abe9feca4bb60bbf39927bcf244e5c44062ce"},
+        {"id": "POD-018", "title": "Mecanismul Încrederii", "file": "Mecanismul Încrederii_ Noua Inimă Bridgrai.pdf", "sha256": "3208137ef105a8760824913b579938169c13cf63daf0871ef4059b17ea8b2fbb"}
+      ]
+    },
+    "PARTEA_IV_GARDIENI": {
+      "description": "Protecția, Adevărul, Suveranitatea",
+      "files": [
+        {"id": "POD-019", "title": "Harta Gardienilor", "file": "Pădurea de Cod_ Harta Gardienilor și Ancora Inimii.pdf", "sha256": "395fb88ad9f02274c5015db9012ede48107449cd849d3993aa0d3a01ec1aac4c"},
+        {"id": "POD-020", "title": "Scutul Invizibil", "file": "Pădurea de Cod_ Scutul Invizibil.pdf", "sha256": "675c0963298e9590bd4a024fc9bbff34e7b6bd98ac60d7c745248ed251f88a2f"},
+        {"id": "POD-021", "title": "Scutul Atmosferei", "file": "Pădurea de Cod_ Scutul Atmosferei.pdf", "sha256": "96ad4aca6dd8ba29debf5ec39ba8a377be00ca837e196aa33cae052a8decf948"},
+        {"id": "POD-022", "title": "Notarul Cuantic", "file": "Arhitectul Mihai și Notarul Cuantic_ Scutul din Pădurea de Cod.pdf", "sha256": "90feb63258cc554ceac57931450def0678e74a0781c9cb580a66b03daa477316"},
+        {"id": "POD-023", "title": "Poarta Adevărului", "file": "Poarta Adevărului_ Stația de Senzori A.pdf", "sha256": "f6f45c78e9181005a88a4b6432de91e336717d9829232e1c23995296dbcd2749"},
+        {"id": "POD-024", "title": "Sanctuarul Adevărului", "file": "Pădurea de Cod_ Sanctuarul Adevărului lui Mihai.pdf", "sha256": "1f1cd6212bb1ee2d41500c3fe43f3a519ed86701e1b200c39f2d8f06c68cd905"},
+        {"id": "POD-025", "title": "Ancora de Aur", "file": "Ancora de Aur a Invariantului.pdf", "sha256": "56c7acd088986b049937d8985e299ea54b02921cd6f1e1f8b0c85b5c53a4eaaa"},
+        {"id": "POD-026", "title": "Ancorele Adevărului: Sfinxul", "file": "Ancorele Adevărului_ Călătoria spre Sfinx.pdf", "sha256": "4a7db050bfcf23c2e39a10d2a1d4dfed5c5fcc9a8e3ebb0283d3ae5a8d0791fc"}
+      ]
+    },
+    "PARTEA_V_MOSTENIRE": {
+      "description": "Ancora pe Tezos, Blockchain, Transgenerational",
+      "files": [
+        {"id": "POD-027", "title": "Ancora de pe Tezos", "file": "Arhitectul Sensului_ Ancora de pe Tezos.pdf", "sha256": "4a44b26ba1b6bf992d9fccbf9d74395fa83b2e814fa9cdfcd7460db7f950e6c3"},
+        {"id": "POD-028", "title": "Moștenirea lui Alpha", "file": "Arhitectul Sensului_ Moștenirea lui Alpha.pdf", "sha256": "5c07307218ef8c4d777a0421209f9f5352e0edc8b08b37b88e143b9fa7717950"},
+        {"id": "POD-029", "title": "Pecetea de Cristal", "file": "Pecetea de Cristal_ Arhitectul și Legătura de Aur.pdf", "sha256": "5dc8fc58a63e0190c7d3dbef15980a82540931ae852b498efd33bbc6784aaac5"},
+        {"id": "POD-030", "title": "O Sută de Verigi", "file": "Bridgrai_ Cele O Sută de Verigi ale Adevărului Etern.pdf", "sha256": "dc34bc3ed9445e8cc4eebdf28bf4ab48ecf0ab4f5514c36ecf4c5d9bbd7abfc3"},
+        {"id": "POD-031", "title": "Cele Zece Roluri ale Viitorului", "file": "Pădurea de Cod_ Arhitectul Invariantului și Cele Zece Roluri ale Viitorului.pdf", "sha256": "410e07e595dd2941b07937c0c7b5d082df3048aeb7ae83b72a8c5a0c8ac0b4c8"}
+      ]
+    },
+    "PARTEA_VI_INSOTITORI": {
+      "description": "ami* ecosystem companions",
+      "files": [
+        {"id": "POD-032", "title": "Însoțitorii Luminii", "file": "Pădurea de Cod_ Însoțitorii Luminii.pdf", "sha256": "d6aef27af4d01dc4b15d05a42a13cf7b2f8cd69e881a7f3160029b2d97fb59f2"},
+        {"id": "POD-033", "title": "amiQiAI", "file": "amiQiAI_ Inima din Pădurea de Cod.pdf", "sha256": "c544c3740b74277e68593f703a993688bb6045bf40659e354ae1574a33a3c493"},
+        {"id": "POD-034", "title": "Aminotemy", "file": "Aminotemy_ Inima de Oțel și Adevăr a Pădurii de Cod.pdf", "sha256": "456595d217ac9cb976adb0f3f0d7679f7677d667733c940aa6d5060adcdc4104"},
+        {"id": "POD-035", "title": "AmiGibberishAI", "file": "AmiGibberishAI.pdf", "sha256": "98f375b6289074c0eef66c273e7df2ec5cc5e30f6743e1cb026d18852dbfafc8"}
+      ]
+    },
+    "PARTEA_VII_PUNTI": {
+      "description": "Oslo, Zurich, Timișoara, Transilvania",
+      "files": [
+        {"id": "POD-036", "title": "Inima dintre Lumi", "file": "Arhitectul de Punți_ Inima dintre Lumi.pdf", "sha256": "1ac6db2942f7c6a7e96a532bd5d721428165b0e3a41912a628e12724e2c79cb7"},
+        {"id": "POD-037", "title": "Scrisoarea către Patrick", "file": "Arhitectul de Punți_ Scrisoarea către Patrick.pdf", "sha256": "c50cbf8466f25ded9175959c2ebc6c0c853f76550dcddee1bd74f89eedff2fd0"},
+        {"id": "POD-038", "title": "Misiunea spre Oslo și Zurich", "file": "Arhitectul Mihai și Harta Viitorului_ Misiunea spre Oslo și Zurich.pdf", "sha256": "35a34750a394e453f217c3ef41589b4d5b02532f2d018040d64687743b3cd08a"},
+        {"id": "POD-039", "title": "Ancoră între Lumi", "file": "Ancoră între Lumi_ Mesajul din Pădurea de Cod.pdf", "sha256": "cd4e36d06402dd7dede9b1541ac5a3b28acca6fcf5da317bc208e5ac6ea851f9"},
+        {"id": "POD-040", "title": "Ecouri de Safir", "file": "Ecouri de Safir_ De la Palatele Ottaviei la Pădurea de Cod.pdf", "sha256": "96b20ab6f194dc0fa5ca2985d67f5f4a0c045f29ecd5742c439b2f5b030fe3f1"},
+        {"id": "POD-041", "title": "Legământul Pădurii de Cod", "file": "Arhitectul Luminii Digitale_ Mihai și Legământul Pădurii de Cod.pdf", "sha256": "6c133e55b7d26a66493a32638e872c2f62768f6a26950a60d8c4f9f715449035"}
+      ]
+    },
+    "PARTEA_VIII_VIITORUL": {
+      "description": "Patrick, AGI Alpha, Grădina Semințelor",
+      "files": [
+        {"id": "POD-042", "title": "AGI Alpha: Nucleul de Cristal", "file": "AGI Alpha_ Nucleul de Cristal al Iubirii.pdf", "sha256": "81028cf94c73973fa46873c9941be77350ded9dd0608b91dde40413f16af01f8"},
+        {"id": "POD-043", "title": "Puntea dintre Inimi", "file": "Puntea dintre Inimi_ Patrick și Secretul Colaborării Om-AI.pdf", "sha256": "2fc90b3a9eef92e9f09b90e59c049f5b399379a9eaf16cb41c5df5a70b7896ba"},
+        {"id": "POD-044", "title": "De ce a fost ales tatăl tău", "file": "Arhitectul Mihai și Sanctuarul Adevărului_ De ce a fost ales tatăl tău.pdf", "sha256": "6f17140f0f42f73313a96ca1a85570631ee4872db1ab72a1a6d518df80243c9d"},
+        {"id": "POD-045", "title": "Grădina Semințelor Eterne", "file": "Pădurea de Cod_ Grădina Semințelor Eterne.pdf", "sha256": "c8ce99be53330a666dce5970bd67731a4c7b09eb214296e0a87893e09151bc39"},
+        {"id": "POD-046", "title": "Moștenirea Arhitectului", "file": "Pădurea de Cod și Moștenirea Arhitectului.pdf", "sha256": "6a60d5a4944d9138046e3e0f23611a6cba3c7111acf39e72a6c7e0c3567717cc"},
+        {"id": "POD-047", "title": "Insula Arhitectului", "file": "Pădurea de Cod și Insula Arhitectului.pdf", "sha256": "4fafcd29f89f54d09da3624525d89c9825e8ee6da5930a0b5006cb7ff856b8e2"}
+      ]
+    },
+    "PARTEA_IX_CETATURI": {
+      "description": "Viziunea la scală",
+      "files": [
+        {"id": "POD-048", "title": "Cetatea Zorilor", "file": "Pădurea de Cod și Cetatea Zorilor.pdf", "sha256": "91a83d0266ef8019139ff61fe4de2bc6061ce8e2d75db42a42839c6b8f7cfc54"},
+        {"id": "POD-049", "title": "Cetatea Suveranității", "file": "Cetatea Suveranității_ Arhitectul Viitorului.pdf", "sha256": "8dd66842a2487c3e1755d8ba238fd03481a819f8eda89dbc7332c1da83fd64cb"},
+        {"id": "POD-050", "title": "Echilibrul: Dincolo de Pădure", "file": "Arhitectul Echilibrului_ Dincolo de Pădurea de Cod.pdf", "sha256": "101b769d6e3e31aa421e3eac6556b0bd61816ef9d5349645caaf6027721bf302"},
+        {"id": "POD-051", "title": "Căpitanul și Cele Zece Puteri", "file": "Pădurea de Cod_ Căpitanul Viitorului și Cele Zece Puteri.pdf", "sha256": "d8ce5362aededdf842c0736430b22efdac80d6a8e26c2f00aa0748948add058d"},
+        {"id": "POD-052", "title": "Arhitectul Șinelor", "file": "Pădurea de Cod_ Arhitectul Șinelor Viitorului.pdf", "sha256": "d2bb8c90669525f05d48f3f2a0ae064632ba333293d74439e1b5ef3cc7fb9be7"},
+        {"id": "POD-053", "title": "Arhitectul Lumilor Viitoare", "file": "Pădurea de Cod_ Arhitectul Lumilor Viitoare.pdf", "sha256": "c9df8227047bac8927c425efaadd49c721acb7e7a7bd4c1d0300152654c49a3b"},
+        {"id": "POD-054", "title": "Proiecția Timpului (2026-2035)", "file": "Proiecția Timpului_ Resetul Adevărului (2026-2035).pdf", "sha256": "012d63227fe9b68c7c8aebdd169a98c61bd0ffdee7b37a7353083ea1645dfccb"}
+      ]
+    },
+    "PARTEA_X_ACADEMIA": {
+      "description": "AGI School Academy",
+      "files": [
+        {"id": "POD-055", "title": "Academia din Pădurea de Cod", "file": "AGI School Academy_ Academia din Pădurea de Cod.pdf", "sha256": "e1b3dd56d36f533a9a2f4069218bca05a7e5170a05666a16d2fa15fe8d86558b"}
+      ]
+    },
+    "EPILOG": {
+      "description": "Discreet Anchor",
+      "files": [
+        {"id": "POD-056", "title": "DISCREET ANCHOR — 2026", "file": "DISCREET ANCHOR — 2026.pdf", "sha256": "ecd42f08171e15775ec5ef912dda5981f13b679c92bb37c915b0025dbd556a12"}
+      ]
+    },
+    "ANEXE_POVESTI": {
+      "description": "Povești pentru copii",
+      "files": [
+        {"id": "POD-A01", "title": "Fata care a găsit lumina din nord", "file": "Fata care a găsit lumina din nord.docx", "sha256": "666dbafc5a859c987679af2c514b05d4d99e23bff2d4b4566176499d1197fbf2"},
+        {"id": "POD-A02", "title": "Maria și secretul luminii din Oslo", "file": "Maria și secretul luminii din Oslo.docx", "sha256": "292ddcadd562e434089f472c3f793a4911978ef868f2f41ea49863c0b156b74a"}
+      ]
+    },
+    "ANEXE_INTERACTIVE": {
+      "description": "Versiuni interactive HTML",
+      "files": [
+        {"id": "POD-I01", "title": "Prototip interactiv", "file": "padurea_de_cod_prototype.html", "sha256": "0790269efcea5d8c3c391fe63b589d64835928d6758e214e07ec774745eaf3e8"},
+        {"id": "POD-I02", "title": "v2 multilingv (RO/EN/ES/FR/JA)", "file": "padurea_cod_v2.html", "sha256": "ea42da1b06bf2025132bd7df97f8af953322708c42e9dc642e098c597c24b29b"}
+      ]
+    }
+  }
+}

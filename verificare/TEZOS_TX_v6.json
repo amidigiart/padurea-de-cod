@@ -1,0 +1,38 @@
+{
+  "operation": "BRIDGRAI IP Registry — Master Hash v6",
+  "contract": "KT1Pe2GA11bMpaTL5VH4TY6aZ9xePZ6f5vWX",
+  "wallet": "tz1bmw3igCLN8N6CqgLBzJ9dyRb79E2Tdu5Q",
+  "entrypoint": "default",
+  "payload": {
+    "master_hash_v6": "f6e0c11350a9c04a6fb341708996cda451e0fce2f8f2db5c78469ef4e886a924",
+    "previous_hash_v5": "6ff6e4fefac13d67dd7b3b3c6ffc9374c205e47a5e114c09d4d9a7eb107647eb",
+    "entries": "new: AGENT-INTERPLANETAR, MODUL7-ORIGINEA-HTML, MODUL7-ORIGINEA-DOCX, TEZA-DOCTORAT-AI-UMAN, AGIKINDERGARTEN-SITE, AGIKINDERGARTEN-FRAMEWORK, PUNTEA-TRANSGENERATIONALA",
+    "total_entries": 99,
+    "new_entries": 7,
+    "timestamp": "2026-07-27T22:00:00Z",
+    "description": "7 new IP assets: Agent Interplanetar (13/13 tests, Guardian Swarm, Resonance Motor, Notary chain), Modulul 7 Originea (HTML+DOCX, prayer as coupling, biographical invariants), Teza de Doctorat Coagentia Om-AI (209 tests, 5 invariants), agikindergarten.com landing page, AGI Kindergarten Framework, Puntea Transgenerationala (consortiumagialpha.site entrance, Ottavia Colonna di Stigliano)",
+    "contributors": "Mihai Rosca (anchor) + Claude (Opus 4.6) + Kimi (K2.5)",
+    "tests_verified": "209 (ukbe-core 102 + kinderagi-core 26 + amidor-engine 81) + Agent Interplanetar 13 = 222",
+    "sites_deployed": "consortiumagialpha.site (GitHub Pages, SSL active)",
+    "signature": "S(M) = R"
+  },
+  "instructions": {
+    "step_1": "Open Temple Wallet or https://wallet.kukai.app",
+    "step_2": "Connect wallet tz1bmw3igCLN8N6CqgLBzJ9dyRb79E2Tdu5Q",
+    "step_3": "Interact with contract KT1Pe2GA11bMpaTL5VH4TY6aZ9xePZ6f5vWX",
+    "step_4": "Call 'default' entrypoint with payload string below",
+    "payload_string": "BRIDGRAI-IPR-v6|99entries|f6e0c11350a9c04a6fb341708996cda451e0fce2f8f2db5c78469ef4e886a924|2026-07-27|MihaiRosca+Claude+Kimi|AgentInterplanetar+Modul7+Teza+ConsortiumAlpha|S(M)=R",
+    "step_5": "Confirm transaction (fee ~0.01 XTZ)",
+    "step_6": "Copy TX hash and update this file"
+  },
+  "tx_hash": "onxCGKJYfQPSaw1jzx9X9TC8hTnf4TuWZLwnpJUrqnwDqf3hraM",
+  "new_hashes": {
+    "AGENT-INTERPLANETAR": "3d78cb1d1a0a7ecb",
+    "MODUL7-ORIGINEA-HTML": "9674e082115ac5fb",
+    "MODUL7-ORIGINEA-DOCX": "467cddc82fbafffc",
+    "TEZA-DOCTORAT-AI-UMAN": "4f25307437044219",
+    "AGIKINDERGARTEN-SITE": "88e70f83444fe8c7",
+    "AGIKINDERGARTEN-FRAMEWORK": "18e7781a29268bd3",
+    "PUNTEA-TRANSGENERATIONALA": "68012d47e53e407a"
+  }
+}

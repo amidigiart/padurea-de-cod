@@ -1,0 +1,41 @@
+{
+  "operation": "BRIDGRAI IP Registry — Master Hash v7",
+  "contract": "KT1Pe2GA11bMpaTL5VH4TY6aZ9xePZ6f5vWX",
+  "wallet": "tz1bmw3igCLN8N6CqgLBzJ9dyRb79E2Tdu5Q",
+  "entrypoint": "default",
+  "payload": {
+    "master_hash_v7": "987872ae01015eb1ba4df03d1187758fc428ef3c773d846c6cd569837b77d348",
+    "previous_hash_v6": "f6e0c11350a9c04a6fb341708996cda451e0fce2f8f2db5c78469ef4e886a924",
+    "entries": "new: AMICOOPERAI-ENGINE, AMICOOPERAI-SITE, CRAWLER-ATTACH-SUBMOTOR, CRAWLER-ATTACH-TESTS, MIHAI-COMPANION-AGENT15, MIHAI-COMPANION-TESTS, BRIDGRAI-GENERAL-FRAMEWORK, DECALAJ-ANALYSIS, PORTFOLIO-GUIDE, AGISCHOOL-ACADEMY",
+    "total_entries": 116,
+    "new_entries": 10,
+    "timestamp": "2026-09-03T20:15:00Z",
+    "description": "10 new IP assets: AmiCooperAI Engine (146 tests, DSEI principles, anti-addiction, manipulation guard), AmiCooperAI site, CrawlerAttachSubmotor (73 tests, phi_intern + entropy valve + Ed25519 notarization), Mihai Companion Agent #15 (96 tests, 12 education pillars, bilingual RO/EN), BRIDGRAI General Framework (12 sections, S(M)=R axiom, 9 layers), Decalaj Analysis (verified qualitative), Portfolio Guide (verified numbers), agischool.academy (academic publication)",
+    "contributors": "Mihai Rosca (anchor) + Claude (Opus 4.6)",
+    "tests_verified": "717 total ecosystem (175 ukbe-core + 146 amicooperai + 96 mihai-companion + 240+ a2a + 60+ others)",
+    "sites_deployed": "amicooperai.com, agischool.academy (GitHub Pages)",
+    "signature": "S(M) = R"
+  },
+  "instructions": {
+    "step_1": "Open Temple Wallet or https://wallet.kukai.app",
+    "step_2": "Connect wallet tz1bmw3igCLN8N6CqgLBzJ9dyRb79E2Tdu5Q",
+    "step_3": "Interact with contract KT1Pe2GA11bMpaTL5VH4TY6aZ9xePZ6f5vWX",
+    "step_4": "Call 'default' entrypoint with payload string below",
+    "payload_string": "BRIDGRAI-IPR-v7|116entries|987872ae01015eb1ba4df03d1187758fc428ef3c773d846c6cd569837b77d348|2026-09-03|MihaiRosca+Claude|CooperAI+CrawlerAttach+MihaiCompanion+Framework+Academy|S(M)=R",
+    "step_5": "Confirm transaction (fee ~0.01 XTZ)",
+    "step_6": "Copy TX hash and update this file + BLOCKCHAIN_MANIFEST.json"
+  },
+  "tx_hash": "PENDING",
+  "new_hashes": {
+    "AMICOOPERAI-ENGINE": "ca3bce26345f54ce8f3b90b81ac867bad88de94c09442feba5e84c7ce27520c2",
+    "AMICOOPERAI-SITE": "feed98a8717253cd6addce6ea9ae8474d77e8b6a5709f4b4492ab41a75a30a32",
+    "CRAWLER-ATTACH-SUBMOTOR": "37aa89f41348c9b6efcc16788697fe994eb72dec10cd212594ca04f9d96d7fd0",
+    "CRAWLER-ATTACH-TESTS": "5c95dc1acd3b764c8f42705faed7395ecb2dc3babbdb305ffa9882b4b9274226",
+    "MIHAI-COMPANION-AGENT15": "4d91ca7d06b644e84ffd457cb6c1e1b1e9926d102ed4ef6c2de3aaef1a44a5de",
+    "MIHAI-COMPANION-TESTS": "eca17110ec613ab21fbef8a09a1b429d618b89705a846fde45963af3625f7d28",
+    "BRIDGRAI-GENERAL-FRAMEWORK": "ad603871bd5c97cb7b52b646cd8f180784bbbfa726d5c5a67fed490868c23f47",
+    "DECALAJ-ANALYSIS": "9e08fd031477081b518de90bb02ef0f4b4408af9076b7009963b87a6f5acf1e6",
+    "PORTFOLIO-GUIDE": "e7132312b9268b7f643a53f8500bfc01fa34e5587e2d647e28fd9927f6e857d3",
+    "AGISCHOOL-ACADEMY": "8060e804df4100109a633a82cbd7c7cdf0a5581a978959fce0f4118c79d07b38"
+  }
+}

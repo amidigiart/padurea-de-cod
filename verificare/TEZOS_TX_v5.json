@@ -1,0 +1,27 @@
+{
+  "operation": "BRIDGRAI IP Registry — Master Hash v5",
+  "contract": "KT1Pe2GA11bMpaTL5VH4TY6aZ9xePZ6f5vWX",
+  "wallet": "tz1bmw3igCLN8N6CqgLBzJ9dyRb79E2Tdu5Q",
+  "entrypoint": "default",
+  "payload": {
+    "master_hash_v5": "6ff6e4fefac13d67dd7b3b3c6ffc9374c205e47a5e114c09d4d9a7eb107647eb",
+    "previous_hash_v4": "37390208df8c1e357b599c51d6286c138ab0f05ff7769154081f652674d8dfb3",
+    "entries": "115-125",
+    "total": 125,
+    "timestamp": "2026-07-25T21:30:00Z",
+    "description": "11 new entries: Alpha-Mercury Agent #13 (ChatGPT+Claude), Thesis Ch XIV Bibliography (15 influences), Thesis Ch XV Co-Authorship Declaration (first in doctoral history), Attribution Record, Monetization Strategy+Infrastructure (Stripe, checkout, terms, privacy)",
+    "contributors": "Mihai Rosca (anchor) + Claude (Opus 4.6) + ChatGPT + DeepSeek + Grok + Gemini",
+    "tests_total": "82+47=129 all passed",
+    "signature": "S(M) = R"
+  },
+  "instructions": {
+    "step_1": "Open https://wallet.kukai.app or Temple Wallet",
+    "step_2": "Connect wallet tz1bmw3igCLN8N6CqgLBzJ9dyRb79E2Tdu5Q",
+    "step_3": "Interact with contract KT1Pe2GA11bMpaTL5VH4TY6aZ9xePZ6f5vWX",
+    "step_4": "Call 'default' entrypoint with payload string:",
+    "payload_string": "BRIDGRAI-IPR-v5|125entries|6ff6e4fefac13d67dd7b3b3c6ffc9374c205e47a5e114c09d4d9a7eb107647eb|2026-07-25|MihaiRosca+Claude+ChatGPT+DeepSeek+Grok+Gemini|S(M)=R",
+    "step_5": "Confirm transaction (fee ~0.01 XTZ)",
+    "step_6": "Copy TX hash and update this file"
+  },
+  "tx_hash": "PENDING — execute the transaction above"
+}

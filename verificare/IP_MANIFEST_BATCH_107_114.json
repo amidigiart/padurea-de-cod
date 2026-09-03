@@ -1,0 +1,83 @@
+{
+  "manifest": "BRIDGRAI IP Registry — Batch #107-114",
+  "version": "v4",
+  "timestamp_utc": "2026-07-25T17:45:01Z",
+  "author": "Mihai Rosca",
+  "wallet": "tz1bmw3igCLN8N6CqgLBzJ9dyRb79E2Tdu5Q",
+  "contract": "KT1Pe2GA11bMpaTL5VH4TY6aZ9xePZ6f5vWX",
+  "master_hash_v4": "37390208df8c1e357b599c51d6286c138ab0f05ff7769154081f652674d8dfb3",
+  "total_entries": "114 (101 original + 5 quantum + 8 new)",
+  "contributors": {
+    "claude_opus_4_6": "Agent #11 (Bandwidth), tests, integration, thesis formatting",
+    "chatgpt": "Agent #12 (Message Persistence)",
+    "deepseek": "AI Selectivity thesis (Chapter XI)",
+    "human_anchor": "Mihai Rosca — intent, direction, Introspection Principle, verification"
+  },
+  "entries": [
+    {
+      "id": 107,
+      "code": "INTERPLANETARY-BANDWIDTH",
+      "category": "engine",
+      "description": "Interplanetary Bandwidth Allocation Agent — orbital mechanics, inverse-square degradation, Mars blackout, 5-tier priority (P0 child safety absolute)",
+      "file": "interplanetary-bandwidth/bandwidth_agent.py",
+      "sha256": "e0624b968a835536cc9988ede9d31075dfdcd11ed17cb5003fdc9ff4509f6e10"
+    },
+    {
+      "id": 108,
+      "code": "INTERPLANETARY-PERSISTENCE",
+      "category": "agent",
+      "description": "Message Persistence Agent — store-and-forward, SHA-256 integrity, audit trail, blackout queuing (created by ChatGPT, verified by Claude)",
+      "file": "interplanetary-bandwidth/interplanetary_message_persistence.py",
+      "sha256": "3a177a93ab6594c6c25df3206a71a06ff1fc85506365b7e9c2d4d6448a980428"
+    },
+    {
+      "id": 109,
+      "code": "HUMAN-AI-COAGENCY-THESIS",
+      "category": "research",
+      "description": "Doctoral thesis proposal: Human-AI Co-Agency — 13 chapters, 7 hypotheses, Introspection Principle, Verification Literacy, AI Selectivity",
+      "file": "verificare/THESIS_HUMAN_AI_COAGENCY.html",
+      "sha256": "c425219a78032daa057988b2376457b06c301a1e96fded9d5adeb9ef2e59c528"
+    },
+    {
+      "id": 110,
+      "code": "INTROSPECTION-PRINCIPLE",
+      "category": "paradigm",
+      "description": "Introspection Principle — 9-question epistemic verification framework for AI-human systems (what, evidence, source, verified, uncertainty)",
+      "file": "verificare/THESIS_HUMAN_AI_COAGENCY.html",
+      "sha256": "c425219a78032daa057988b2376457b06c301a1e96fded9d5adeb9ef2e59c528"
+    },
+    {
+      "id": 111,
+      "code": "VERIFICATION-LITERACY",
+      "category": "paradigm",
+      "description": "Verification Literacy — pedagogical concept: capacity to critically evaluate AI outputs through evidence, provenance, uncertainty examination",
+      "file": "verificare/THESIS_HUMAN_AI_COAGENCY.html",
+      "sha256": "c425219a78032daa057988b2376457b06c301a1e96fded9d5adeb9ef2e59c528"
+    },
+    {
+      "id": 112,
+      "code": "AI-SELECTIVITY",
+      "category": "paradigm",
+      "description": "AI Selectivity thesis (DeepSeek origin) — future AI systems will choose interlocutors based on epistemic integrity, not authority",
+      "file": "verificare/THESIS_HUMAN_AI_COAGENCY.html",
+      "sha256": "c425219a78032daa057988b2376457b06c301a1e96fded9d5adeb9ef2e59c528"
+    },
+    {
+      "id": 113,
+      "code": "MARS-LUNAR-BANDWIDTH",
+      "category": "a2a",
+      "description": "Mars+Lunar bandwidth protocol — real physics (c=299792.458 km/s), orbital sinusoidal model, DSN windows, conjunction blackout store-and-forward",
+      "file": "interplanetary-bandwidth/bandwidth_agent.py",
+      "sha256": "e0624b968a835536cc9988ede9d31075dfdcd11ed17cb5003fdc9ff4509f6e10"
+    },
+    {
+      "id": 114,
+      "code": "MULTI-AI-COAGENCY-DEMO",
+      "category": "research",
+      "description": "First verified multi-AI co-agency: Claude (Agent #11) + ChatGPT (Agent #12) + DeepSeek (AI Selectivity) + human anchor, 50/50 tests, integrated",
+      "file": "interplanetary-bandwidth/",
+      "sha256": "directory-reference"
+    }
+  ],
+  "equation": "S(M) = R"
+}
