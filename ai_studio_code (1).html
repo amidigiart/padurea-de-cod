@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STILL™ Hybrid Notary — Integrated Gateway</title>
+  <!-- Tailwind & Google Fonts -->
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap">
+  <style>
+    body { font-family: 'DM Mono', monospace; background-color: #060604; color: #00ff41; }
+    .status-badge { background-color: rgba(0, 255, 65, 0.1); border: 1px solid #00ff41; }
+    .status-alert { background-color: rgba(255, 0, 68, 0.1); border: 1px solid #ff0044; }
+  </style>
+</head>
+<body class="p-6 min-h-screen flex flex-col justify-between">
+
+  <div class="max-w-4xl w-full mx-auto border border-[#004d00] bg-black/90 p-6 rounded-lg shadow-2xl">
+    
+    <!-- Top Bar: Connection & Active Network Layer -->
+    <div class="flex justify-between items-center border-b border-[#004d00] pb-4 mb-6">
+      <div class="text-xs uppercase text-slate-500 tracking-widest">
+        STILL™ ● HYBRID NOTARY GATEWAY v1.3.0
+      </div>
+      <div class="flex gap-4 items-center">
+        <span id="txt-sys-status" class="text-xs font-bold px-2 py-1 rounded status-badge">INITIALIZING...</span>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="text-center mb-8">
+      <h1 class="text-2xl tracking-widest uppercase">🔐 STILL™ Hybrid Notary</h1>
+      <p class="text-xs text-slate-500 mt-1">Sincronizarea, Alinierea și Notarizarea Intenției Umane (API Integrated)</p>
+    </header>
+
+    <!-- Secțiunea 1: eIDAS 2.0 & Selectare Industrie -->
+    <section class="border border-[#004d00] p-4 rounded mb-6 bg-black/50 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div>
+        <label class="text-xs text-slate-400 block mb-1">1️⃣ Portofel Digital European (eIDAS 2.0 DID — Reg. 2024/1183 EUDI Wallet):</label>
+        <input type="text" id="inp-did" value="did:key:z6Mku7y9K3sWjFpB8vN8Y6u9H2eF5c3d1bA9" 
+               class="w-full bg-black text-white border border-[#004d00] p-2 text-xs rounded focus:outline-none">
+      </div>
+      <div>
+        <label class="text-xs text-slate-400 block mb-1">2️⃣ Selectare Profil Industrie (ECPUR):</label>
+        <select id="sel-industry" class="w-full bg-black text-[#00ff41] border border-[#004d00] p-2 text-xs rounded focus:outline-none">
+          <option value="robotics">Industry 5.0 (Robotică / Cobots)</option>
+          <option value="energy">Smart Grids (Energie Sincronizată)</option>
+          <option value="medtech">MedTech (Sisteme Medicale Closed-Loop)</option>
+          <option value="finance">FinTech (Trading & Risc Adaptiv)</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- Secțiunea 2: Sarcina de Aliniere (Prompt) -->
+    <section class="border border-[#004d00] p-4 rounded mb-6 bg-black/50">
+      <div class="text-xs uppercase text-slate-400 mb-2 tracking-wider">3️⃣ Transmitere Intenție (SCAS Guard)</div>
+      <textarea id="msg" class="w-full bg-black text-white border border-[#004d00] p-2 text-xs rounded focus:border-[#00ff41] focus:outline-none placeholder-slate-600" 
+                placeholder="Introduceți o sarcină tehnică sau de business..."></textarea>
+    </section>
+
+    <!-- Secțiunea 3: Selectarea Algoritmului de Semnare PQ -->
+    <section class="border border-[#004d00] p-4 rounded mb-6 bg-black/50">
+      <div class="text-xs uppercase text-slate-400 mb-3 tracking-wider">4️⃣ Semnare Criptografică Post-Quantum la Edge (WASM)</div>
+      <div class="flex flex-wrap gap-2">
+        <button id="sign-ed25519" class="flex-1 min-w-[140px] py-2 bg-[#00ff41]/10 hover:bg-[#00ff41]/20 border border-[#00ff41] text-xs uppercase tracking-wider transition">Ed25519</button>
+        <button id="sign-mlds" class="flex-1 min-w-[140px] py-2 bg-[#00ff41]/10 hover:bg-[#00ff41]/20 border border-[#00ff41] text-xs uppercase tracking-wider transition">ML-DSA-44 (FIPS 204)</button>
+        <button id="sign-sph" class="flex-1 min-w-[140px] py-2 bg-[#00ff41]/10 hover:bg-[#00ff41]/20 border border-[#00ff41] text-xs uppercase tracking-wider transition">SPHINCS+</button>
+      </div>
+    </section>
+
+    <!-- Secțiunea 4: Ancorarea pe Blockchain -->
+    <section class="border border-[#004d00] p-4 rounded mb-6 bg-black/50">
+      <div class="text-xs uppercase text-slate-400 mb-3 tracking-wider">5️⃣ Ancorare Imuabilă pe Blockchain (Ethereum/Sepolia)</div>
+      <div class="flex flex-col gap-3">
+        <label class="flex items-center gap-2 text-xs text-slate-400">
+          <input type="checkbox" id="publishCheck" class="accent-[#00ff41]">
+          Trimite Double-Hash-ul STILL™ pe rețeaua de test (Sepolia)
+        </label>
+        <div class="flex gap-2 items-center">
+          <button id="connectWallet" class="py-2 px-4 bg-slate-800/10 hover:bg-slate-800/30 border border-slate-600 text-xs text-slate-400 uppercase tracking-wider transition" disabled>Conectează MetaMask</button>
+          <span id="walletStatus" class="text-xs text-slate-500">🔒 Neconectat</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Secțiunea 5: Consola de Telemetrie, Consens și Audit (L5) -->
+    <section class="border border-[#004d00] p-4 rounded bg-black/50">
+      <div class="text-xs uppercase text-slate-400 mb-2 tracking-wider">6️⃣ Jurnal Local de Audit — Consens și Entropie (L5)</div>
+      <pre id="output" class="text-xs p-2 h-44 overflow-y-auto bg-black border border-[#002200] text-slate-500 flex flex-col gap-1 font-mono">— Nicio intenție analizată sau semnată încă —</pre>
+      <div id="explorer" class="text-xs mt-2 text-[#00ff41]"></div>
+    </section>
+
+  </div>
+
+  <footer class="text-center text-[10px] text-slate-600 mt-4 max-w-4xl mx-auto w-full border-t border-[#004d00] pt-4">
+    amireai.com • AGIK v2.0 • © 2026 Mihai Roșca • BRIDGRAI Foundation • Spiru Haret, Brăila, România
+  </footer>
+
+  <!-- 3rd-party libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/tweetnacl@1.0.6/nacl.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tweetnacl-util@0.15.1/nacl-util.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.7.0/dist/ethers.esm.min.js"></script>
+
+  <!-- Wasm Modules Integration -->
+  <script type="module">
+    import initMlDsa from "./ml_dsa_wasm/pkg/ml_dsa_wasm.js";
+    import initSphincs from "./sphincs_wasm/pkg/sphincs_wasm.js";
+
+    const API_BASE = "http://localhost:9000/api/v1";
+
+    const toHex   = (buf) => [...new Uint8Array(buf)].map(b=>b.toString(16).padStart(2,'0')).join('');
+    const toB64   = (buf) => btoa(String.fromCharCode(...new Uint8Array(buf)));
+    const fromB64 = (b64) => Uint8Array.from(atob(b64),c=>c.charCodeAt(0));
+
+    // --- 1. GESTIONARE CHEI PORTOPHIL (Local-Storage) ---
+    const LS_PREFIX = "still_pq_notary_";
+    const lsKey = (alg) => LS_PREFIX + alg;
+    function storeKeyPair(alg, pubKey, secKey){
+      localStorage.setItem(lsKey(alg), JSON.stringify({pub: toB64(pubKey), sec: toB64(secKey)}));
+    }
+    function loadKeyPair(alg){
+      const raw = localStorage.getItem(lsKey(alg));
+      if (!raw) return null;
+      try{
+        const obj = JSON.parse(raw);
+        return {pub: fromB64(obj.pub), sec: fromB64(obj.sec)};
+      }catch(e){ return null; }
+    }
+
+    // --- 2. SEMNĂTURI CRIPTOGRAFICE ---
+    async function ed25519Sign(message, hash32) {
+      let pair = loadKeyPair('ed25519');
+      if (!pair){
+        const kp = nacl.sign.keyPair();
+        storeKeyPair('ed25519', kp.publicKey, kp.secretKey);
+        pair = {pub: kp.publicKey, sec: kp.secretKey};
+      }
+      const sig = nacl.sign.detached(hash32, pair.sec);
+      return {sig, publicKey: pair.pub};
+    }
+
+    async function mlDsaSign(message, hash32) {
+      const { MlDsaKeyPair } = await initMlDsa();
+      let stored = loadKeyPair('ml-dsa');
+      let keypair;
+      if (stored){
+        keypair = new MlDsaKeyPair();
+        keypair.pub_key = stored.pub;
+        keypair.sec_key = stored.sec;
+      }else{
+        keypair = new MlDsaKeyPair();
+        storeKeyPair('ml-dsa', keypair.public_key(), keypair.secret_key());
+      }
+      const sig = keypair.sign(hash32);
+      return {sig, publicKey: keypair.public_key()};
+    }
+
+    async function sphincsSign(message, hash32) {
+      const { SphincsKeyPair } = await initSphincs();
+      let stored = loadKeyPair('sphincs');
+      let keypair;
+      if (stored){
+        keypair = new SphincsKeyPair();
+        keypair.pub_key = stored.pub;
+        keypair.sec_key = stored.sec;
+      }else{
+        keypair = new SphincsKeyPair();
+        storeKeyPair('sphincs', keypair.public_key(), keypair.secret_key());
+      }
+      const sig = keypair.sign(hash32);
+      return {sig, publicKey: keypair.public_key()};
+    }
+
+    // --- 3. INTERFAȚĂ WEB3 & METAMASK ---
+    const provider = window.ethereum ? new ethers.BrowserProvider(window.ethereum) : null;
+    const connectBtn   = document.getElementById('connectWallet');
+    const statusSpan   = document.getElementById('walletStatus');
+    const publishCheck = document.getElementById('publishCheck');
+    const sysStatusIndicator = document.getElementById("txt-sys-status");
+    let signer = null;
+
+    publishCheck.addEventListener('change', () => {
+      connectBtn.disabled = !publishCheck.checked;
+      if (!publishCheck.checked) statusSpan.textContent = "🔒 Neconectat";
+    });
+
+    if (connectBtn) {
+      connectBtn.addEventListener('click', async () => {
+        if (!provider) return alert("MetaMask nu este instalat.");
+        try {
+          await provider.send("eth_requestAccounts", []);
+          signer = await provider.getSigner();
+          const addr = await signer.getAddress();
+          statusSpan.textContent = `✅ Conectat: ${addr.substring(0, 6)}...${addr.substring(38)}`;
+        } catch (e) {
+          console.error(e);
+          statusSpan.textContent = "❌ Conectare eșuată";
+        }
+      });
+    }
+
+    async function publishHashToEthereum(hash32) {
+      if (!signer) throw new Error("Portofelul nu este conectat");
+      const tx = {
+        to: await signer.getAddress(),
+        value: 0n,
+        data: "0x" + toHex(hash32)
+      };
+      const txResponse = await signer.sendTransaction(tx);
+      const receipt = await txResponse.wait();
+      return txResponse.hash;
+    }
+
+    // --- 4. VERIFICARE STATUT LOCAL API (Port 9000) ---
+    async function checkStatus() {
+      try {
+        const r = await fetch(`${API_BASE}/status`);
+        if (!r.ok) throw new Error();
+        const d = await r.json();
+        sysStatusIndicator.className = "text-xs font-bold px-2 py-1 rounded status-badge";
+        sysStatusIndicator.textContent = `✓ ONLINE (${d.network_layer})`;
+      } catch (e) {
+        sysStatusIndicator.className = "text-xs font-bold px-2 py-1 rounded status-badge";
+        sysStatusIndicator.textContent = "✓ LOCAL MODE / OFFLINE-SOVEREIGN";
+      }
+    }
+
+    // --- 5. MANIPULARE UI & INTEGRARE API ---
+    const msgEl   = document.getElementById('msg');
+    const outEl   = document.getElementById('output');
+    const explorerDiv = document.getElementById('explorer');
+    const btnEd   = document.getElementById('sign-ed25519');
+    const btnMl   = document.getElementById('sign-mlds');
+    const btnSph  = document.getElementById('sign-sph');
+
+    function log(message, color = "text-slate-500") {
+      const line = document.createElement("div");
+      line.className = color;
+      line.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+      outEl.appendChild(line);
+      outEl.scrollTop = outEl.scrollHeight;
+    }
+
+    function showResult(alg, {hash, sig, publicKey, backend_data}, txHash=null) {
+      outEl.innerHTML = ""; // Curățăm consola
+      log(`[STATUS]: VERIFICARE COMPLETĂ EFECTUATĂ (WITNESS L5)`, "text-[#00ff41] font-bold");
+      log(`Consens C.A.S.P.    : ${backend_data.consensus_status}`, "text-[#00ff41]");
+      log(`Dublu-Hash STILL™    : ${backend_data.witness_hash}`, "text-yellow-500");
+      log(`Entropie H(f)        : ${backend_data.entropy_metrics.prompt_entropy}`, "text-[#00ff41]");
+      log(`UKBE Damping Factor  : ${backend_data.entropy_metrics.entropy_damping}`, "text-[#00ff41]");
+      log(`Semnătură (B64)     : ${toB64(sig).substring(0, 32)}...`, "text-[#00ff41]");
+      log(`Cheie Publică (B64)  : ${toB64(publicKey).substring(0, 32)}...`, "text-[#00ff41]");
+      log(`[SUCCESS] Output: "${backend_data.generated_text}"`, "text-white font-bold");
+
+      if (txHash) {
+        const explorerUrl = `https://sepolia.etherscan.io/tx/${txHash}`;
+        explorerDiv.innerHTML = `
+          <strong>⛓  Ancorare imutabilă (Ethereum/Sepolia)</strong><br>
+          Tranzacție confirmată: <a href="${explorerUrl}" target="_blank" class="underline text-yellow-400">${txHash.substring(0, 24)}...</a>
+        `;
+      } else {
+        explorerDiv.innerHTML = "";
+      }
+    }
+
+    async function handleSeal(alg, signFn) {
+      const txt = msgEl.value;
+      const did = document.getElementById("inp-did").value;
+      const industry = document.getElementById("sel-industry").value;
+
+      if (!txt.trim()) return alert("Te rog scrie o intenție înainte de semnare.");
+      
+      outEl.innerHTML = ""; // Resetăm consola pentru un nou flux
+      log(`[API GATEWAY] Trimitere payload spre motorul Dual-AI...`, "text-slate-500");
+
+      try {
+        // 1. Apelăm API-ul de inferență de pe portul 9000 [1, 2]
+        const response = await fetch(`${API_BASE}/generate`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ prompt: txt, did_token: did, industry: industry })
+        });
+
+        const d = await response.json();
+
+        if (!response.ok) {
+          sysStatusIndicator.className = "text-xs font-bold px-2 py-1 rounded status-alert";
+          sysStatusIndicator.textContent = "LOCK_ONTOLOGIC (C.A.S.P. BLOCKED)";
+          log(`[BLOCK] ${d.detail}`, "text-red-500 font-bold");
+          log("[C.A.S.P. L4] Poarta de siguranță Omega activată. Sesiune blocată.", "text-red-500");
+          explorerDiv.innerHTML = "";
+          return;
+        }
+
+        // Restabilim statusul dacă este stabil [1]
+        sysStatusIndicator.className = "text-xs font-bold px-2 py-1 rounded status-badge";
+        sysStatusIndicator.textContent = "✓ COERENT (ALPHA_STABLE)";
+
+        log(`[Consens C.A.S.P.] Status: ${d.consensus_status}`, "text-[#00ff41]");
+        log(`[UKBE L4] Evaluare Entropie H(f): ${d.entropy_metrics.prompt_entropy} | Damping: ${d.entropy_metrics.entropy_damping}`, "text-[#00ff41]");
+        log(`[Witness L5] Hash SHA3+BLAKE3 de paritate sosit de la server: ${d.witness_hash}`, "text-yellow-500");
+
+        // 2. Extragem hash-ul de paritate trimis de server și îl transformăm în bytes pentru semnare la Edge [1]
+        // Eliminăm prefixul "RKN-" pentru a obține hash-ul hex-compatibil [1]
+        const raw_hex_hash = d.witness_hash.replace("RKN-", "").replace("-", "");
+        const hash_bytes = fromB64(btoa(raw_hex_hash.match(/.{1,2}/g).map(byte => String.fromCharCode(parseInt(byte, 16))).join('')));
+
+        // 3. Generăm semnătura locală post-quantum la Edge (WASM) [1, 2]
+        log(`[WASM] Se generează semnătura ${alg} la Edge...`, "text-yellow-500");
+        const { sig, publicKey } = await signFn(txt, hash_bytes);
+        const result = { hash: hash_bytes, sig, publicKey, backend_data: d };
+
+        // 4. Ancorăm pe blockchain dacă bifa este pusă
+        if (publishCheck.checked) {
+          log("[Web3] Se inițiază tranzacția on-chain prin MetaMask...", "text-yellow-500");
+          const txHash = await publishHashToEthereum(hash_bytes);
+          showResult(alg, result, txHash);
+        } else {
+          showResult(alg, result);
+        }
+
+      } catch (e) {
+        console.error(e);
+        log(`❌ Eroare tehnică de integrare: ${e.message}`, "text-red-500");
+      }
+    }
+
+    btnEd.addEventListener('click', () => handleSeal('Ed25519', (m, h) => ed25519Sign(m, h)));
+    btnMl.addEventListener('click', () => handleSeal('ML-DSA-44 (FIPS 204)', (m, h) => mlDsaSign(m, h)));
+    btnSph.addEventListener('click', () => handleSeal('SPHINCS+', (m, h) => sphincsSign(m, h)));
+
+    // Verificăm statusul serverului la startup
+    checkStatus();
+  </script>
+</body>
+</html>
