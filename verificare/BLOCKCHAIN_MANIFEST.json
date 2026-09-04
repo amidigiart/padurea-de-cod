@@ -1,11 +1,11 @@
 {
   "protocol": "ami* Ecosystem Verification Protocol",
-  "version": "1.4",
-  "timestamp_utc": "2026-09-04T00:30:00Z",
+  "version": "1.5",
+  "timestamp_utc": "2026-09-04T01:00:00Z",
   "previous_version": {
-    "version": "1.3",
-    "timestamp_utc": "2026-09-03T21:15:00Z",
-    "master_hash": "6dc56cb1087fde71acdc9ab6342a8aa136128587f3b05d9adf3e0e8bb2e6d317"
+    "version": "1.4",
+    "timestamp_utc": "2026-09-04T00:30:00Z",
+    "master_hash": "3f05e7378b3fc18d705246d20e9a141b5ec097842684c8c0df42597375a42dcb"
   },
   "author": {
     "name": "Mihai Roșca",
@@ -54,12 +54,25 @@
       "verify": "https://tzkt.io/op3WERVe7BiAWngAGWjfFqnrHHKMHzWdUhPw7yKJ3qM2sb1ryKu"
     },
     "pending_transaction": {
-      "label": "MANIFEST-V1.4",
-      "master_hash": "3f05e7378b3fc18d705246d20e9a141b5ec097842684c8c0df42597375a42dcb",
-      "description": "Master hash of 119 IP assets — v1.3 (118) + ScaleEngine head-to-head benchmark",
+      "label": "MANIFEST-V1.5",
+      "master_hash": "4249cd07d02fe8f2d20c2b5cbc2a18fca75452e325895507b4abe672bf565989",
+      "description": "Master hash of 120 IP assets — v1.4 (119) + STILL Hybrid Notary Gateway v1.3.0 (corected: Sepolia, FIPS 204, eIDAS Reg. 2024/1183, offline-sovereign)",
       "status": "PENDING_TEZOS_TX",
-      "note": "Submit this hash to Tezos mainnet to confirm v1.4. Chain: v1.1→v1.2→v1.3→v1.4"
+      "note": "Submit this hash to Tezos mainnet to confirm v1.5. Chain: v1.1→v1.2→v1.3→v1.4→v1.5"
     }
+  },
+  "new_assets_since_v1_4": {
+    "total_new": 1,
+    "assets": [
+      {
+        "id": 120,
+        "name": "STILL™ Hybrid Notary Gateway v1.3.0",
+        "type": "gateway",
+        "file": "ai_studio_code (1).html",
+        "sha256": "39212b108f05a226783e8680610f5beb53ad0a10259c4749a837acb3418ee5d2",
+        "description": "Corrected: Goerli→Sepolia, ML-DSA-44 FIPS 204, eIDAS Reg. 2024/1183, offline-sovereign badge, audit journal (no telemetry)"
+      }
+    ]
   },
   "new_assets_since_v1_3": {
     "total_new": 1,
@@ -198,7 +211,7 @@
     }
   },
   "verification_summary": {
-    "blockchain_ip_assets": 119,
+    "blockchain_ip_assets": 120,
     "total_tests_ecosystem": 717,
     "test_breakdown": {
       "ukbe_core": 175,

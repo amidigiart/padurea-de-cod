@@ -1,0 +1,30 @@
+{
+  "version": "v10",
+  "timestamp_utc": "2026-09-04T01:00:00Z",
+  "author": "Mihai Roșca",
+  "co_author": "Claude (Opus 4.6, Anthropic)",
+  "wallet": "tz1bmw3igCLN8N6CqgLBzJ9dyRb79E2Tdu5Q",
+  "chain": {
+    "v1.1_master": "08a4230e7c9dac122432b348aa11a66945a3334d85eac22c536b96066214ae6d",
+    "v1.2_master": "987872ae01015eb1ba4df03d1187758fc428ef3c773d846c6cd569837b77d348",
+    "v1.3_master": "6dc56cb1087fde71acdc9ab6342a8aa136128587f3b05d9adf3e0e8bb2e6d317",
+    "v1.4_master": "3f05e7378b3fc18d705246d20e9a141b5ec097842684c8c0df42597375a42dcb",
+    "v1.5_master": "4249cd07d02fe8f2d20c2b5cbc2a18fca75452e325895507b4abe672bf565989"
+  },
+  "payload_string": "BRIDGRAI-IPR-v10|120entries|4249cd07d02fe8f2d20c2b5cbc2a18fca75452e325895507b4abe672bf565989|2026-09-04|MihaiRosca+Claude|STILL-Notary-v1.3.0-Sepolia+FIPS204+eIDAS2024+OfflineSovereign|S(M)=R",
+  "new_assets": {
+    "120": {
+      "name": "STILL™ Hybrid Notary Gateway v1.3.0 (corrected)",
+      "sha256": "39212b108f05a226783e8680610f5beb53ad0a10259c4749a837acb3418ee5d2"
+    }
+  },
+  "corrections_applied": [
+    "Goerli → Sepolia (Goerli deprecated 2024)",
+    "ML-DSA (Dilithium2) → ML-DSA-44 (FIPS 204)",
+    "CONNECTING badge → LOCAL MODE / OFFLINE-SOVEREIGN",
+    "Consolă Telemetrie → Jurnal Local de Audit",
+    "eIDAS 2.0 DID → eIDAS 2.0 DID (Reg. 2024/1183 EUDI Wallet)"
+  ],
+  "tx_hash": "PENDING",
+  "status": "Ready to submit to Tezos mainnet"
+}
