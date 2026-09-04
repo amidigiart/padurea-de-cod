@@ -25,6 +25,8 @@
     "Consolă Telemetrie → Jurnal Local de Audit",
     "eIDAS 2.0 DID → eIDAS 2.0 DID (Reg. 2024/1183 EUDI Wallet)"
   ],
-  "tx_hash": "PENDING",
-  "status": "Ready to submit to Tezos mainnet"
+  "tx_hash": "ooBVxKpzHx3BAvkMGFSeDFCdMCVwF2n6cXjjAGiL978zAWARMLC",
+  "onchain_master_hash": "6b50dbcdcf38600774f6175decff5c79d59b92b8a1100e4500f072bd3e9bb666",
+  "status": "CONFIRMED",
+  "verify": "https://tzkt.io/ooBVxKpzHx3BAvkMGFSeDFCdMCVwF2n6cXjjAGiL978zAWARMLC"
 }

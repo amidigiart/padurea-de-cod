@@ -53,13 +53,15 @@
       "status": "CONFIRMED",
       "verify": "https://tzkt.io/op3WERVe7BiAWngAGWjfFqnrHHKMHzWdUhPw7yKJ3qM2sb1ryKu"
     },
-    "pending_transaction": {
+    "confirmed_v1_5": {
       "label": "MANIFEST-V1.5",
-      "master_hash": "4249cd07d02fe8f2d20c2b5cbc2a18fca75452e325895507b4abe672bf565989",
-      "description": "Master hash of 120 IP assets — v1.4 (119) + STILL Hybrid Notary Gateway v1.3.0 (corected: Sepolia, FIPS 204, eIDAS Reg. 2024/1183, offline-sovereign)",
-      "status": "PENDING_TEZOS_TX",
-      "note": "Submit this hash to Tezos mainnet to confirm v1.5. Chain: v1.1→v1.2→v1.3→v1.4→v1.5"
-    }
+      "tx_hash": "ooBVxKpzHx3BAvkMGFSeDFCdMCVwF2n6cXjjAGiL978zAWARMLC",
+      "master_hash": "6b50dbcdcf38600774f6175decff5c79d59b92b8a1100e4500f072bd3e9bb666",
+      "description": "Master hash of 120 IP assets — full portfolio timestamped on Tezos",
+      "status": "CONFIRMED",
+      "verify": "https://tzkt.io/ooBVxKpzHx3BAvkMGFSeDFCdMCVwF2n6cXjjAGiL978zAWARMLC"
+    },
+    "pending_transaction": null
   },
   "new_assets_since_v1_4": {
     "total_new": 1,
