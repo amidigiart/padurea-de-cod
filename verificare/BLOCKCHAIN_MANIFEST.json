@@ -80,7 +80,7 @@
         "type": "demo",
         "repo": "github.com/amidigiart/bridgrai-demo",
         "file": "investor-pack.html",
-        "sha256": "aa6b0e1e9de88b252101c7fb248bd2967fcadefb596a30f490184e792cf6ba85",
+        "sha256": "9ac8212079cd62ffc5d40c34a86c58be20a3bdd03044cfdebbf87ae75b641764",
         "description": "Investor landing page: live demos, reading guide by audience, next steps (terms on request), blockchain verification, regulatory alignment"
       }
     ]
@@ -117,7 +117,7 @@
         "type": "demo",
         "repo": "github.com/amidigiart/bridgrai-demo",
         "file": "dashboard.html",
-        "sha256": "941d7e93d72dc707065478d10a9f29b1a90db2e4ed6a3ac12917a456101df763",
+        "sha256": "0277d30ca2c8eb1477be88cf0c70ccbce43a0adfba84e29c18f8bea5cefbe84e",
         "description": "Ecosystem status: Tezos TX table, AGIK consensus rounds, STILL signatures, manifest hash chain v1.1-v1.5"
       }
     ]
