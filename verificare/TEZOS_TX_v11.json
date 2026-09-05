@@ -10,13 +10,13 @@
     "v1.3_master": "6dc56cb1087fde71acdc9ab6342a8aa136128587f3b05d9adf3e0e8bb2e6d317",
     "v1.4_master": "3f05e7378b3fc18d705246d20e9a141b5ec097842684c8c0df42597375a42dcb",
     "v1.5_master": "6b50dbcdcf38600774f6175decff5c79d59b92b8a1100e4500f072bd3e9bb666",
-    "v1.6_master": "7212db26ffe2f453a03226297fdb534f11067503b4696ae80240180902f6a2cc"
+    "v1.6_master": "08e20f2f122c734977c87c8c8b23a883aa80c74abb84fddaf50a4a7433155143"
   },
-  "payload_string": "BRIDGRAI-IPR-v11|122entries|7212db26ffe2f453a03226297fdb534f11067503b4696ae80240180902f6a2cc|2026-09-05|MihaiRosca+Claude|AGIK-ChildSafety-Demo+Dashboard-PreOslo|S(M)=R",
+  "payload_string": "BRIDGRAI-IPR-v11|122entries|08e20f2f122c734977c87c8c8b23a883aa80c74abb84fddaf50a4a7433155143|2026-09-05|MihaiRosca+Claude|AGIK-ChildSafety-InteractiveSandbox+Dashboard-PreOslo|S(M)=R",
   "new_assets": {
     "121": {
-      "name": "AGIK Child Safety Consensus Demo",
-      "sha256": "2290925ca7f6d1c7bac04a4e1420e60f4c5f959c0afbf85119a7b85a73daa1a9"
+      "name": "AGIK Child Safety Consensus Demo (Interactive Sandbox)",
+      "sha256": "36cf2cc22e510825305f1b3c2c8cba63c64593766e3528efdfa2849e59cb0cd0"
     },
     "122": {
       "name": "BRIDGRAI Dashboard",

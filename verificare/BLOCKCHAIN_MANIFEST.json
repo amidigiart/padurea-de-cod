@@ -72,8 +72,8 @@
         "type": "demo",
         "repo": "github.com/amidigiart/bridgrai-demo",
         "file": "child-safety.html",
-        "sha256": "2290925ca7f6d1c7bac04a4e1420e60f4c5f959c0afbf85119a7b85a73daa1a9",
-        "description": "5 synthetic scenarios (3 SAFE, 1 REVIEW, 1 NOT SAFE with human escalation), GDPR-K compliant, reasoning hashes"
+        "sha256": "36cf2cc22e510825305f1b3c2c8cba63c64593766e3528efdfa2849e59cb0cd0",
+        "description": "Interactive sandbox: 5 synthetic scenarios with Run Consensus Round animation (3 SAFE, 1 REVIEW, 1 NOT SAFE with escalation), GDPR-K compliant"
       },
       {
         "id": 122,
