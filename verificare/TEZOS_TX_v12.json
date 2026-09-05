@@ -11,16 +11,16 @@
     "v1.4_master": "3f05e7378b3fc18d705246d20e9a141b5ec097842684c8c0df42597375a42dcb",
     "v1.5_master": "6b50dbcdcf38600774f6175decff5c79d59b92b8a1100e4500f072bd3e9bb666",
     "v1.6_master": "08e20f2f122c734977c87c8c8b23a883aa80c74abb84fddaf50a4a7433155143",
-    "v1.7_master": "58a89a91e59ab87686744c7bea9efd1698ca978b48d1f780c9805be816420638"
+    "v1.7_master": "6df4cb7048b2ef48c8ef7a6b284ad4a839eccb888234925b141c755d7330bc16"
   },
-  "payload_string": "BRIDGRAI-IPR-v12|123entries|58a89a91e59ab87686744c7bea9efd1698ca978b48d1f780c9805be816420638|2026-09-05|MihaiRosca+Claude|ResonanceEngineering-Foundational-PreOslo|S(M)=R",
+  "payload_string": "BRIDGRAI-IPR-v12|123entries|6df4cb7048b2ef48c8ef7a6b284ad4a839eccb888234925b141c755d7330bc16|2026-09-05|MihaiRosca+Claude|ResonanceEngineering-Foundational-PreOslo|S(M)=R",
   "new_assets": {
     "123": {
       "name": "Resonance Engineering — Foundational Document",
       "sha256": "d58709ed2466eb090b9dc638fced268c2d213947547978b80eaa5e622ab6e6fe"
     }
   },
-  "tx_hash": null,
-  "status": "PENDING",
-  "instructions": "Submit payload_string as memo to Tezos self-transfer from wallet above. Paste confirmed TX hash back."
+  "tx_hash": "op113kYvTmnvXNRzBnqgpjZ7zyActFpUg9psC1rNFqUvJ2XsGLy",
+  "status": "CONFIRMED",
+  "verify": "https://tzkt.io/op113kYvTmnvXNRzBnqgpjZ7zyActFpUg9psC1rNFqUvJ2XsGLy"
 }

@@ -61,6 +61,14 @@
       "status": "CONFIRMED",
       "verify": "https://tzkt.io/ooBVxKpzHx3BAvkMGFSeDFCdMCVwF2n6cXjjAGiL978zAWARMLC"
     },
+    "confirmed_v1_7": {
+      "label": "MANIFEST-V1.7",
+      "tx_hash": "op113kYvTmnvXNRzBnqgpjZ7zyActFpUg9psC1rNFqUvJ2XsGLy",
+      "master_hash": "6df4cb7048b2ef48c8ef7a6b284ad4a839eccb888234925b141c755d7330bc16",
+      "description": "Master hash of 123 IP assets — Resonance Engineering + Ce NU este section",
+      "status": "CONFIRMED",
+      "verify": "https://tzkt.io/op113kYvTmnvXNRzBnqgpjZ7zyActFpUg9psC1rNFqUvJ2XsGLy"
+    },
     "pending_transaction": null
   },
   "new_assets_since_v1_6": {
