@@ -69,6 +69,14 @@
       "status": "CONFIRMED",
       "verify": "https://tzkt.io/op113kYvTmnvXNRzBnqgpjZ7zyActFpUg9psC1rNFqUvJ2XsGLy"
     },
+    "confirmed_v1_8": {
+      "label": "MANIFEST-V1.8",
+      "tx_hash": "op5R4axfbtgXihieEEgthZAL7LTY39G1G8SNZZxx5uAPTJSCT7h",
+      "master_hash": "6df4cb7048b2ef48c8ef7a6b284ad4a839eccb888234925b141c755d7330bc16",
+      "description": "Master hash of 124 IP assets — Investor Pack + terminology alignment",
+      "status": "CONFIRMED",
+      "verify": "https://tzkt.io/op5R4axfbtgXihieEEgthZAL7LTY39G1G8SNZZxx5uAPTJSCT7h"
+    },
     "pending_transaction": null
   },
   "new_assets_since_v1_7": {

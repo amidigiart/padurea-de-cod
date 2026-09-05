@@ -21,7 +21,7 @@
       "sha256": "9ac8212079cd62ffc5d40c34a86c58be20a3bdd03044cfdebbf87ae75b641764"
     }
   },
-  "tx_hash": null,
-  "status": "PENDING",
-  "instructions": "Submit payload_string as memo to Tezos self-transfer from wallet above. Paste confirmed TX hash back."
+  "tx_hash": "op5R4axfbtgXihieEEgthZAL7LTY39G1G8SNZZxx5uAPTJSCT7h",
+  "status": "CONFIRMED",
+  "verify": "https://tzkt.io/op5R4axfbtgXihieEEgthZAL7LTY39G1G8SNZZxx5uAPTJSCT7h"
 }
