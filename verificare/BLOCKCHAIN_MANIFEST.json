@@ -1,11 +1,11 @@
 {
   "protocol": "ami* Ecosystem Verification Protocol",
-  "version": "1.6",
-  "timestamp_utc": "2026-09-05T10:00:00Z",
+  "version": "1.7",
+  "timestamp_utc": "2026-09-05T12:00:00Z",
   "previous_version": {
-    "version": "1.5",
-    "timestamp_utc": "2026-09-04T01:00:00Z",
-    "master_hash": "6b50dbcdcf38600774f6175decff5c79d59b92b8a1100e4500f072bd3e9bb666"
+    "version": "1.6",
+    "timestamp_utc": "2026-09-05T10:00:00Z",
+    "master_hash": "08e20f2f122c734977c87c8c8b23a883aa80c74abb84fddaf50a4a7433155143"
   },
   "author": {
     "name": "Mihai Roșca",
@@ -62,6 +62,20 @@
       "verify": "https://tzkt.io/ooBVxKpzHx3BAvkMGFSeDFCdMCVwF2n6cXjjAGiL978zAWARMLC"
     },
     "pending_transaction": null
+  },
+  "new_assets_since_v1_6": {
+    "total_new": 1,
+    "assets": [
+      {
+        "id": 123,
+        "name": "Resonance Engineering — Foundational Document",
+        "type": "research",
+        "repo": "github.com/amidigiart/bridgrai-demo",
+        "file": "resonance-engineering.html",
+        "sha256": "2a3b4206f6d7acce06b262b8c7a6eae942df221eada83b02c2b3c0fe11d97c64",
+        "description": "10-section foundational document: axiom S(M)=R, RSI+beta_min, ScaleEngine benchmark, DSEI governance, cross-model methodology, hardware reality"
+      }
+    ]
   },
   "new_assets_since_v1_5": {
     "total_new": 2,
@@ -236,7 +250,7 @@
     }
   },
   "verification_summary": {
-    "blockchain_ip_assets": 122,
+    "blockchain_ip_assets": 123,
     "total_tests_ecosystem": 717,
     "test_breakdown": {
       "ukbe_core": 175,

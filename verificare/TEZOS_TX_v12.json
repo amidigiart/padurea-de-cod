@@ -1,0 +1,26 @@
+{
+  "version": "v12",
+  "timestamp_utc": "2026-09-05T14:00:00Z",
+  "author": "Mihai Roșca",
+  "co_author": "Claude (Opus 4.6, Anthropic)",
+  "wallet": "tz1bmw3igCLN8N6CqgLBzJ9dyRb79E2Tdu5Q",
+  "chain": {
+    "v1.1_master": "08a4230e7c9dac122432b348aa11a66945a3334d85eac22c536b96066214ae6d",
+    "v1.2_master": "987872ae01015eb1ba4df03d1187758fc428ef3c773d846c6cd569837b77d348",
+    "v1.3_master": "6dc56cb1087fde71acdc9ab6342a8aa136128587f3b05d9adf3e0e8bb2e6d317",
+    "v1.4_master": "3f05e7378b3fc18d705246d20e9a141b5ec097842684c8c0df42597375a42dcb",
+    "v1.5_master": "6b50dbcdcf38600774f6175decff5c79d59b92b8a1100e4500f072bd3e9bb666",
+    "v1.6_master": "08e20f2f122c734977c87c8c8b23a883aa80c74abb84fddaf50a4a7433155143",
+    "v1.7_master": "5b3c9927e31ee1a77ddd07c74bae647fe2e664508ce139c84925022476a64f2a"
+  },
+  "payload_string": "BRIDGRAI-IPR-v12|123entries|5b3c9927e31ee1a77ddd07c74bae647fe2e664508ce139c84925022476a64f2a|2026-09-05|MihaiRosca+Claude|ResonanceEngineering-Foundational-PreOslo|S(M)=R",
+  "new_assets": {
+    "123": {
+      "name": "Resonance Engineering — Foundational Document",
+      "sha256": "2a3b4206f6d7acce06b262b8c7a6eae942df221eada83b02c2b3c0fe11d97c64"
+    }
+  },
+  "tx_hash": null,
+  "status": "PENDING",
+  "instructions": "Submit payload_string as memo to Tezos self-transfer from wallet above. Paste confirmed TX hash back."
+}
