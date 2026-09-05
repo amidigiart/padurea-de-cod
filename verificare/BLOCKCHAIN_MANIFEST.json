@@ -1,11 +1,11 @@
 {
   "protocol": "ami* Ecosystem Verification Protocol",
-  "version": "1.5",
-  "timestamp_utc": "2026-09-04T01:00:00Z",
+  "version": "1.6",
+  "timestamp_utc": "2026-09-05T10:00:00Z",
   "previous_version": {
-    "version": "1.4",
-    "timestamp_utc": "2026-09-04T00:30:00Z",
-    "master_hash": "3f05e7378b3fc18d705246d20e9a141b5ec097842684c8c0df42597375a42dcb"
+    "version": "1.5",
+    "timestamp_utc": "2026-09-04T01:00:00Z",
+    "master_hash": "6b50dbcdcf38600774f6175decff5c79d59b92b8a1100e4500f072bd3e9bb666"
   },
   "author": {
     "name": "Mihai Roșca",
@@ -62,6 +62,29 @@
       "verify": "https://tzkt.io/ooBVxKpzHx3BAvkMGFSeDFCdMCVwF2n6cXjjAGiL978zAWARMLC"
     },
     "pending_transaction": null
+  },
+  "new_assets_since_v1_5": {
+    "total_new": 2,
+    "assets": [
+      {
+        "id": 121,
+        "name": "AGIK Child Safety Consensus Demo",
+        "type": "demo",
+        "repo": "github.com/amidigiart/bridgrai-demo",
+        "file": "child-safety.html",
+        "sha256": "2290925ca7f6d1c7bac04a4e1420e60f4c5f959c0afbf85119a7b85a73daa1a9",
+        "description": "5 synthetic scenarios (3 SAFE, 1 REVIEW, 1 NOT SAFE with human escalation), GDPR-K compliant, reasoning hashes"
+      },
+      {
+        "id": 122,
+        "name": "BRIDGRAI Dashboard",
+        "type": "demo",
+        "repo": "github.com/amidigiart/bridgrai-demo",
+        "file": "dashboard.html",
+        "sha256": "941d7e93d72dc707065478d10a9f29b1a90db2e4ed6a3ac12917a456101df763",
+        "description": "Ecosystem status: Tezos TX table, AGIK consensus rounds, STILL signatures, manifest hash chain v1.1-v1.5"
+      }
+    ]
   },
   "new_assets_since_v1_4": {
     "total_new": 1,
@@ -213,7 +236,7 @@
     }
   },
   "verification_summary": {
-    "blockchain_ip_assets": 120,
+    "blockchain_ip_assets": 122,
     "total_tests_ecosystem": 717,
     "test_breakdown": {
       "ukbe_core": 175,

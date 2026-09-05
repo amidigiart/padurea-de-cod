@@ -1,0 +1,29 @@
+{
+  "version": "v11",
+  "timestamp_utc": "2026-09-05T10:00:00Z",
+  "author": "Mihai Roșca",
+  "co_author": "Claude (Opus 4.6, Anthropic)",
+  "wallet": "tz1bmw3igCLN8N6CqgLBzJ9dyRb79E2Tdu5Q",
+  "chain": {
+    "v1.1_master": "08a4230e7c9dac122432b348aa11a66945a3334d85eac22c536b96066214ae6d",
+    "v1.2_master": "987872ae01015eb1ba4df03d1187758fc428ef3c773d846c6cd569837b77d348",
+    "v1.3_master": "6dc56cb1087fde71acdc9ab6342a8aa136128587f3b05d9adf3e0e8bb2e6d317",
+    "v1.4_master": "3f05e7378b3fc18d705246d20e9a141b5ec097842684c8c0df42597375a42dcb",
+    "v1.5_master": "6b50dbcdcf38600774f6175decff5c79d59b92b8a1100e4500f072bd3e9bb666",
+    "v1.6_master": "7212db26ffe2f453a03226297fdb534f11067503b4696ae80240180902f6a2cc"
+  },
+  "payload_string": "BRIDGRAI-IPR-v11|122entries|7212db26ffe2f453a03226297fdb534f11067503b4696ae80240180902f6a2cc|2026-09-05|MihaiRosca+Claude|AGIK-ChildSafety-Demo+Dashboard-PreOslo|S(M)=R",
+  "new_assets": {
+    "121": {
+      "name": "AGIK Child Safety Consensus Demo",
+      "sha256": "2290925ca7f6d1c7bac04a4e1420e60f4c5f959c0afbf85119a7b85a73daa1a9"
+    },
+    "122": {
+      "name": "BRIDGRAI Dashboard",
+      "sha256": "941d7e93d72dc707065478d10a9f29b1a90db2e4ed6a3ac12917a456101df763"
+    }
+  },
+  "tx_hash": null,
+  "status": "PENDING",
+  "instructions": "Submit payload_string as memo to Tezos self-transfer from wallet above. Paste confirmed TX hash back."
+}
