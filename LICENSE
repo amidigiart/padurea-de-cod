@@ -1,0 +1,31 @@
+PROPRIETARY LICENSE — ALL RIGHTS RESERVED
+
+Copyright (c) 2023-2026 Mihai Rosca (BRIDGRAI / ami* Ecosystem)
+ORCID: 0009-0001-1422-6209
+
+This repository and all its contents — including but not limited to source code,
+algorithms, documentation, research materials, test suites, blockchain manifests,
+and the BRIDGRAI AGI Backbone — are the exclusive intellectual property of
+Mihai Rosca.
+
+PERMISSIONS:
+- You MAY view this code for verification and audit purposes only.
+- You MAY reference the blockchain transaction hashes for independent verification
+  on Tezos mainnet.
+
+RESTRICTIONS:
+- You MAY NOT copy, modify, merge, distribute, sublicense, or sell any part of
+  this repository without explicit written permission from the author.
+- You MAY NOT use any part of this code, algorithms, or architectural patterns
+  in commercial or non-commercial projects without a separate license agreement.
+- You MAY NOT train AI/ML models on the contents of this repository.
+
+ENFORCEMENT:
+- All IP assets are timestamped on Tezos mainnet (125 assets as of 2026-09-07).
+- Blockchain proof of prior art is immutable and publicly verifiable.
+- Unauthorized use will be pursued under applicable EU and international
+  intellectual property law.
+
+For licensing inquiries: mihairosca1982@gmail.com
+
+S(M) = R
