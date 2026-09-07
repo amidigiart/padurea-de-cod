@@ -1,0 +1,21 @@
+{
+  "tx_hash": "oocCeqQLnKoaqAcd2H5Se6pytc6taEtKLLZxciaHqLobP7efwQM",
+  "network": "Tezos Mainnet",
+  "wallet": "tz1bmw3igCLN8N6CqgLBzJ9dyRb79E2Tdu5Q",
+  "master_hash": "ee3af3e528ebd19b75cb3ff4d6fc8571bb92a113b4947609a5fdddb56f344bda",
+  "manifest_version": "1.9",
+  "ip_assets": 125,
+  "new_asset": "BRIDGRAI AGI Backbone v1.0 — 12 modules, 4 phases, 55 tests, Qwen 3.8 MAX + Claude Opus 4.6",
+  "timestamp_utc": "2026-09-07T04:57:39Z",
+  "status": "CONFIRMED",
+  "verify": "https://tzkt.io/oocCeqQLnKoaqAcd2H5Se6pytc6taEtKLLZxciaHqLobP7efwQM",
+  "chain": {
+    "v1.1": "08a4230e7c9dac122432b348aa11a66945a3334d85eac22c536b96066214ae6d",
+    "v1.3": "6dc56cb1087fde71acdc9ab6342a8aa136128587f3b05d9adf3e0e8bb2e6d317",
+    "v1.5": "6b50dbcdcf38600774f6175decff5c79d59b92b8a1100e4500f072bd3e9bb666",
+    "v1.7": "6df4cb7048b2ef48c8ef7a6b284ad4a839eccb888234925b141c755d7330bc16",
+    "v1.8": "6df4cb7048b2ef48c8ef7a6b284ad4a839eccb888234925b141c755d7330bc16",
+    "v1.9": "ee3af3e528ebd19b75cb3ff4d6fc8571bb92a113b4947609a5fdddb56f344bda"
+  },
+  "payload": "BRIDGRAI-IPR|125entries|ee3af3e528ebd19b75cb3ff4d6fc8571bb92a113b4947609a5fdddb56f344bda|2026-09-07|MihaiRosca|BACKBONE-v1.0|S(M)=R"
+}

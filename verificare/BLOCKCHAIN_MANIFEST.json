@@ -1,10 +1,10 @@
 {
   "protocol": "ami* Ecosystem Verification Protocol",
-  "version": "1.8",
-  "timestamp_utc": "2026-09-05T16:00:00Z",
+  "version": "1.9",
+  "timestamp_utc": "2026-09-07T18:00:00Z",
   "previous_version": {
-    "version": "1.7",
-    "timestamp_utc": "2026-09-05T14:00:00Z",
+    "version": "1.8",
+    "timestamp_utc": "2026-09-05T16:00:00Z",
     "master_hash": "6df4cb7048b2ef48c8ef7a6b284ad4a839eccb888234925b141c755d7330bc16"
   },
   "author": {
@@ -77,7 +77,31 @@
       "status": "CONFIRMED",
       "verify": "https://tzkt.io/op5R4axfbtgXihieEEgthZAL7LTY39G1G8SNZZxx5uAPTJSCT7h"
     },
-    "pending_transaction": null
+    "pending_transaction": null,
+    "confirmed_v1_9": {
+      "label": "MANIFEST-V1.9",
+      "tx_hash": "oocCeqQLnKoaqAcd2H5Se6pytc6taEtKLLZxciaHqLobP7efwQM",
+      "master_hash": "ee3af3e528ebd19b75cb3ff4d6fc8571bb92a113b4947609a5fdddb56f344bda",
+      "description": "Master hash of 125 IP assets — AGI Backbone v1.0 (12 modules, 55 tests, Qwen+Claude)",
+      "status": "CONFIRMED",
+      "verify": "https://tzkt.io/oocCeqQLnKoaqAcd2H5Se6pytc6taEtKLLZxciaHqLobP7efwQM"
+    }
+  },
+  "new_assets_since_v1_8": {
+    "total_new": 1,
+    "assets": [
+      {
+        "id": 125,
+        "name": "BRIDGRAI AGI Backbone v1.0",
+        "type": "backbone",
+        "path": "Backbone Update/backbone/ + Backbone Update/tests/",
+        "files": 19,
+        "modules": "anchor, kuramoto, scale, valve, adler, tve, privacy, cooper, agik, still, mesh, heritage, manifest",
+        "tests": 55,
+        "sha256": "34244996bdf6707c18d78d44ec6ccb6a9c7db66694876360c92b7cb53a8b3f20",
+        "description": "12-module AGI Backbone: 4 phases (ANCHOR→VALVE, COOPER→TVE, AGIK→STILL, MESH→MANIFEST), EMA RSI, concordance check, heritage-STILL-MANIFEST succession. Qwen 3.8 MAX base + Claude Opus 4.6 improvements. 55/55 tests passed."
+      }
+    ]
   },
   "new_assets_since_v1_7": {
     "total_new": 1,
@@ -280,7 +304,7 @@
     }
   },
   "verification_summary": {
-    "blockchain_ip_assets": 124,
+    "blockchain_ip_assets": 125,
     "total_tests_ecosystem": 717,
     "test_breakdown": {
       "ukbe_core": 175,
