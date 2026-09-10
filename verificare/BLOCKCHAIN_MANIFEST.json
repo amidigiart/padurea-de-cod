@@ -1,11 +1,11 @@
 {
   "protocol": "ami* Ecosystem Verification Protocol",
-  "version": "1.9",
-  "timestamp_utc": "2026-09-07T18:00:00Z",
+  "version": "2.2",
+  "timestamp_utc": "2026-09-10T03:30:00Z",
   "previous_version": {
-    "version": "1.8",
-    "timestamp_utc": "2026-09-05T16:00:00Z",
-    "master_hash": "6df4cb7048b2ef48c8ef7a6b284ad4a839eccb888234925b141c755d7330bc16"
+    "version": "2.1",
+    "timestamp_utc": "2026-09-09T21:00:00Z",
+    "master_hash": "acb2dec1bac18cf6c9a986656026c130a162cfdea4a5154029363cfc4b15528f"
   },
   "author": {
     "name": "Mihai Roșca",
@@ -21,6 +21,14 @@
     "network": "Tezos Mainnet",
     "wallet": "tz1bmw3igCLN8N6CqgLBzJ9dyRb79E2Tdu5Q",
     "transactions": [
+      {
+        "label": "SIGNA-CAMP-PAPERS",
+        "tx_hash": "oobKNM4CAYmKqRWZXdZdDKAGv58nMZ4Q4WiFm214jdJqRG67rPp",
+        "payload_sha256": "f03499fb4e5c5505739b5135dd97bd2386f893400e753d42e844adef100b2e85",
+        "description": "Master hash of 132 IP assets — SIGNA + CAMP academic papers (Zenodo DOIs: 22682891, 22682610)",
+        "status": "CONFIRMED",
+        "verify": "https://tzkt.io/oobKNM4CAYmKqRWZXdZdDKAGv58nMZ4Q4WiFm214jdJqRG67rPp"
+      },
       {
         "label": "MASTER-HASH",
         "tx_hash": "oomw5MNXurBpYLwoGqNAS5BDrRBr3Hsx8FTBfTPexn1eWhwU9EN",
@@ -78,6 +86,30 @@
       "verify": "https://tzkt.io/op5R4axfbtgXihieEEgthZAL7LTY39G1G8SNZZxx5uAPTJSCT7h"
     },
     "pending_transaction": null,
+    "confirmed_v2_2": {
+      "label": "MANIFEST-V2.2",
+      "tx_hash": "oobKNM4CAYmKqRWZXdZdDKAGv58nMZ4Q4WiFm214jdJqRG67rPp",
+      "master_hash": "f03499fb4e5c5505739b5135dd97bd2386f893400e753d42e844adef100b2e85",
+      "description": "Master hash of 132 IP assets — SIGNA framework + CAMP protocol (Zenodo DOIs)",
+      "status": "CONFIRMED",
+      "verify": "https://tzkt.io/oobKNM4CAYmKqRWZXdZdDKAGv58nMZ4Q4WiFm214jdJqRG67rPp"
+    },
+    "confirmed_v2_1": {
+      "label": "MANIFEST-V2.1",
+      "tx_hash": "ooeVNb1qYNLSJK4voVy7FtDvoNqDfj4TjQVATg5NhRT6QQz3j54",
+      "master_hash": "acb2dec1bac18cf6c9a986656026c130a162cfdea4a5154029363cfc4b15528f",
+      "description": "Master hash of 128 IP assets — KCE academic paper (base + extended framework)",
+      "status": "CONFIRMED",
+      "verify": "https://tzkt.io/ooeVNb1qYNLSJK4voVy7FtDvoNqDfj4TjQVATg5NhRT6QQz3j54"
+    },
+    "confirmed_v2_0": {
+      "label": "MANIFEST-V2.0",
+      "tx_hash": "oneEyqTWeVBBtcS5SzzLboUsRrrqCXJX8nuQxLCURzZZSA6gBBC",
+      "master_hash": "acb2dec1bac18cf6c9a986656026c130a162cfdea4a5154029363cfc4b15528f",
+      "description": "Master hash of 126 IP assets — Knowledge Continuity Engineering founding document",
+      "status": "CONFIRMED",
+      "verify": "https://tzkt.io/oneEyqTWeVBBtcS5SzzLboUsRrrqCXJX8nuQxLCURzZZSA6gBBC"
+    },
     "confirmed_v1_9": {
       "label": "MANIFEST-V1.9",
       "tx_hash": "oocCeqQLnKoaqAcd2H5Se6pytc6taEtKLLZxciaHqLobP7efwQM",
@@ -86,6 +118,87 @@
       "status": "CONFIRMED",
       "verify": "https://tzkt.io/oocCeqQLnKoaqAcd2H5Se6pytc6taEtKLLZxciaHqLobP7efwQM"
     }
+  },
+  "new_assets_since_v2_1": {
+    "total_new": 4,
+    "assets": [
+      {
+        "id": 129,
+        "name": "SIGNA Academic Paper — Markdown",
+        "type": "research",
+        "repo": "github.com/amidigiart/signa-framework",
+        "file": "SIGNA_Framework_Rosca_2026.md",
+        "sha256": "62cc356a97cd68d7d705d73512453e6c5f76cb2365d51e7d5dfad8dbb1ef0f77",
+        "doi": "10.5281/zenodo.22682891",
+        "description": "SIGNA v1.2 — Semantic Intent Guarantee and Notary Architecture: 6-pillar certification framework, per-pillar floor rule, concordance scoring, threat model, 9 sections + 3 appendices"
+      },
+      {
+        "id": 130,
+        "name": "SIGNA Academic Paper — PDF",
+        "type": "research",
+        "repo": "github.com/amidigiart/signa-framework",
+        "file": "SIGNA_Framework_Rosca_2026.pdf",
+        "sha256": "2dc3360e55c02152f344dd543203b80f95bf5f5e756c71941576f14e3f574ee4",
+        "doi": "10.5281/zenodo.22682892",
+        "description": "SIGNA v1.2 PDF — Zenodo preprint, 21 pages, all Qwen critical review patches applied"
+      },
+      {
+        "id": 131,
+        "name": "CAMP Protocol Paper — Markdown",
+        "type": "research",
+        "repo": "github.com/amidigiart/camp-protocol",
+        "file": "CAMP_Protocol_Rosca_2026.md",
+        "sha256": "7e281f723a310386f7de044f1d4728e2532316ec87dfbe97d72d23de9a7a6759",
+        "doi": "10.5281/zenodo.22682610",
+        "description": "CAMP — Cognitive Arbitration Mediation Protocol: vendor-neutral framework for trust verification, 10 sections + 3 appendices"
+      },
+      {
+        "id": 132,
+        "name": "CAMP Protocol Paper — PDF",
+        "type": "research",
+        "repo": "github.com/amidigiart/camp-protocol",
+        "file": "CAMP_Protocol_Rosca_2026_FINAL.pdf",
+        "sha256": "e50810eb87b97bf495fdc638e4fc241cb9add37a46c406ff3fc0bf58628dba34",
+        "doi": "10.5281/zenodo.22682610",
+        "description": "CAMP PDF — Zenodo preprint, vendor-neutral protocol for multi-provider AI ecosystems"
+      }
+    ]
+  },
+  "new_assets_since_v2_0": {
+    "total_new": 2,
+    "assets": [
+      {
+        "id": 127,
+        "name": "KCE Academic Paper — Base Framework",
+        "type": "research",
+        "file": "kce-paper.md",
+        "sha256": "6f77abf391cb90fe13d48076c862594c0050445de2452d9d531c5fdf96a686c9",
+        "file_size": 26632,
+        "description": "Academic paper: 8 sections, literature gap (KM/OAIS/PROV/AI Act), formal problem statements (P1-P5), 7 principles, 5-layer architecture, BRIDGRAI reference implementation with honest assessment, 9 real references, E0-E5 scale, compliance checklist"
+      },
+      {
+        "id": 128,
+        "name": "KCE Extended Framework — Implementation Guide",
+        "type": "research",
+        "file": "kce-paper-extended.md",
+        "sha256": "4b8f1893dc68c3843ef0c48f9911854520837662792fa9dcb8c9f3e94cfa2c48",
+        "file_size": 24200,
+        "description": "Extended framework: Tier 1/2/3 implementation guide, metadata schema, layer checklists, 5 pitfalls, 3 case studies (1 real BRIDGRAI + 2 hypothetical), 4 proposed metrics (PCR/SVR/ACI/DRS), adoption roadmap, risk categories (qualitative, no fabricated financials)"
+      }
+    ]
+  },
+  "new_assets_since_v1_9": {
+    "total_new": 1,
+    "assets": [
+      {
+        "id": 126,
+        "name": "Knowledge Continuity Engineering — Founding Document",
+        "type": "research",
+        "file": "kce-founding-document.md",
+        "sha256": "92d989727fda66fe72205b950faa756435be2d90943546e8bfa57726457947d3",
+        "description": "KCE founding definition: new discipline — 5 problems (model/human discontinuity, provenance decay, semantic drift, authority fragmentation), 7 principles (K1-K7), 5-layer stack (Creation→Validation→Persistence→Governance→Continuity), BRIDGRAI as first implementation"
+      }
+    ]
   },
   "new_assets_since_v1_8": {
     "total_new": 1,
@@ -304,7 +417,7 @@
     }
   },
   "verification_summary": {
-    "blockchain_ip_assets": 125,
+    "blockchain_ip_assets": 132,
     "total_tests_ecosystem": 717,
     "test_breakdown": {
       "ukbe_core": 175,
