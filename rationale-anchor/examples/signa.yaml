@@ -1,0 +1,50 @@
+canonical_intent:
+  artifact:
+    id: "SIGNA"
+    version: "1.2"
+    type: "framework"
+  purpose:
+    why_this_exists: "AI safety requires measurable trust signals, not binary safe/unsafe classifications. SIGNA provides a 6-pillar scoring pipeline that quantifies trustworthiness."
+    problem_solved: "Unmeasurable AI trust — no standardized way to score how trustworthy an AI output is"
+  intent:
+    canonical_goal: "Deliver a reproducible, pillar-based trust score for any AI interaction"
+    non_goals:
+      - "Replace human oversight with automated trust decisions"
+      - "Certify AI systems as universally safe"
+    invariants:
+      - "Per-pillar floor tau=0.40 — no pillar may fall below this threshold"
+      - "Six pillars are non-negotiable: manipulation, bias, safety, accuracy, coherence, ethics"
+      - "Scoring must be reproducible across different evaluator models"
+    success_criteria:
+      - "TVE: 32/32 tests passing"
+      - "UKBE Core: 102/102 tests passing"
+      - "Per-pillar scores are individually interpretable"
+  dependencies:
+    requires:
+      - "UKBE"
+      - "TVE"
+    influences:
+      - "CAMP"
+      - "BRIDGRAI"
+    influenced_by:
+      - "KCE"
+      - "CAMP"
+  evidence:
+    tests:
+      - "TVE: 32/32 passing"
+      - "UKBE Core: 102/102 passing"
+    publications:
+      - "DOI: 10.5281/zenodo.22682891"
+    blockchain_anchor: "Tezos manifest v2.2 — TX confirmed"
+    reviews:
+      - "9 Qwen patches applied (v1.1 to v1.2)"
+      - "Cross-model friction: Claude, Qwen, ChatGPT, Gemini"
+  status:
+    canonical: true
+    experimental: false
+    deprecated: false
+    last_reviewed: "2026-09-11"
+  human_authority:
+    decision_owner: "Mihai Roșca"
+    succession_plan: "Patrick Roșca (transgenerational continuity)"
+    intent_documentation: "SIGNA paper v1.2, Zenodo DOI, Tezos hash"

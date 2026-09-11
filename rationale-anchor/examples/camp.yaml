@@ -1,0 +1,47 @@
+canonical_intent:
+  artifact:
+    id: "CAMP"
+    version: "1.0"
+    type: "protocol"
+  purpose:
+    why_this_exists: "Multi-provider AI arbitration needs a protocol that ensures no single model controls the canonical answer. CAMP provides cross-model friction as quality assurance."
+    problem_solved: "Single-model dependency and unchallenged AI outputs"
+  intent:
+    canonical_goal: "Enable systematic cross-model arbitration with measurable concordance"
+    non_goals:
+      - "Replace human judgment with automated consensus"
+      - "Rank models against each other"
+    invariants:
+      - "Minimum 3 independent models per arbitration cycle"
+      - "Human arbiter holds final canonical authority"
+      - "Concordance score must be reproducible"
+    success_criteria:
+      - "175/175 automated tests passing (CAMP test suite)"
+      - "Cross-model friction detects factual errors that single-model missed"
+  dependencies:
+    requires:
+      - "UKBE"
+    influences:
+      - "BRIDGRAI"
+      - "SIGNA"
+    influenced_by:
+      - "KCE"
+      - "SIGNA"
+  evidence:
+    tests:
+      - "CAMP: 175/175 passing"
+    publications:
+      - "DOI: 10.5281/zenodo.22682610"
+    blockchain_anchor: "Tezos manifest v2.2 — TX confirmed"
+    reviews:
+      - "Cross-model friction: Claude, Qwen, ChatGPT, Gemini"
+      - "arXiv endorsement campaign in progress"
+  status:
+    canonical: true
+    experimental: false
+    deprecated: false
+    last_reviewed: "2026-09-11"
+  human_authority:
+    decision_owner: "Mihai Roșca"
+    succession_plan: "Patrick Roșca (transgenerational continuity)"
+    intent_documentation: "CAMP paper v1.0, Zenodo DOI, Tezos hash"

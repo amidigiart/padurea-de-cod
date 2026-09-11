@@ -1,0 +1,49 @@
+canonical_intent:
+  artifact:
+    id: "KCE"
+    version: "1.0"
+    type: "framework"
+  purpose:
+    why_this_exists: "Knowledge systems lose intent when they cross boundaries — between teams, tools, or time. KCE ensures that the WHY behind knowledge survives transition."
+    problem_solved: "Intent decay in knowledge-intensive systems"
+  intent:
+    canonical_goal: "Preserve semantic continuity across knowledge lifecycle transitions"
+    non_goals:
+      - "Replace existing knowledge management tools"
+      - "Automate human judgment about what matters"
+    invariants:
+      - "Intent metadata must survive every format conversion"
+      - "Human authority over canonical status is non-delegable"
+      - "Blockchain anchors prove existence, not correctness"
+    success_criteria:
+      - "Intent records pass round-trip validation after format migration"
+      - "Decision provenance is traceable to a named human owner"
+  dependencies:
+    requires:
+      - "UKBE"
+    influences:
+      - "CAMP"
+      - "SIGNA"
+      - "BRIDGRAI"
+    influenced_by:
+      - "TVE"
+      - "AmiDor"
+  evidence:
+    tests:
+      - "UKBE Core: 102/102 passing"
+      - "TVE: 32/32 passing"
+    publications:
+      - "DOI: 10.5281/zenodo.22682610 (CAMP paper)"
+      - "DOI: 10.5281/zenodo.22682891 (SIGNA paper)"
+    blockchain_anchor: "Tezos manifest v2.2 — 132 IP assets, TX confirmed"
+    reviews:
+      - "Cross-model friction: Claude, Qwen, ChatGPT, Gemini"
+  status:
+    canonical: true
+    experimental: false
+    deprecated: false
+    last_reviewed: "2026-09-09"
+  human_authority:
+    decision_owner: "Mihai Roșca"
+    succession_plan: "Patrick Roșca (transgenerational continuity)"
+    intent_documentation: "KCE founding document, Tezos hash 2026-09-09"
