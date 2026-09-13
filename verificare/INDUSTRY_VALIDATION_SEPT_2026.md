@@ -20,7 +20,7 @@ Fiecare problemă recunoscută public în septembrie 2026 are o soluție funcți
 | Recursive self-improvement fără control uman | Human Anchor Thesis + RationaleAnchor v0.2 | Implementat, testat | [GitHub](https://github.com/amidigiart/rationale-anchor) |
 | Coordonare autonomă inter-agent (swarms) | CAMP — Cognitive Arbitration Mediation Protocol | Publicat | [DOI 10.5281/zenodo.22682610](https://doi.org/10.5281/zenodo.22682610) |
 | Output-uri AI neverificabile | SIGNA — Semantic Intent Governance & Notarization Architecture | Publicat | [DOI 10.5281/zenodo.22682891](https://doi.org/10.5281/zenodo.22682891) |
-| Pierderea cunoașterii în sisteme complexe | KCE — Knowledge Continuity Engineering | Publicat | [GitHub](https://github.com/amidigiart/kce-framework) |
+| Pierderea cunoașterii în sisteme complexe | KCE — Knowledge Continuity Engineering | Publicat | [DOI 10.5281/zenodo.22667873](https://doi.org/10.5281/zenodo.22667873) |
 | Dovada intenției umane | AmiStampAI — notarizare semantică | Live | [amistampai.com](https://amistampai.com) |
 | Manipulare și confabulare | TVE Core — 6-pillar manipulation detection | Funcțional, 32 teste | [GitHub](https://github.com/amidigiart/tve-core) |
 | Governance multi-agent | BRIDGRAI A2A — 9 componente, trust layer | Testat, 240+ teste | [GitHub](https://github.com/amidigiart/bridgrai-a2a) |
@@ -44,7 +44,7 @@ Sep 2026   Amodei/Altman/Musk recunosc problemele. BRIDGRAI le avea rezolvate.
 
 ## Dovezi verificabile
 
-- **173 IP assets** pe Tezos Mainnet: [KT1Pe2GA11bMpaTL5VH4TY6aZ9xePZ6f5vWX](https://tzkt.io/KT1Pe2GA11bMpaTL5VH4TY6aZ9xePZ6f5vWX/storage)
+- **174 IP assets** pe Tezos Mainnet: [KT1Pe2GA11bMpaTL5VH4TY6aZ9xePZ6f5vWX](https://tzkt.io/KT1Pe2GA11bMpaTL5VH4TY6aZ9xePZ6f5vWX/storage)
 - **717+ teste automate** în ecosistem
 - **75 repo-uri publice**: [github.com/amidigiart](https://github.com/amidigiart)
 - **ORCID**: [0009-0001-1422-6209](https://orcid.org/0009-0001-1422-6209)
