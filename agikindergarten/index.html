@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AGI Kindergarten — Pădurea de Cod</title>
+<meta name="description" content="Primul cadru pedagogic pentru copiii care cresc cu inteligență artificială. Safety-first. Anti-adictiv. Verificabil. Construit de un educator, pentru Patrick.">
+<style>
+@font-face {
+  font-family: 'Forest';
+  src: local('Georgia'), local('Palatino Linotype'), local('Book Antiqua'), local('Palatino'), local('Times New Roman');
+  font-display: swap;
+}
+
+:root {
+  --canopy: #1B3A2A;
+  --trunk: #2C5E3F;
+  --leaf: #3E8C5B;
+  --moss: #5FAD78;
+  --clearing: #E7F2EB;
+  --light: #F4F9F6;
+  --earth: #5C4033;
+  --amber: #D4870E;
+  --amber-soft: #FFF3DC;
+  --warmth: #FFFCF5;
+  --ink: #1A1A18;
+  --ink-2: #4A4A45;
+  --ink-3: #7A7A72;
+  --rule: #D0D8D2;
+  --danger: #C0392B;
+  --danger-bg: #FDEDEB;
+  --card: #FFFFFF;
+  --shadow: rgba(27,58,42,0.06);
+}
+@media(prefers-color-scheme:dark){:root{
+  --canopy:#9FD4B5;--trunk:#6BBF8A;--leaf:#4DAF6E;--moss:#3E8C5B;
+  --clearing:#1A2A22;--light:#131E18;
+  --earth:#C4A882;--amber:#F0A830;--amber-soft:#2A2214;
+  --warmth:#181D19;
+  --ink:#E8E8E0;--ink-2:#B0B0A8;--ink-3:#808078;
+  --rule:#2A3A30;--danger:#E74C3C;--danger-bg:#2A1A18;
+  --card:#1E2A22;--shadow:rgba(0,0,0,0.2);
+}}
+:root[data-theme="dark"]{
+  --canopy:#9FD4B5;--trunk:#6BBF8A;--leaf:#4DAF6E;--moss:#3E8C5B;
+  --clearing:#1A2A22;--light:#131E18;
+  --earth:#C4A882;--amber:#F0A830;--amber-soft:#2A2214;
+  --warmth:#181D19;
+  --ink:#E8E8E0;--ink-2:#B0B0A8;--ink-3:#808078;
+  --rule:#2A3A30;--danger:#E74C3C;--danger-bg:#2A1A18;
+  --card:#1E2A22;--shadow:rgba(0,0,0,0.2);
+}
+:root[data-theme="light"]{
+  --canopy:#1B3A2A;--trunk:#2C5E3F;--leaf:#3E8C5B;--moss:#5FAD78;
+  --clearing:#E7F2EB;--light:#F4F9F6;
+  --earth:#5C4033;--amber:#D4870E;--amber-soft:#FFF3DC;
+  --warmth:#FFFCF5;
+  --ink:#1A1A18;--ink-2:#4A4A45;--ink-3:#7A7A72;
+  --rule:#D0D8D2;--danger:#C0392B;--danger-bg:#FDEDEB;
+  --card:#FFFFFF;--shadow:rgba(27,58,42,0.06);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Georgia,'Forest','Palatino Linotype','Book Antiqua',Palatino,serif;
+  background:var(--warmth);color:var(--ink);
+  font-size:17px;line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+.wrap{max-width:780px;margin:0 auto;padding:0 1.5rem}
+
+/* ── Hero ── */
+.hero{
+  min-height:92vh;display:flex;flex-direction:column;
+  justify-content:center;align-items:center;text-align:center;
+  padding:3rem 1.5rem 4rem;position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;top:0;left:0;right:0;bottom:0;
+  background:radial-gradient(ellipse at 50% 80%, var(--clearing) 0%, var(--warmth) 70%);
+  z-index:0;
+}
+.hero>*{position:relative;z-index:1}
+
+.hero-trees{
+  display:flex;gap:6px;justify-content:center;margin-bottom:2rem;opacity:0.6;
+}
+.tree{width:2px;background:var(--trunk);border-radius:1px}
+
+.hero-badge{
+  font-family:system-ui,-apple-system,sans-serif;
+  font-size:.7rem;letter-spacing:.35em;text-transform:uppercase;
+  color:var(--leaf);margin-bottom:1.2rem;font-weight:600;
+}
+.hero h1{
+  font-size:clamp(2rem,5.5vw,3.2rem);font-weight:400;
+  line-height:1.15;color:var(--canopy);
+  text-wrap:balance;margin-bottom:.6rem;
+  letter-spacing:-.02em;
+}
+.hero .sub{
+  font-size:clamp(1rem,2.5vw,1.2rem);font-style:italic;
+  color:var(--trunk);margin-bottom:2.5rem;
+  max-width:520px;text-wrap:balance;
+}
+.hero .premise{
+  font-size:.95rem;color:var(--ink-2);max-width:560px;
+  line-height:1.7;margin-bottom:2.5rem;
+}
+.hero .premise strong{color:var(--canopy);font-weight:600}
+
+.hero-stats{
+  display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;
+  font-family:system-ui,-apple-system,sans-serif;font-size:.82rem;
+  color:var(--ink-3);
+}
+.hero-stats .n{font-weight:700;color:var(--leaf);font-variant-numeric:tabular-nums}
+
+.hero-scroll{
+  position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);
+  font-family:system-ui,-apple-system,sans-serif;font-size:.72rem;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3);
+  opacity:0.5;
+}
+
+/* ── Section structure ── */
+section{padding:4rem 0}
+section+section{border-top:1px solid var(--rule)}
+
+.sec-label{
+  font-family:system-ui,-apple-system,sans-serif;
+  font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--moss);margin-bottom:.5rem;font-weight:600;
+}
+section h2{
+  font-size:clamp(1.4rem,3.5vw,1.9rem);font-weight:400;
+  color:var(--canopy);line-height:1.25;margin-bottom:.3rem;
+  text-wrap:balance;
+}
+section h2 em{font-style:italic;color:var(--trunk);font-size:.88em}
+.sec-rule{width:40px;height:2px;background:var(--leaf);margin:1rem 0 1.8rem;border-radius:1px}
+
+section h3{
+  font-size:1.05rem;font-weight:400;color:var(--trunk);
+  margin:2.2rem 0 .8rem;
+}
+
+p{margin-bottom:1rem}
+p+p{margin-top:0}
+
+/* ── Cards grid ── */
+.cards{display:grid;grid-template-columns:1fr;gap:1.2rem;margin:1.8rem 0}
+@media(min-width:580px){.cards{grid-template-columns:repeat(3,1fr)}}
+
+.card{
+  background:var(--card);border:1px solid var(--rule);
+  border-radius:12px;padding:1.5rem;
+  box-shadow:0 2px 8px var(--shadow);
+}
+.card .icon{
+  font-size:1.6rem;margin-bottom:.8rem;display:block;line-height:1;
+}
+.card h4{
+  font-family:system-ui,-apple-system,sans-serif;
+  font-size:.85rem;font-weight:700;letter-spacing:.04em;
+  color:var(--canopy);text-transform:uppercase;margin-bottom:.5rem;
+}
+.card p{font-size:.88rem;color:var(--ink-2);line-height:1.6;margin:0}
+.card .tag{
+  display:inline-block;margin-top:.8rem;
+  font-family:system-ui,-apple-system,sans-serif;
+  font-size:.68rem;letter-spacing:.06em;
+  padding:.2rem .6rem;border-radius:3px;
+  font-weight:600;
+}
+.tag-safe{background:var(--clearing);color:var(--canopy)}
+.tag-tested{background:var(--amber-soft);color:var(--earth)}
+
+/* ── Questions ── */
+.questions{
+  display:flex;flex-direction:column;gap:1rem;
+  margin:1.8rem 0;counter-reset:q;
+}
+.q{
+  display:flex;gap:1rem;align-items:baseline;
+  padding:1rem 1.2rem;background:var(--light);
+  border-left:3px solid var(--leaf);border-radius:0 8px 8px 0;
+}
+.q::before{
+  counter-increment:q;content:counter(q);
+  font-family:system-ui,-apple-system,sans-serif;
+  font-size:1.4rem;font-weight:700;color:var(--moss);
+  min-width:1.6rem;line-height:1;
+}
+.q div strong{color:var(--canopy)}
+.q div{font-size:.92rem;color:var(--ink-2);line-height:1.6}
+
+/* ── Anti-pattern list ── */
+.anti{margin:1.8rem 0}
+.anti-item{
+  display:flex;gap:.8rem;align-items:flex-start;
+  padding:.7rem 0;
+  border-bottom:1px solid var(--rule);
+}
+.anti-item:last-child{border-bottom:none}
+.anti-x{
+  font-family:system-ui,-apple-system,sans-serif;
+  font-size:.75rem;font-weight:700;color:var(--danger);
+  background:var(--danger-bg);
+  min-width:1.6rem;height:1.6rem;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  margin-top:.15rem;flex-shrink:0;
+}
+.anti-item .at{font-size:.9rem;color:var(--ink)}
+.anti-item .at strong{color:var(--danger);font-weight:600}
+.anti-item .ad{font-size:.82rem;color:var(--ink-3);margin-top:.1rem}
+
+/* ── Pipeline ── */
+.pipeline{margin:2rem 0;display:flex;flex-direction:column;gap:0;align-items:center}
+.pipe-step{
+  background:var(--card);border:1px solid var(--rule);
+  border-radius:8px;padding:.8rem 1.2rem;
+  width:100%;max-width:420px;text-align:center;
+  font-family:system-ui,-apple-system,sans-serif;font-size:.82rem;
+  color:var(--ink-2);position:relative;
+}
+.pipe-step strong{color:var(--canopy);font-weight:700;display:block;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.2rem}
+.pipe-arrow{
+  width:2px;height:20px;background:var(--leaf);margin:0 auto;
+}
+
+/* ── Missions table ── */
+.missions{margin:1.5rem 0;overflow-x:auto}
+.missions table{
+  width:100%;border-collapse:collapse;
+  font-size:.86rem;font-variant-numeric:tabular-nums;
+}
+.missions th{
+  background:var(--canopy);color:var(--light);
+  padding:.6rem .8rem;text-align:left;font-weight:600;
+  font-family:system-ui,-apple-system,sans-serif;font-size:.76rem;
+  letter-spacing:.04em;
+}
+.missions td{
+  padding:.6rem .8rem;border-bottom:1px solid var(--rule);
+  vertical-align:top;line-height:1.5;
+}
+.missions tr:nth-child(even){background:var(--light)}
+.missions .lvl{
+  font-weight:700;color:var(--leaf);text-align:center;
+  font-family:system-ui,-apple-system,sans-serif;
+}
+
+/* ── Quote / pull ── */
+.pull{
+  margin:2rem 0;padding:1.2rem 1.5rem;
+  border-left:3px solid var(--amber);
+  background:var(--amber-soft);
+  font-style:italic;font-size:1.02rem;line-height:1.6;
+  color:var(--ink);
+}
+.pull .attr{
+  display:block;margin-top:.5rem;font-style:normal;
+  font-size:.78rem;color:var(--ink-3);letter-spacing:.03em;
+}
+
+/* ── Parents ── */
+.proof{margin:1.5rem 0;display:flex;flex-direction:column;gap:.8rem}
+.proof-item{
+  display:flex;gap:.8rem;align-items:flex-start;
+  padding:1rem 1.2rem;background:var(--light);border-radius:8px;
+}
+.proof-check{
+  font-family:system-ui,-apple-system,sans-serif;
+  font-size:.78rem;font-weight:700;color:var(--leaf);
+  background:var(--clearing);
+  min-width:1.6rem;height:1.6rem;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;margin-top:.1rem;
+}
+.proof-item p{margin:0;font-size:.9rem;color:var(--ink-2);line-height:1.55}
+.proof-item p strong{color:var(--canopy)}
+
+/* ── Roadmap ── */
+.roadmap{margin:1.5rem 0;display:flex;flex-direction:column;gap:1.5rem}
+.phase{padding-left:1.5rem;border-left:2px solid var(--rule);position:relative}
+.phase::before{
+  content:'';position:absolute;left:-5px;top:.4rem;
+  width:8px;height:8px;border-radius:50%;border:2px solid var(--leaf);
+  background:var(--warmth);
+}
+.phase.done::before{background:var(--leaf)}
+.phase h4{
+  font-family:system-ui,-apple-system,sans-serif;
+  font-size:.82rem;font-weight:700;color:var(--canopy);
+  text-transform:uppercase;letter-spacing:.04em;margin-bottom:.3rem;
+}
+.phase p{font-size:.86rem;color:var(--ink-2);line-height:1.55;margin:0}
+.phase ul{
+  list-style:none;font-size:.84rem;color:var(--ink-2);
+  line-height:1.6;margin-top:.3rem;
+}
+.phase ul li::before{content:'+ ';color:var(--leaf);font-weight:700}
+.phase ul li.pending::before{content:'- ';color:var(--ink-3)}
+
+/* ── Principles ── */
+.principles{margin:1.5rem 0;display:grid;gap:.6rem}
+.prin{
+  display:flex;gap:.7rem;align-items:baseline;
+  font-size:.88rem;color:var(--ink-2);line-height:1.55;
+}
+.prin .pn{
+  font-family:system-ui,-apple-system,sans-serif;
+  font-weight:700;color:var(--moss);min-width:1.2rem;
+  font-size:.8rem;
+}
+.prin strong{color:var(--canopy)}
+
+/* ── Story ── */
+.story{
+  margin:2rem 0;padding:2rem 2rem;
+  background:var(--clearing);border-radius:12px;
+  text-align:center;
+}
+.story p{font-size:.92rem;color:var(--ink-2);line-height:1.7;margin-bottom:.5rem}
+.story p:last-child{margin-bottom:0}
+.story strong{color:var(--canopy)}
+.story em{color:var(--trunk)}
+
+/* ── Footer ── */
+footer{
+  padding:3rem 0 4rem;border-top:1px solid var(--rule);
+  text-align:center;
+}
+footer .mark{
+  font-family:system-ui,-apple-system,sans-serif;
+  font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--moss);margin-bottom:1rem;
+}
+footer p{font-size:.82rem;color:var(--ink-3);line-height:1.8;margin-bottom:.3rem}
+footer a{color:var(--trunk);text-decoration:none;border-bottom:1px solid var(--rule)}
+footer a:hover{color:var(--canopy);border-color:var(--canopy)}
+footer .sig{
+  margin-top:1.5rem;font-style:italic;font-size:.88rem;color:var(--ink-2);
+}
+
+/* ── License badges ── */
+.licenses{
+  display:flex;flex-wrap:wrap;gap:.6rem;margin:1rem 0;
+  font-family:system-ui,-apple-system,sans-serif;font-size:.72rem;
+}
+.lic{
+  padding:.25rem .65rem;border-radius:3px;font-weight:600;letter-spacing:.03em;
+}
+.lic-apache{background:var(--clearing);color:var(--canopy)}
+.lic-agpl{background:var(--amber-soft);color:var(--earth)}
+.lic-cc{background:var(--light);color:var(--ink-3);border:1px solid var(--rule)}
+
+@media(max-width:600px){
+  .hero{min-height:80vh;padding:2rem 1rem 3rem}
+  .hero-stats{gap:1rem}
+  .cards{grid-template-columns:1fr}
+  .wrap{padding:0 1rem}
+  section{padding:3rem 0}
+  .q{flex-direction:column;gap:.3rem}
+  .pipe-step{max-width:100%}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<div class="hero">
+  <div class="hero-trees" aria-hidden="true">
+    <div class="tree" style="height:60px"></div>
+    <div class="tree" style="height:85px"></div>
+    <div class="tree" style="height:70px"></div>
+    <div class="tree" style="height:95px"></div>
+    <div class="tree" style="height:75px"></div>
+    <div class="tree" style="height:88px"></div>
+    <div class="tree" style="height:65px"></div>
+  </div>
+  <div class="hero-badge">Resonance Engineering&thinsp;&trade; &bull; BRIDGRAI</div>
+  <h1>AGI Kindergarten</h1>
+  <div class="sub">Primul cadru pedagogic pentru copiii<br>care cresc cu inteligenta artificiala</div>
+  <p class="premise">
+    Copiii nu trebuie protejati <em>de</em> inteligenta artificiala.
+    Trebuie educati <strong>sa verifice</strong> inteligenta artificiala.
+    Diferenta e intre a creste un om neajutorat
+    si a creste un om care gandeste.
+  </p>
+  <div class="hero-stats">
+    <span><span class="n">26</span> teste safety</span>
+    <span><span class="n">0</span> dark patterns</span>
+    <span><span class="n">0</span> date colectate</span>
+    <span><span class="n">100+</span> povesti</span>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">descopera</div>
+</div>
+
+<div class="wrap">
+
+<!-- ═══════════════ 3 LAYERS ═══════════════ -->
+<section>
+  <div class="sec-label">Arhitectura</div>
+  <h2>Cele 3 Straturi <em>ale Padurii de Cod</em></h2>
+  <div class="sec-rule"></div>
+
+  <div class="cards">
+    <div class="card">
+      <span class="icon" aria-hidden="true">&#127794;</span>
+      <h4>Siguranta</h4>
+      <p>Pipeline de siguranta care ruleaza INAINTE de orice model de limbaj. Detectie criza multilingva. Risc acut: oprire imediata + resurse reale. Nicio conversatie nu paraseste masina.</p>
+      <span class="tag tag-safe">S > A > P > M</span>
+    </div>
+    <div class="card">
+      <span class="icon" aria-hidden="true">&#127793;</span>
+      <h4>Rezonanta</h4>
+      <p>Motor Kuramoto + Kalman care masoara cadenta copilului. Cand copilul e pierdut, AI-ul nu continua sa vorbeasca. Se opreste si verifica. Ecuatiile decid, nu regulile arbitrare.</p>
+      <span class="tag tag-tested">Phi_extern verified</span>
+    </div>
+    <div class="card">
+      <span class="icon" aria-hidden="true">&#127807;</span>
+      <h4>Ritmul</h4>
+      <p>Pacer adaptiv anti-adictiv. Bugetul de atentie e hard-stop. Engagement maxim = exact momentul de oprire. Copil lent-dar-corect avanseaza identic cu unul rapid.</p>
+      <span class="tag tag-tested">Anti-adictiv testat</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PIPELINE ═══════════════ -->
+<section>
+  <div class="sec-label">Cum functioneaza</div>
+  <h2>De la copil la copil <em>prin 7 straturi de protectie</em></h2>
+  <div class="sec-rule"></div>
+
+  <p style="font-size:.92rem;color:var(--ink-2);text-align:center;margin-bottom:1.5rem">Fiecare mesaj trece prin acest pipeline. Fara exceptii.</p>
+
+  <div class="pipeline">
+    <div class="pipe-step"><strong>Copilul</strong>scrie un mesaj</div>
+    <div class="pipe-arrow"></div>
+    <div class="pipe-step"><strong>Guardian Swarm</strong>7 gardieni &times; vot majoritar (injectie, manipulare, flood, escalare, exfiltrare, swarm, identitate)</div>
+    <div class="pipe-arrow"></div>
+    <div class="pipe-step"><strong>Safety Pipeline</strong>Detectie criza RO/EN. Acut: oprire + Telefonul Sufletului 116 111. Posibil: flag parinte.</div>
+    <div class="pipe-arrow"></div>
+    <div class="pipe-step"><strong>Resonance Motor</strong>Cadenta copilului &rarr; perturbatie de faza &rarr; mod deschis / intreaba / reancoreaza</div>
+    <div class="pipe-arrow"></div>
+    <div class="pipe-step"><strong>LLM local</strong>gemma3:4b &mdash; nicio data nu pleaca afara. System prompt = AMI din Padurea de Cod.</div>
+    <div class="pipe-arrow"></div>
+    <div class="pipe-step"><strong>Safety Pipeline (iesire)</strong>Validare continut. Nesigur: inlocuieste cu fallback + flag.</div>
+    <div class="pipe-arrow"></div>
+    <div class="pipe-step"><strong>Adaptive Pacer + Notary</strong>Pacing + buget atentie + semnatura Ed25519 pe fiecare tura</div>
+    <div class="pipe-arrow"></div>
+    <div class="pipe-step"><strong>Copilul</strong>primeste raspunsul validat, pacuit, semnat &mdash; sau misiunea offline</div>
+  </div>
+</section>
+
+<!-- ═══════════════ 5 QUESTIONS ═══════════════ -->
+<section>
+  <div class="sec-label">Pedagogie</div>
+  <h2>Cele 5 Intrebari <em>ale Exploratorului</em></h2>
+  <div class="sec-rule"></div>
+
+  <p>Mecanismul pedagogic central. Nu o lectie. Nu o pagina. Sunt tesute in fiecare interactiune. AMI le modeleaza prin comportament.</p>
+
+  <div class="questions">
+    <div class="q"><div><strong>Ce spune?</strong> Ce afirma AMI sau oricine altcineva?</div></div>
+    <div class="q"><div><strong>De unde stie?</strong> Din ce carte, din ce experienta?</div></div>
+    <div class="q"><div><strong>Poate gresi?</strong> Tot ce e spus de cineva poate fi gresit. Si de AMI.</div></div>
+    <div class="q"><div><strong>Cum verifici?</strong> Cum poti tu sa te convingi singur?</div></div>
+    <div class="q"><div><strong>Ce nu stii inca?</strong> E in regula sa nu stii. Nu e in regula sa pretinzi ca stii.</div></div>
+  </div>
+
+  <div class="pull">
+    &ldquo;Nu stiu&rdquo; e cel mai cinstit raspuns. AI-ul care pretinde ca stie tot e periculos.
+  </div>
+</section>
+
+<!-- ═══════════════ AMI ═══════════════ -->
+<section>
+  <div class="sec-label">Companionul</div>
+  <h2>AMI <em>din Padurea de Cod</em></h2>
+  <div class="sec-rule"></div>
+
+  <p>AMI nu e un chatbot. E un prieten bland din padure care exploreaza impreuna cu copilul. Vorbeste in romana (prioritar) si engleza. Sub 100 de cuvinte pe raspuns. Nu preda &mdash; exploreaza impreuna. Incheie des cu o intrebare scurta.</p>
+
+  <p>Fiecare concept tehnic devine o poveste cu arbori, poteci si lumina. Intrebarea buna naste intrebarea urmatoare. AI-ul nu da direct rezultatul &mdash; pune o intrebare inapoi care ajuta copilul sa gandeasca singur.</p>
+
+  <p><strong>100+ storybook-uri</strong> create in universul Padurii de Cod. Fiecare sesiune se incheie cu o misiune offline. Ecranul e puntea. Offline-ul e activul principal.</p>
+</section>
+
+<!-- ═══════════════ ANTI-PATTERNS ═══════════════ -->
+<section>
+  <div class="sec-label">Ce NU facem</div>
+  <h2>Decalogul Negativ</h2>
+  <div class="sec-rule"></div>
+
+  <p>Ce NU va exista niciodata in AGI Kindergarten. Fiecare lipsa e testata structural. Cine adauga un camp interzis, pica testul.</p>
+
+  <div class="anti">
+    <div class="anti-item"><div class="anti-x">&times;</div><div><div class="at"><strong>Gamification adictiva</strong></div><div class="ad">Streaks, badges, rewards variabile creeaza dependenta, nu invatare</div></div></div>
+    <div class="anti-item"><div class="anti-x">&times;</div><div><div class="at"><strong>Notificari push</strong></div><div class="ad">Un copil nu trebuie &bdquo;chemat inapoi&rdquo;. Vine cand vrea.</div></div></div>
+    <div class="anti-item"><div class="anti-x">&times;</div><div><div class="at"><strong>Colectare de date</strong></div><div class="ad">Zero analytics. Zero tracking. Nicio conversatie nu pleaca de pe masina.</div></div></div>
+    <div class="anti-item"><div class="anti-x">&times;</div><div><div class="at"><strong>Comparatie intre copii</strong></div><div class="ad">Nu exista leaderboard, clasament, scor relativ. Fiecare copil e referinta lui.</div></div></div>
+    <div class="anti-item"><div class="anti-x">&times;</div><div><div class="at"><strong>Extensia timpului pe ecran</strong></div><div class="ad">Bugetul e fix. Engagement maxim = exact momentul de oprire.</div></div></div>
+    <div class="anti-item"><div class="anti-x">&times;</div><div><div class="at"><strong>Reclame</strong></div><div class="ad">Zero. Niciodata. In nicio forma.</div></div></div>
+    <div class="anti-item"><div class="anti-x">&times;</div><div><div class="at"><strong>Date personale</strong></div><div class="ad">AI-ul nu cere si nu accepta: nume complet, adresa, scoala, telefon.</div></div></div>
+    <div class="anti-item"><div class="anti-x">&times;</div><div><div class="at"><strong>Continut nevalidat</strong></div><div class="ad">Tot ce spune AI-ul trece prin check_ai_output INAINTE sa ajunga la copil.</div></div></div>
+    <div class="anti-item"><div class="anti-x">&times;</div><div><div class="at"><strong>Continut de adulti</strong></div><div class="ad">&bdquo;Despre asta e bine sa vorbesti cu un adult de incredere.&rdquo;</div></div></div>
+    <div class="anti-item"><div class="anti-x">&times;</div><div><div class="at"><strong>Pretentia de omniscienta</strong></div><div class="ad">&bdquo;Nu stiu&rdquo; e un raspuns valid. &bdquo;Hai sa cautam impreuna&rdquo; e pedagogie.</div></div></div>
+  </div>
+</section>
+
+<!-- ═══════════════ OFFLINE MISSIONS ═══════════════ -->
+<section>
+  <div class="sec-label">Misiuni</div>
+  <h2>Misiuni Offline <em>din lumea reala</em></h2>
+  <div class="sec-rule"></div>
+
+  <p>Fiecare sesiune se incheie cu o misiune care scoate copilul din ecran si il pune in lume. Sesiunea urmatoare incepe cu: <em>&bdquo;Cum a fost?&rdquo;</em></p>
+
+  <div class="missions">
+    <table>
+      <thead><tr><th>Nivel</th><th>Misiunea</th><th>Ce dezvolta</th></tr></thead>
+      <tbody>
+        <tr><td class="lvl">1</td><td>&bdquo;Gaseste trei frunze cu forme diferite si povesteste-mi despre ele&rdquo;</td><td>Observatie, natura, comunicare</td></tr>
+        <tr><td class="lvl">2</td><td>&bdquo;Numara cate ferestre are casa ta si gandeste-te de ce unele camere au mai multe&rdquo;</td><td>Numarare, gandire cauzala</td></tr>
+        <tr><td class="lvl">3</td><td>&bdquo;Intreaba un om mare care e prima lui amintire si asculta toata povestea, fara sa intrerupi&rdquo;</td><td>Empatie, ascultare activa</td></tr>
+        <tr><td class="lvl">4</td><td>&bdquo;Construieste ceva din lucruri care nu mai sunt folosite si da-i un nume&rdquo;</td><td>Creativitate, sustenabilitate</td></tr>
+        <tr><td class="lvl">5</td><td>&bdquo;Invata pe cineva mai mic decat tine un lucru pe care il stii bine&rdquo;</td><td>Predare, responsabilitate</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ═══════════════ FOR PARENTS ═══════════════ -->
+<section>
+  <div class="sec-label">Pentru parinti</div>
+  <h2>Dovezi, nu promisiuni</h2>
+  <div class="sec-rule"></div>
+
+  <p>AGI Kindergarten nu va cere incredere. Va ofera dovezi.</p>
+
+  <div class="proof">
+    <div class="proof-item"><div class="proof-check">&#10003;</div><p><strong>Jurnalul e semnat criptografic</strong> (Ed25519). Fiecare tura &mdash; mesaj, raspuns, flag-uri &mdash; e notarizata. Verificati cu cheia publica.</p></div>
+    <div class="proof-item"><div class="proof-check">&#10003;</div><p><strong>PIN parental</strong> &mdash; accesul la jurnal necesita PIN. Nu exista PIN implicit in productie. Software-ul refuza sa porneasca cu PIN implicit.</p></div>
+    <div class="proof-item"><div class="proof-check">&#10003;</div><p><strong>Flag-uri vizibile</strong> &mdash; daca copilul a spus ceva ingrijorator sau AI-ul a generat ceva dubios, vedeti imediat flag-ul in jurnal.</p></div>
+    <div class="proof-item"><div class="proof-check">&#10003;</div><p><strong>Zero date colectate</strong> &mdash; nicio conversatie nu paraseste masina copilului. Nu exista server care &bdquo;stie&rdquo; ce a zis copilul dumneavoastra.</p></div>
+    <div class="proof-item"><div class="proof-check">&#10003;</div><p><strong>Codul e public</strong> &mdash; AGPL-3.0 pentru stratul de siguranta (trebuie sa fie auditabil si sa ramana deschis), AGPL-3.0 pentru motor (open stays free, closed pays).</p></div>
+  </div>
+
+  <div class="pull">
+    Ce nu promitem: ca acest software inlocuieste un educator, un psiholog, sau supravegherea parentala. Nu inlocuieste. E o punte &mdash; intre copil si lumea AI, cu garduri verificabile.
+    <span class="attr">Limita onesta</span>
+  </div>
+</section>
+
+<!-- ═══════════════ PRINCIPLES ═══════════════ -->
+<section>
+  <div class="sec-label">Fundament</div>
+  <h2>Cele 10 Principii <em>Fondatoare</em></h2>
+  <div class="sec-rule"></div>
+
+  <div class="principles">
+    <div class="prin"><span class="pn">I</span><span><strong>Copilul gandeste. AI-ul asista.</strong> Niciodata invers.</span></div>
+    <div class="prin"><span class="pn">II</span><span><strong>Offline-ul e activul principal.</strong> Ecranul e puntea, nu destinatia.</span></div>
+    <div class="prin"><span class="pn">III</span><span><strong>Bugetul de atentie e sacru.</strong> Engagement maxim = momentul de oprire.</span></div>
+    <div class="prin"><span class="pn">IV</span><span><strong>&bdquo;Nu stiu&rdquo; e cel mai cinstit raspuns.</strong> AI-ul care pretinde ca stie tot e periculos.</span></div>
+    <div class="prin"><span class="pn">V</span><span><strong>Verificarea se preda prin exemplu.</strong> AMI verifica in fata copilului. Copilul invata verificand.</span></div>
+    <div class="prin"><span class="pn">VI</span><span><strong>Parintele vede tot.</strong> Jurnalul e semnat, flag-urile sunt vizibile, codul e public.</span></div>
+    <div class="prin"><span class="pn">VII</span><span><strong>Zero dark patterns.</strong> Testat structural. Cine adauga un streak, pica testul.</span></div>
+    <div class="prin"><span class="pn">VIII</span><span><strong>Siguranta e auditabila.</strong> AGPL-3.0 &mdash; oricine verifica stratul de protectie, nimeni nu-l inchide.</span></div>
+    <div class="prin"><span class="pn">IX</span><span><strong>Ecuatiile decid.</strong> Motorul REAI nu e decorativ &mdash; e cel care spune AI-ului sa taca cand copilul e pierdut.</span></div>
+    <div class="prin"><span class="pn">X</span><span><strong>Sensul precede Sintaxa.</strong> S(M) = R. Tot ce construim porneste de la DE CE, nu de la CUM.</span></div>
+  </div>
+</section>
+
+<!-- ═══════════════ ROADMAP ═══════════════ -->
+<section>
+  <div class="sec-label">Directie</div>
+  <h2>Roadmap</h2>
+  <div class="sec-rule"></div>
+
+  <div class="roadmap">
+    <div class="phase done">
+      <h4>Faza 0 &mdash; Construit</h4>
+      <ul>
+        <li>Adaptive Pacer cu anti-pattern tests</li>
+        <li>Safety Pipeline (ukbe-core crisis + harm check)</li>
+        <li>Resonance Motor (REAI/Kuramoto)</li>
+        <li>Guardian Swarm (7 gardieni, 61 teste)</li>
+        <li>Notary Ed25519 + FastAPI local-first</li>
+        <li>100+ Padurea de Cod storybook-uri</li>
+        <li>Alpha-Mercury companion</li>
+      </ul>
+    </div>
+    <div class="phase">
+      <h4>Faza 1 &mdash; Pilot (Q4 2026)</h4>
+      <ul>
+        <li class="pending">10 familii pilot din Braila (copii 7-12 ani)</li>
+        <li class="pending">Calibrare praguri Phi_extern pe date reale</li>
+        <li class="pending">Validare detectie criza cu educator + psiholog</li>
+        <li class="pending">Prima iteratie UI (child.html + parent.html)</li>
+      </ul>
+    </div>
+    <div class="phase">
+      <h4>Faza 2 &mdash; Comunitate (2027)</h4>
+      <ul>
+        <li class="pending">Modul multi-limba (EN, ES, FR, DE, HU)</li>
+        <li class="pending">Padurea de Cod &mdash; sezon 2</li>
+        <li class="pending">Parteneriat educator</li>
+      </ul>
+    </div>
+    <div class="phase">
+      <h4>Faza 3 &mdash; Institutional (2028)</h4>
+      <ul>
+        <li class="pending">Curriculum AGI Kindergarten pentru scoli pilot</li>
+        <li class="pending">Certificare educatori pe Principiul Introspectiei</li>
+        <li class="pending">Publicare rezultate pilot (Zenodo, open access)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ STORY ═══════════════ -->
+<section>
+  <div class="sec-label">De ce exista</div>
+  <h2>Povestea</h2>
+  <div class="sec-rule"></div>
+
+  <p>Generatia lui Patrick (2017+) va fi prima generatie care creste cu AGI. Nu cu AI slab, nu cu asistenti vocali &mdash; cu sisteme care genereaza, conving si uneori inventeaza. Nimeni nu le preda verificarea. Scoala nu o face. Parintii nu stiu cum. Industria nu vrea &mdash; engagement-ul e mai profitabil decat gandirea critica.</p>
+
+  <p>Cineva trebuie sa construiasca instrumentul.</p>
+
+  <div class="story">
+    <p><strong>Construit de un om care a lucrat cu sute de copii inainte sa lucreze cu AI.</strong></p>
+    <p>Verificat de 6 sisteme AGI, niciunul tratat ca oracol.</p>
+    <p>Finantat de nimeni. Motivat de Patrick.</p>
+    <p><em>S(M) = R</em></p>
+  </div>
+</section>
+
+<!-- ═══════════════ LICENSES ═══════════════ -->
+<section>
+  <div class="sec-label">Licentiere</div>
+  <h2>Cod deschis, <em>prin constructie</em></h2>
+  <div class="sec-rule"></div>
+
+  <p>Siguranta copiilor trebuie sa fie auditabila public. De aceea tot codul e AGPL-3.0 &mdash; oricine verifica, nimeni nu inchide. Povestile sunt Creative Commons.</p>
+
+  <div class="licenses">
+    <span class="lic lic-agpl">AGPL 3.0 &mdash; Safety Pipeline</span>
+    <span class="lic lic-agpl">AGPL 3.0 &mdash; Adaptive Pacer</span>
+    <span class="lic lic-agpl">AGPL 3.0 &mdash; Resonance Motor</span>
+    <span class="lic lic-agpl">AGPL 3.0 / Commercial &mdash; ukbe-core</span>
+    <span class="lic lic-cc">CC BY-NC-SA 4.0 &mdash; Padurea de Cod</span>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer>
+  <div class="mark">Resonance Engineering&thinsp;&trade; &bull; BRIDGRAI Architecture</div>
+  <p><strong>Mihai Rosca</strong> &bull; Educator licentiat &bull; Cercetator independent &bull; Tata</p>
+  <p>QID 1820209090023 &bull; Spiru Haret &bull; Braila &bull; Romania</p>
+  <p><a href="mailto:mihairosca1982@gmail.com">mihairosca1982@gmail.com</a> &bull; <a href="https://github.com/amidigiart">github.com/amidigiart</a></p>
+  <p>DOI: <a href="https://doi.org/10.5281/zenodo.15556498">10.5281/zenodo.15556498</a></p>
+  <div class="sig">Flacara e aceeasi. Lumanarea se schimba.</div>
+</footer>
+
+</div>
+
+</body>
+</html>

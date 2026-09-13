@@ -234,7 +234,7 @@ curl -s "https://api.tzkt.io/v1/operations/op7UGM1tMW6EdLN7H6bykL8h68sQeBZmD98KX
 | Artifact | Verification |
 |----------|-------------|
 | GitHub repository | `curl -s https://api.github.com/repos/amidigiart/ukbe-core \| python3 -c "import sys,json;d=json.load(sys.stdin);print(d['created_at'],d['license']['spdx_id'])"` |
-| License | Apache-2.0 (open-core, NLnet eligible) |
+| License | AGPL-3.0 (open-core, NLnet eligible) |
 | Tests | 102/102 verified before publication |
 | ORCID | `https://orcid.org/0009-0001-1422-6209` |
 
@@ -243,7 +243,7 @@ curl -s "https://api.tzkt.io/v1/operations/op7UGM1tMW6EdLN7H6bykL8h68sQeBZmD98KX
 | Artifact | Verification |
 |----------|-------------|
 | GitHub repository | `curl -s https://api.github.com/repos/amidigiart/kinderagi-core \| python3 -c "import sys,json;d=json.load(sys.stdin);print(d['created_at'],d['license']['spdx_id'])"` |
-| License | Apache-2.0 |
+| License | AGPL-3.0 |
 | Live site | `https://kinderagi.com` |
 | Tests | 17/17 verified |
 
@@ -551,8 +551,8 @@ Run the script. Check the endpoints. Resolve the DOI. Query the blockchain. Read
 | Repository | License | Purpose |
 |-----------|---------|---------|
 | `amidigiart/p6-adler-ghost-peak` | MIT + CC BY 4.0 | P6 paper — ghost peak bifurcation |
-| `amidigiart/ukbe-core` | Apache-2.0 | REAI engine — Kuramoto/Adler mathematics |
-| `amidigiart/kinderagi-core` | Apache-2.0 | KinderAGI — AI-assisted pedagogy |
+| `amidigiart/ukbe-core` | AGPL-3.0 | REAI engine — Kuramoto/Adler mathematics |
+| `amidigiart/kinderagi-core` | AGPL-3.0 | KinderAGI — AI-assisted pedagogy |
 | `amidigiart/amidor-engine` | AGPL-3.0 | Multi-industry anti-confabulation engine |
 | `amidigiart/amiqiai.com` | — | amiQiAI frontend + API |
 | `amidigiart/amiherbai.com` | — | amiHerbAI frontend + API |

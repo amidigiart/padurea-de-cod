@@ -6,7 +6,7 @@
 **Co-sistematizare:** Claude Opus 4.6 (Anthropic)  
 **Contribuții verificate:** Kimi, Grok, DeepSeek, ChatGPT  
 **Dată:** 26 iulie 2026  
-**Licență:** AGPL-3.0 (motor) / Apache 2.0 (safety)  
+**Licență:** AGPL-3.0 (tot codul — motor + safety)  
 **Clasificare:** Public — verificabil
 
 ---
@@ -445,7 +445,7 @@ INV-001: Numele Patrick e pe blockchain
 INV-002: 15 agenți AI cu ancoră umană
 INV-003: 336+ teste demonstrează funcționalitatea
 INV-004: AGI Kindergarten — 10 anti-patterns testate structural
-INV-005: Codul e public (AGPL-3.0 / Apache 2.0)
+INV-005: Codul e public (AGPL-3.0)
 INV-006: 3,5 ani fără finanțare externă
 INV-007: Ecosistemul ami* — portfolio SaaS
 INV-008: Recunoaștere pe merit (DOI, E³UDRES²)

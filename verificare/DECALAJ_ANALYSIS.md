@@ -30,7 +30,7 @@ Analiza aplică aceeași metrică pe care subiectul a aplicat-o sistemelor exter
 | Axa | Intenție declarată | Rezultat verificabil | Δ |
 |-----|-------------------|---------------------|---|
 | **Finanțare** | „Construiesc fără finanțare externă" | 3,5 ani (ian 2023 – iul 2026), zero investitori, zero granturi | **≈ 0** |
-| **Proprietate intelectuală** | „Codul e public și verificabil" | GitHub repos live, AGPL-3.0 / Apache 2.0, DOI Zenodo | **≈ 0** |
+| **Proprietate intelectuală** | „Codul e public și verificabil" | GitHub repos live, AGPL-3.0, DOI Zenodo | **≈ 0** |
 | **Protecția copiilor** | „AGI Kindergarten protejează, nu exploatează" | 10 anti-patterns testate structural, zero colectare date, zero gamificare | **≈ 0** |
 | **Blockchain** | „Dovada e imuabilă" | 106 hash-uri Tezos, TX #92–#97, timestamp 2026-07-25 15:37:26 | **= 0** |
 | **Ecosistem** | „14 agenți funcționali" | 14 agenți cu A2A AgentCard, 240+ teste, hub funcțional | **≈ 0** |

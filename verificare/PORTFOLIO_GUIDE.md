@@ -75,11 +75,11 @@ Acest portfolio documentează muncă independentă, nefinanțată extern. Fiecar
 
 | Motor | Repo | Teste | Licență | Descriere |
 |-------|------|-------|---------|-----------|
-| UKBE Core | ukbe-core | 102 | Apache-2.0 | Kuramoto + Kalman resonance engine |
+| UKBE Core | ukbe-core | 102 | AGPL-3.0 | Kuramoto + Kalman resonance engine |
 | TVE Core | tve-core | 32 | AGPL-3.0 | 6-pillar manipulation detection |
 | Amidor Engine | amidor-engine | 12+ | AGPL-3.0/commercial | Dual-model anti-confabulation |
 | TVE-UKBE Fusion | tve-ukbe-fusion | — | AGPL-3.0 | Unified resonance + truth vector |
-| KinderAGI Core | kinderagi-core | 26 | Apache-2.0 | Child-safe AI companion prototype |
+| KinderAGI Core | kinderagi-core | 26 | AGPL-3.0 | Child-safe AI companion prototype |
 | BRIDGRAI A2A | bridgrai-a2a | — | AGPL-3.0 | 8 agents, A2A protocol, JSON-RPC 2.0 |
 
 ---
@@ -122,7 +122,7 @@ Acest portfolio documentează muncă independentă, nefinanțată extern. Fiecar
 | Frontend | HTML/CSS/JS, GitHub Pages |
 | Safety | Guardian Swarm (7 agents), TVE 6-pillar, UKBE resonance |
 | Protocols | A2A (Agent-to-Agent), JSON-RPC 2.0 |
-| Licențe | AGPL-3.0 (motors), Apache 2.0 (safety), commercial (UKBE) |
+| Licențe | AGPL-3.0 (all engines + safety), commercial dual-license available |
 
 ---
 
