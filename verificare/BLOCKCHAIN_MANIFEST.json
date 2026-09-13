@@ -1,6 +1,6 @@
 {
   "protocol": "ami* Ecosystem Verification Protocol",
-  "version": "2.3",
+  "version": "2.4",
   "timestamp_utc": "2026-09-14T00:00:00Z",
   "previous_version": {
     "version": "2.2",
@@ -759,5 +759,65 @@
         "file_size": 321706617
       }
     ]
-  }
+  },
+  "total_assets": 182,
+  "new_assets_since_v2_3": [
+    {
+      "id": 175,
+      "code": "PADUREA-STORY-175",
+      "title": "Alfabetizare Digitală & Securitate Online_ Păzitorii Lumii Digitale",
+      "sha256": "c3293a85544e4490b0fa6c2139fc23cc87a37cbf135152f5d98b13e747e82339",
+      "license": "CC BY-NC-SA 4.0"
+    },
+    {
+      "id": 176,
+      "code": "PADUREA-STORY-176",
+      "title": "Ancorele Adevărului_ Călătoria spre Sfinx",
+      "sha256": "250e7eb675f8f4acac3a928e5b19fe6af3a3d82db98e90c86bb14865c5eab326",
+      "license": "CC BY-NC-SA 4.0"
+    },
+    {
+      "id": 177,
+      "code": "PADUREA-STORY-177",
+      "title": "Cetatea Secretă a Vărului Vesel",
+      "sha256": "af8e125cd3955a9e005095271c23d58ca612f5d637368ce07dd93523d1f38c09",
+      "license": "CC BY-NC-SA 4.0"
+    },
+    {
+      "id": 178,
+      "code": "PADUREA-STORY-178",
+      "title": "Cântecul Uit al Stelelor",
+      "sha256": "9c734d553678809a10b48e0f68a269e8877024da48fac5693201c8a8e5bef8c8",
+      "license": "CC BY-NC-SA 4.0"
+    },
+    {
+      "id": 179,
+      "code": "PADUREA-STORY-179",
+      "title": "Fundația (The Foundation)",
+      "sha256": "c0010c50a7d8854828af4e20e9b7d64d944a373d77e5ebc39aa7962821723baf",
+      "license": "CC BY-NC-SA 4.0"
+    },
+    {
+      "id": 180,
+      "code": "PADUREA-STORY-180",
+      "title": "Grădina de Date",
+      "sha256": "804e3b026582acabe118ce0d60a2f3b9aeffd4f7f5fe3e88cb0716f612241926",
+      "license": "CC BY-NC-SA 4.0"
+    },
+    {
+      "id": 181,
+      "code": "PADUREA-STORY-181",
+      "title": "MICUL GHID AL ARHITECTULUI DE SISTEME SUVERANE",
+      "sha256": "d8d783477073351754140a81333ec0d3c8e83b6ef5e8272bab0c557ce609994f",
+      "license": "CC BY-NC-SA 4.0"
+    },
+    {
+      "id": 182,
+      "code": "PADUREA-STORY-182",
+      "title": "Scânteia Secretă",
+      "sha256": "20c8271aa1a0495e42ffad5c1b14e2475807be24ff8caf079f4c72ff8a0b2c0b",
+      "license": "CC BY-NC-SA 4.0"
+    }
+  ],
+  "pending_transaction": "v2.4 — 8 new stories, total 182 assets. Awaiting Tezos TX."
 }

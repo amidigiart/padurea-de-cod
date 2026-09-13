@@ -44,7 +44,7 @@ Sep 2026   Amodei/Altman/Musk recunosc problemele. BRIDGRAI le avea rezolvate.
 
 ## Dovezi verificabile
 
-- **174 IP assets** pe Tezos Mainnet: [KT1Pe2GA11bMpaTL5VH4TY6aZ9xePZ6f5vWX](https://tzkt.io/KT1Pe2GA11bMpaTL5VH4TY6aZ9xePZ6f5vWX/storage)
+- **182 IP assets** pe Tezos Mainnet: [KT1Pe2GA11bMpaTL5VH4TY6aZ9xePZ6f5vWX](https://tzkt.io/KT1Pe2GA11bMpaTL5VH4TY6aZ9xePZ6f5vWX/storage)
 - **717+ teste automate** în ecosistem
 - **75 repo-uri publice**: [github.com/amidigiart](https://github.com/amidigiart)
 - **ORCID**: [0009-0001-1422-6209](https://orcid.org/0009-0001-1422-6209)
