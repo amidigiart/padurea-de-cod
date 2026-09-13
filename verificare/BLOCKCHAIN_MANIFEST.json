@@ -418,7 +418,7 @@
     "master_hash_v2_3": "486824e851187a3392a20b212219b95e23875c2cc7f0482e6b2344610d4981c1"
   },
   "verification_summary": {
-    "blockchain_ip_assets": 173,
+    "blockchain_ip_assets": 174,
     "total_tests_ecosystem": 717,
     "test_breakdown": {
       "ukbe_core": 175,
